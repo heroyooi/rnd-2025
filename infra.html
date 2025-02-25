@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자율차-일반차 혼재상황 대비 AI기반 자율주행모빌리티 운영 플랫폼 개발 - 3차</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="js/billboard.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body class="search">
+  <div id="wrap">
+    <div id="header">
+      <h1 class="logo"><a href="#"><span>자율차-일반차 혼재상황 대비 AI기반 자율주행모빌리티 운영 플랫폼 개발</span></a></h1>
+      <ul id="utilmenu">
+        <li class="user"><a href="#"></a></li>
+        <li class="menu"><a href="#"></a></li>
+      </ul>
+      <div class="ui-wrap">
+        <a href="#" class="btn-close"></a>
+        <span class="face" style="background:url(img/rnd2/icon-userdata-ad.png) 0 0 no-repeat;"></span>
+        <p class="email">abdasdadadadadasdasdcT123@mqnic.com</p>
+        <p class="username">홍길동</p>
+        <ul class="info">
+          <li>
+            <span class="label">기관</span>
+            <span class="result">화성시 1234567부서</span>
+          </li>
+          <li>
+            <span class="label">연락처</span>
+            <span class="result">010-0000-0000</span>
+          </li>
+          <li>
+            <span class="label">권한</span>
+            <span class="result">12345</span>
+          </li>
+        </ul>
+        <div class="btns-wrap">
+          <span class="btn-base tp1"><a href="#">로그아웃</a></span>
+        </div>
+      </div>
+    </div><!-- #header -->
+    <div class="menu-wrap">
+      <ul class="menu-list">
+        <li class="has-menu">
+          <dl>
+            <dt>인프라 모니터링</dt>
+            <dd>
+              <ul>
+                <li><a href="#">EdegRSU 상태</a></li>
+                <li><a href="#">EdegRSU 상태</a></li>
+                <li><a href="#">EdegRSU 가공</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>자율차전용지도 구축현황</dt>
+          </dl>
+        </li>
+        <li class="has-menu">
+          <dl>
+            <dt>개별 서비스</dt>
+            <dd>
+              <ul>
+                <li class="bg tp1"><a href="#">국-10 과제</a></li>
+                <li class="bg tp2"><a href="#">국-11 과제</a></li>
+                <li class="bg tp3"><a href="#">국-12 과제</a></li>
+                <li class="bg tp4"><a href="#">국-10 과제</a></li>
+                <li class="bg tp5"><a href="#">국-11 과제</a></li>
+                <li class="bg tp6"><a href="#">국-12 과제</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div><!-- .menu-wrap -->
+
+    <div class="search-wrap">
+      <div class="search-header type-1">
+        <div class="top-area">
+          <p class="tit">EdgeRSU의 상태 현황과 상태 변화 이력을 확인하여 이상 여부를 확인할 수 있는 모니터링 대시보드입니다.</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="input-wrap">
+          <span class="label">기간</span>
+          <div class="input-wrap input-datepicker">
+            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+              <input id="startpicker-input1-1" type="text" aria-label="Date">
+              <span class="tui-ico-date"></span>
+              <div id="startpicker-container1-1" style="margin-left: -1px;"></div>
+            </div>
+            <span class="bridge">~</span>
+            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+              <input id="endpicker-input1-1" type="text" aria-label="Date">
+              <span class="tui-ico-date"></span>
+              <div id="endpicker-container1-1" style="margin-left: -1px;"></div>
+            </div>
+          </div>
+          <span class="label">도로명</span>
+          <span class="select-base" style="width: 400px;">
+            <span class="value"></span>
+            <select>
+              <option value="0" selected>All</option>
+              <option value="1">값 1</option>
+              <option value="2">값 2</option>
+              <option value="3">값 3</option>
+            </select>
+          </span>
+          <a href="#" class="btn-search ml8"></a>
+        </div>
+      </div><!-- .search-header -->
+
+      <div class="search-header type-2" style="display: none;">
+        <div class="top-area">
+          <p class="tit">EdgeRSU의 상태 현황과 상태 변화 이력을 확인하여 이상 여부를 확인할 수 있는 모니터링 대시보드입니다.</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="input-wrap">
+          <span class="label">기간</span>
+          <div class="input-wrap input-datepicker">
+            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+              <input id="startpicker-input1-2" type="text" aria-label="Date">
+              <span class="tui-ico-date"></span>
+              <div id="startpicker-container1-2" style="margin-left: -1px;"></div>
+            </div>
+            <span class="bridge">~</span>
+            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+              <input id="endpicker-input1-2" type="text" aria-label="Date">
+              <span class="tui-ico-date"></span>
+              <div id="endpicker-container1-2" style="margin-left: -1px;"></div>
+            </div>
+          </div>
+          <span class="label">연계정보</span>
+          <span class="select-base" style="width: 300px;">
+            <span class="value"></span>
+            <select>
+              <option value="0" selected>객체인지정보</option>
+              <option value="1">값 1</option>
+              <option value="2">값 2</option>
+              <option value="3">값 3</option>
+            </select>
+          </span>
+          <a href="#" class="btn-search ml8"></a>
+          <span class="label">장비</span>
+          <span class="select-base" style="width: 300px;">
+            <span class="value"></span>
+            <select>
+              <option value="0" selected>All</option>
+              <option value="1">값 1</option>
+              <option value="2">값 2</option>
+              <option value="3">값 3</option>
+            </select>
+          </span>
+          <a href="#" class="btn-search ml8"></a>
+        </div>
+      </div><!-- .search-header -->
+
+      <div class="search-header type-3" style="display: none;">
+        <div class="top-area">
+          <p class="tit">EdgeRSU로 수집된 정보의 가공 현황을 모니터링 할 수 있는 대시보드입니다.</p>
+          <a href="#" class="btn-close"></a>
+        </div>
+        <div class="input-wrap">
+          <span class="label">기간</span>
+          <div class="input-wrap input-datepicker">
+            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+              <input id="startpicker-input1-3" type="text" aria-label="Date">
+              <span class="tui-ico-date"></span>
+              <div id="startpicker-container1-3" style="margin-left: -1px;"></div>
+            </div>
+            <span class="bridge">~</span>
+            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+              <input id="endpicker-input1-3" type="text" aria-label="Date">
+              <span class="tui-ico-date"></span>
+              <div id="endpicker-container1-3" style="margin-left: -1px;"></div>
+            </div>
+          </div>
+          <span class="label">연계정보</span>
+          <span class="select-base" style="width: 300px;">
+            <span class="value"></span>
+            <select>
+              <option value="0" selected>객체인지정보</option>
+              <option value="1">값 1</option>
+              <option value="2">값 2</option>
+              <option value="3">값 3</option>
+            </select>
+          </span>
+          <a href="#" class="btn-search ml8"></a>
+          <span class="label">장비</span>
+          <span class="select-base" style="width: 300px;">
+            <span class="value"></span>
+            <select>
+              <option value="0" selected>All</option>
+              <option value="1">값 1</option>
+              <option value="2">값 2</option>
+              <option value="3">값 3</option>
+            </select>
+          </span>
+          <a href="#" class="btn-search ml8"></a>
+        </div>
+      </div><!-- .search-header -->
+
+
+      <div class="search-container">
+        <div class="search-content">
+          <div style="height: 100%; color: rgba(255, 255, 255, 0.1); font-size: 100px; display: flex; justify-content: center; align-items: center;">Grafana Dashboard Area</div>
+        </div><!-- .search-content -->
+      </div><!-- .search-container -->
+    </div><!-- .search-wrap -->
+  </div><!-- #wrap -->
+
+  <script>
+    tui.DatePicker.localeTexts['customKey'] = {
+      titles: {
+          // days
+          DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          // daysShort
+          D: ['일', '월', '화', '수', '목', '금', '토'],
+          // months
+          MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+          // monthsShort
+          MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+      },
+      titleFormat: 'yyyy.MMM',
+      todayFormat: '오늘 : yyyy.MMMM.dd',
+      date: 'Date',
+      time: 'Time'
+    };
+
+    var today1 = new Date();
+    var picker1 = tui.DatePicker.createRangePicker({
+      language: 'customKey',
+      startpicker: {
+        date: today1,
+        input: '#startpicker-input1-1',
+        container: '#startpicker-container1-1'
+      },
+      endpicker: {
+        date: today1,
+        input: '#endpicker-input1-1',
+        container: '#endpicker-container1-1'
+      },
+      selectableRanges: [
+        [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+      ],
+      format: 'YYYY-MM-dd',
+      // showAlways: true,
+    });
+    picker1.on('change:end', () => {
+        console.log(123);
+    });
+
+    var picker2 = tui.DatePicker.createRangePicker({
+      language: 'customKey',
+      startpicker: {
+        date: today1,
+        input: '#startpicker-input1-2',
+        container: '#startpicker-container1-2'
+      },
+      endpicker: {
+        date: today1,
+        input: '#endpicker-input1-2',
+        container: '#endpicker-container1-2'
+      },
+      selectableRanges: [
+        [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+      ],
+      format: 'YYYY-MM-dd',
+      // showAlways: true,
+    });
+    picker2.on('change:end', () => {
+        console.log(123);
+    });
+
+    var picker3 = tui.DatePicker.createRangePicker({
+      language: 'customKey',
+      startpicker: {
+        date: today1,
+        input: '#startpicker-input1-3',
+        container: '#startpicker-container1-3'
+      },
+      endpicker: {
+        date: today1,
+        input: '#endpicker-input1-3',
+        container: '#endpicker-container1-3'
+      },
+      selectableRanges: [
+        [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+      ],
+      format: 'YYYY-MM-dd',
+      // showAlways: true,
+    });
+    picker3.on('change:end', () => {
+        console.log(123);
+    });
+
+    $(window).on('load resize', function(){
+      $('.search-wrap .search-container').css('height', $(window).height() - 112 - 60);
+    });
+
+    var Qsample = $.urlParam('sample');
+    if (Qsample == '2') {
+      $('.search-header').hide();
+      $('.search-header.type-2').show();
+    } else if (Qsample == '3') {
+      $('.search-header').hide();
+      $('.search-header.type-3').show();
+    }
+  </script>
+</body>
+</html>
+
+

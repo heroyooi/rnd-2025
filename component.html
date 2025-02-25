@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퍼블리싱 - 컴포넌트 가이드</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <style>
+    .ex_wrp pre{display:none;}
+    .ex_wrp pre.guide{display:block;}
+    .ex_wrp h2{font-size:24px;}
+    .ex_wrp .section{margin-top:50px;position: relative;}
+    .ex_wrp h3{font-size:18px;padding:0 0 10px;}
+    .ex_wrp h3 button{display:inline-block;background-color:#000;color:#fff;padding:5px;border-radius:3px;font-size:12px;vertical-align:middle;}
+    .ex_wrp .code-area{padding:20px;border:1px solid #000;margin-top:15px;}
+    .ex_wrp .code-area.bg-type{background-color:#eee;}
+    .ex_wrp .code-box > .i-weather{display:inline-block;margin-left:30px;}
+    .ex_wrp .code-box > .i-weather:first-child{margin-left:0;}
+    .ex_wrp .code-box > .i-obj{position:relative;display:inline-block;margin-left:30px;}
+    .ex_wrp .code-box > .i-obj:first-child{margin-left:0;}
+    .ex_wrp .left-wrap{position:relative;left:0;top:0;}
+    .ex_wrp .loading-wrap{display:flex;position: relative;left:0;top:0;transform:none;}
+
+    .component-menu{position:fixed;right:20px;top:70px;padding:10px;background-color:#000;border:1px solid #333;box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.07);border-radius:5px;z-index:1;}
+    .component-menu li{font-size:14px;margin-top:10px;cursor:pointer;}
+    .component-menu li:first-child{margin-top:0;}
+    .component-menu li.on{color:#1b64c8;font-weight:500;}
+    .component-menu .component-list{margin-bottom:10px;}
+    .component-menu .btn-base a{font-size:12px;padding:3.5px 8px;width:62px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1 class="logo"><a href="#"><span>자율차-일반차 혼재상황 대비 AI기반 자율주행모빌리티 운영 플랫폼 개발</span></a></h1>
+      <ul id="utilmenu">
+        <li class="user"><a href="#"></a></li>
+        <li class="menu"><a href="#"></a></li>
+      </ul>
+      <div class="ui-wrap">
+        <a href="#" class="btn-close"></a>
+        <span class="face" style="background:url(img/rnd2/icon-userdata-ad.png) 0 0 no-repeat;"></span>
+        <p class="email">abdasdadadadadasdasdcT123@mqnic.com</p>
+        <p class="username">홍길동</p>
+        <ul class="info">
+          <li>
+            <span class="label">기관</span>
+            <span class="result">화성시 1234567부서</span>
+          </li>
+          <li>
+            <span class="label">연락처</span>
+            <span class="result">010-0000-0000</span>
+          </li>
+          <li>
+            <span class="label">권한</span>
+            <span class="result">12345</span>
+          </li>
+        </ul>
+        <div class="btns-wrap">
+          <span class="btn-base tp1"><a href="#">로그아웃</a></span>
+        </div>
+      </div>
+    </div><!-- #header -->
+    <div class="menu-wrap">
+      <ul class="menu-list">
+        <li class="has-menu">
+          <dl>
+            <dt>인프라 모니터링</dt>
+            <dd>
+              <ul>
+                <li><a href="#">EdegRSU 상태</a></li>
+                <li><a href="#">EdegRSU 상태</a></li>
+                <li><a href="#">EdegRSU 가공</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>자율차전용지도 구축현황</dt>
+          </dl>
+        </li>
+        <li class="has-menu">
+          <dl>
+            <dt>개별 서비스</dt>
+            <dd>
+              <ul>
+                <li class="bg tp1"><a href="#">국-10 과제</a></li>
+                <li class="bg tp2"><a href="#">국-11 과제</a></li>
+                <li class="bg tp3"><a href="#">국-12 과제</a></li>
+                <li class="bg tp4"><a href="#">국-10 과제</a></li>
+                <li class="bg tp5"><a href="#">국-11 과제</a></li>
+                <li class="bg tp6"><a href="#">국-12 과제</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div><!-- .menu-wrap -->
+    
+    <div id="container" class="ex_wrp component">
+      <div class="content-wrap">
+
+<pre class="language-html guide">
+<code><link rel="stylesheet" href="css/common.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/tui-time-picker.js"></script>
+<script src="js/tui-date-picker.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/circleChart.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="js/billboard.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/ui.js"></script></code>
+</pre>
+
+      <div class="section">
+        <h2>인풋</h2>
+
+        <div class="code-area">
+          <h3>타입1 <button>코드 보기</button></h3>
+<div class="code-box"><div>
+  <div class="input-wrap">
+    <input type="text" class="input-base tp1" placeholder="검색어를 입력해 주세요.">
+    <button class="btn-del">삭제</button>
+  </div>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입1 - 비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><div>
+  <div class="input-wrap">
+    <input type="text" class="input-base tp1" placeholder="검색어를 입력해 주세요." value="자율주행" disabled>
+    <button class="btn-del">삭제</button>
+  </div>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>데이트피커</h2>
+
+        <div class="code-area" style="position: relative; z-index: 3;">
+          <h3>타입1 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+  <input id="datepicker-input" type="text" aria-label="Date">
+  <span class="tui-ico-date"></span>
+  <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
+</div></div>
+<script>tui.DatePicker.localeTexts['customKey'] = {
+  titles: {
+      // days
+      DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      // daysShort
+      D: ['일', '월', '화', '수', '목', '금', '토'],
+      // months
+      MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+      // monthsShort
+      MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+  },
+  titleFormat: 'yyyy.MMM',
+  todayFormat: '오늘 : yyyy.MMMM.dd',
+  date: 'Date',
+  time: 'Time'
+};
+
+var datepicker = new tui.DatePicker('.date_wrapper#general', {
+  language: 'customKey',
+  date: new Date(),
+  input: {
+    element: '#datepicker-input',
+    format: 'YYYY-MM-dd',
+  }
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+
+        </div>
+
+        <div class="code-area" style="position: relative; z-index: 2;">
+          <h3>타입1 - 비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+  <input id="datepicker-input-disabled" type="text" aria-label="Date" disabled>
+  <span class="tui-ico-date"></span>
+  <div class="date_wrapper" id="disabled" style="margin-left: -1px;"></div>
+</div></div>
+<script>tui.DatePicker.localeTexts['customKey'] = {
+  titles: {
+      // days
+      DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      // daysShort
+      D: ['일', '월', '화', '수', '목', '금', '토'],
+      // months
+      MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+      // monthsShort
+      MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+  },
+  titleFormat: 'yyyy.MMM',
+  todayFormat: '오늘 : yyyy.MMMM.dd',
+  date: 'Date',
+  time: 'Time'
+};
+
+var datepicker = new tui.DatePicker('.date_wrapper#disabled', {
+  language: 'customKey',
+  date: new Date(),
+  input: {
+    element: '#datepicker-input-disabled',
+    format: 'YYYY-MM-dd',
+  }
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+
+        </div>
+
+        <div class="code-area" style="position: relative; z-index: 1;">
+          <h3>타입2 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap input-datepicker">
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="startpicker-input1" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="startpicker-container1" style="margin-left: -1px;"></div>
+  </div>
+  <span class="bridge">~</span>
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="endpicker-input1" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="endpicker-container1" style="margin-left: -1px;"></div>
+  </div>
+</div></div>
+<script>tui.DatePicker.localeTexts['customKey'] = {
+  titles: {
+      // days
+      DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      // daysShort
+      D: ['일', '월', '화', '수', '목', '금', '토'],
+      // months
+      MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+      // monthsShort
+      MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+  },
+  titleFormat: 'yyyy.MMM',
+  todayFormat: '오늘 : yyyy.MMMM.dd',
+  date: 'Date',
+  time: 'Time'
+};
+
+var today1 = new Date();
+var picker1 = tui.DatePicker.createRangePicker({
+  language: 'customKey',
+  startpicker: {
+    date: today1,
+    input: '#startpicker-input1',
+    container: '#startpicker-container1'
+  },
+  endpicker: {
+    date: today1,
+    input: '#endpicker-input1',
+    container: '#endpicker-container1'
+  },
+  selectableRanges: [
+    [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+  ],
+  format: 'YYYY-MM-dd',
+  // showAlways: true,
+});
+
+picker1.on('change:end', () => {
+    console.log(123);
+}); </script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>셀렉트박스</h2>
+        <div class="code-area">
+          <h3>기본 셀렉트박스 - 타입1 <button>코드 보기</button></h3>
+<div class="code-box"><span class="select-base">
+  <span class="value"></span>
+  <select>
+    <option value="0" selected>선택</option>
+    <option value="1">값 1</option>
+    <option value="2">값 2</option>
+    <option value="3">값 3</option>
+  </select>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>기본 셀렉트박스 - 타입1 - 값 선택 <button>코드 보기</button></h3>
+<div class="code-box"><span class="select-base">
+  <span class="value"></span>
+  <select>
+    <option value="0">선택</option>
+    <option value="1">값 1</option>
+    <option value="2" selected>긴값긴값긴값긴값긴값긴값긴값긴값긴값긴값긴값 2</option>
+    <option value="3">값 3</option>
+  </select>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>기본 셀렉트박스 - 타입1 - 비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><span class="select-base disabled">
+  <span class="value"></span>
+  <select>
+    <option value="0">선택</option>
+    <option value="1">값 1</option>
+    <option value="2" selected>긴값긴값긴값긴값긴값긴값긴값긴값긴값긴값긴값 2</option>
+    <option value="3">값 3</option>
+  </select>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>ICON</h2>
+        <div class="code-area">
+          <h3>WEATHER <button>코드 보기</button></h3>
+<div class="code-box"><span class="i-weather rain"></span>
+<span class="i-weather rainfall"></span>
+<span class="i-weather snow"></span>
+<span class="i-weather heavysnow"></span>
+<span class="i-weather rainsnow"></span>
+<span class="i-weather noinfo"></span>
+<span class="i-weather sun"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+
+        <div class="code-area">
+          <h3>WEATHER - Animation <button>코드 보기</button></h3>
+<div class="code-box"><span class="i-weather rain ani"></span>
+<span class="i-weather rainfall ani"></span>
+<span class="i-weather snow ani"></span>
+<span class="i-weather heavysnow ani"></span>
+<span class="i-weather rainsnow ani"></span>
+<span class="i-weather noinfo ani"></span>
+<span class="i-weather sun ani"></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>CCTV <button>코드 보기</button></h3>
+<div class="code-box"><span class="i-obj">
+  <span class="i-cctv"><img src="img/rnd2/ico-cctv.png" alt="" /></span>
+</span>
+<span class="i-obj">
+  <span class="i-cctv"><img src="img/rnd2/ico-cctv.png" alt="" /></span>
+  <span class="i-weather rainfall e-absolute"></span>
+</span>
+<span class="i-obj">
+  <span class="i-cctv"><img src="img/rnd2/ico-cctv.png" alt="" /></span>
+  <span class="e-cctv e-absolute"></span>
+</span>
+<span class="i-obj">
+  <span class="i-cctv"><img src="img/rnd2/ico-cctv.png" alt="" /></span>
+  <span class="i-pentagon e-absolute"></span>
+  <span class="e-cctv e-absolute"></span>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>CAR <button>코드 보기</button></h3>
+<div class="code-box"><span class="i-obj">
+  <span class="i-car"><img src="img/rnd2/ico-car.png" alt="" /></span>
+  <span class="e-point tp1"></span>
+</span>
+<span class="i-obj">
+  <span class="i-car"><img src="img/rnd2/ico-car.png" alt="" /></span>
+  <span class="e-point tp2"></span>
+</span>
+<span class="i-obj">
+  <span class="i-car"><img src="img/rnd2/ico-car.png" alt="" /></span>
+  <span class="e-point tp3"></span>
+</span>
+<span class="i-obj">
+  <span class="i-car"><img src="img/rnd2/ico-car.png" alt="" /></span>
+  <span class="e-point tp4"></span>
+</span>
+<span class="i-obj">
+  <span class="i-car"><img src="img/rnd2/ico-car.png" alt="" /></span>
+  <span class="e-point tp5"></span>
+</span>
+<span class="i-obj">
+  <span class="i-car"><img src="img/rnd2/ico-car.png" alt="" /></span>
+  <span class="e-point tp6"></span>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>Chart</h2>
+        <div class="code-area" style="display: none;">
+          <h3>계기판 <button>코드 보기</button></h3>
+<div class="code-box"><div class="circle-area">
+  <div class="circleChart" id="c1"></div>
+  <div class="circleChart" id="c2"></div>
+</div></div>
+<script>
+  $(".circleChart#c1").circleChart({
+    // default settings
+    color: "#2962ff",
+    // backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "transparent",
+    widthRatio: 0.2,
+    value: 100,
+    size: 140,
+    startAngle: 40,
+    // cAngle: 30,
+    text: 0 + 'Km/h',
+    textSize: 24,
+    textWeight: 600,
+    onDraw: function(el, circle) {
+      $(".circleChart_text", el).html(`<span class="value">${Math.round(circle.value)}</span><span class="unit">Km/h</span>`);
+    }
+  });
+  $(".circleChart#c2").circleChart({
+    color: "#9646ef",
+    // backgroundColor: "transparent",
+    backgroundColor: "transparent",
+    widthRatio: 0.2,
+    size: 140,
+    startAngle: 40,
+    value: 10,
+    text: 0 + 'Km/h',
+    textSize: 24,
+    textWeight: 600,
+    onDraw: function(el, circle) {
+      $(".circleChart_text", el).html(`<span class="value">+${Math.round(circle.value)}</span><span class="unit">Km/h</span>`);
+    }
+  });
+</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>상태현황 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area">
+  <div class="pie-chart-wrap">
+    <div id="pieChart1" class="pie-chart" style="width: 160px; height: 160px;"></div>
+    <div class="pie-value">
+      <span class="value">86</span>
+      <span class="label">EdgeRSU</span>
+    </div>
+    <div class="pie-label">
+      <span class="tp1">정상</span>
+      <span class="tp2">장애</span>
+    </div>
+  </div>
+  <div class="pie-chart-wrap">
+    <div id="pieChart2" class="pie-chart" style="width: 160px; height: 160px;"></div>
+    <div class="pie-value">
+      <span class="value">10</span>
+      <span class="label">장애 세부현황</span>
+    </div>
+    <div class="pie-label">
+      <span class="tp1">통신장애</span>
+      <span class="tp3">전원불량</span>
+    </div>
+  </div>
+</div></div>
+<script>
+  // 그래프 선언
+  var chart1 = bb.generate({
+    data: {
+      columns: [["정상", 75], ["장애", 25]],
+      colors: {"정상": "#2962ff", "장애": "#ae65ff"},
+      type: "donut",
+      // labels: {
+      //   colors: 'white'
+      // },
+      
+      // 콜백 함수
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onover: function(d, i) {
+        console.log("onover", d, i);
+      },
+      onout: function(d, i) {
+        console.log("onout", d, i);
+      }
+    },
+
+    // https://naver.github.io/billboard.js/release/latest/doc/Options.html#.donut
+    donut: {
+      // title: "EdgeRSU",
+      padAngle: 0.05,
+      label: {
+        show: false,
+      },
+      width: 10,
+    },
+
+    // size: {
+    //   width: 152,
+    //   height: 152
+    // },
+    
+    arc: {
+      cornerRadius: {
+        ratio: 0.2,
+      },
+    },
+    legend: {
+      item: {
+        tile: {
+          type: "circle",
+          r: 4
+        }
+      },
+      show: false,
+    },
+    bindto: "#pieChart1",
+  });
+  
+  var chart2 = bb.generate({
+    data: {
+      columns: [["통신장애", 65], ["전원불량", 35]],
+      colors: {"통신장애": "#2962ff", "전원불량": "#43dfa2"},
+      type: "donut",
+    },
+
+    donut: {
+      padAngle: 0.05,
+      label: {
+        show: false,
+      },
+      width: 10,
+    },
+    arc: {
+      cornerRadius: {
+        ratio: 0.2,
+      },
+    },
+    legend: {
+      item: {
+        tile: {
+          type: "circle",
+          r: 4
+        }
+      },
+      show: false,
+    },
+    bindto: "#pieChart2",
+  });
+</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+        <div class="code-area">
+          <h3>계기판 <button>코드 보기</button></h3>
+<div class="code-box">
+  <div class="gauge-chart-wrap">
+    <div id="gaugeChart1" class="gauge-chart" style="width: 150px; height: 150px;"></div>
+    <div class="gauge-value">
+      <span class="value">86</span>
+      <span class="label">Km/h</span>
+    </div>
+    <span class="type-label">주행속도</span>
+  </div>
+  <div class="gauge-chart-wrap">
+    <div id="gaugeChart2" class="gauge-chart" style="width: 150px; height: 150px;"></div>
+    <div class="gauge-value">
+      <span class="value">+10</span>
+      <span class="label">Km/h</span>
+    </div>
+    <span class="type-label">가속도</span>
+  </div>
+</div>
+<script>
+  var gChart1 = bb.generate({
+    data: {
+      columns: [
+        ["data", 0]
+      ],
+      type: "gauge", // for ESM specify as: gauge()
+      onclick: function(d, i) {
+        console.log("onclick", d, i);
+      },
+      onover: function(d, i) {
+        console.log("onover", d, i);
+      },
+      onout: function(d, i) {
+        console.log("onout", d, i);
+      }
+    },
+    arc: {
+      cornerRadius: 15
+    },
+
+    // https://naver.github.io/billboard.js/release/latest/doc/Options.html#.gauge
+    gauge: {
+      background: 'rgba(0, 0, 0, 0.5)',
+      width: 10,
+      arcLength: 70,
+      fullCircle: true,
+      label: {
+        show: false,
+        // format: function (value, ratio) { return value + "\nKm/h"; },
+      },
+      startingAngle: -2.2,
+    },
+    color: {
+      pattern: [
+        "#2962ff",
+        "#2962ff",
+        "#2962ff",
+        "#2962ff"
+      ],
+      threshold: {
+        values: [
+          30,
+          60,
+          90,
+          100
+        ]
+      }
+    },
+    // size: {
+    //   width: 140,
+    //   height: 140
+    // },
+    legend: {
+      show: false,
+    },
+    bindto: "#gaugeChart1"
+  });
+  
+  setTimeout(function() {
+    gChart1.load({
+      columns: [["data", 50]]
+    });
+  }, 500);
+  setTimeout(function() {
+    gChart1.load({
+      columns: [["data", 70]]
+    });
+  }, 1000);
+  setTimeout(function() {
+    gChart1.load({
+      columns: [["data", 80]]
+    });
+  }, 1500);
+
+  var gChart2 = bb.generate({
+    data: {
+      columns: [
+        ["data", 0]
+      ],
+      type: "gauge",
+    },
+    arc: {
+      cornerRadius: 15
+    },
+
+    gauge: {
+      background: 'rgba(0, 0, 0, 0.5)',
+      width: 10,
+      arcLength: 70,
+      fullCircle: true,
+      label: {
+        show: false,
+      },
+      startingAngle: -2.2,
+    },
+    color: {
+      pattern: [
+        "#9646ef",
+        "#9646ef",
+        "#9646ef",
+        "#9646ef"
+      ],
+      threshold: {
+        values: [
+          30,
+          60,
+          90,
+          100
+        ]
+      }
+    },
+    legend: {
+      show: false,
+    },
+    bindto: "#gaugeChart2"
+  });
+
+  setTimeout(function() {
+    gChart2.load({
+      columns: [["data", 20]]
+    });
+  }, 250);
+  setTimeout(function() {
+    gChart2.load({
+      columns: [["data", 30]]
+    });
+  }, 750);
+</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- .section -->
+
+
+      <div class="section">
+        <h2>버튼</h2>
+        <div class="code-area">
+          <h3>버튼 - 타입1 <button>코드 보기</button></h3>
+<div class="code-box"><span class="btn-base tp1"><a href="#">로그아웃</a></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>버튼 - 타입1 - reverse <button>코드 보기</button></h3>
+<div class="code-box"><span class="btn-base tp1 reverse"><a href="#">상세정보</a></span></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>좌측 패널</h2>
+        <div class="code-area">
+          <h3>타입1 <button>코드 보기</button></h3>
+<div class="code-box"><div class="left-wrap type-1">
+  <div class="inner pb40">
+    <p class="tit">EdgeRSU</p>
+    <div class="info-box-wrap">
+      <div class="info-box top">
+        <div class="label-area">
+          <p class="label">EdgeRSU ID</p>
+        </div>
+        <div class="st-area">
+          <span class="name">12345</span>
+          <span class="status normal">정상</span>
+          <span class="status error" style="display: none;">이상</span>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="label-area">
+          <p class="label">위도</p>
+        </div>
+        <div class="st-area">
+          <span class="name">37.450675</span>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="label-area">
+          <p class="label">경도</p>
+        </div>
+        <div class="st-area">
+          <span class="name">126.791891</span>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="label-area">
+          <p class="label">고도</p>
+        </div>
+        <div class="st-area">
+          <span class="name">54.71</span>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="label-area">
+          <p class="label">센서정보</p>
+          <a href="#" class="tip"></a>
+        </div>
+        <ul class="tip-list">
+          <li class="c">C</li>
+          <li class="l">L</li>
+          <li class="r">R</li>
+          <li class="w">W</li>
+        </ul>
+        <div class="tip-wrap" style="display: none;">
+          <ul>
+            <li>
+              <span class="label c">C</span>
+              <span class="name">Camera</span>
+            </li>
+            <li>
+              <span class="label l">L</span>
+              <span class="name">Lidar</span>
+            </li>
+            <li>
+              <span class="label r">R</span>
+              <span class="name">Rader</span>
+            </li>
+            <li>
+              <span class="label w">W</span>
+              <span class="name">Weather</span>
+            </li>
+          </ul>
+          <a href="#" class="btn-close"></a>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="label-area">
+          <p class="label">센싱번위</p>
+        </div>
+        <div class="st-area">
+          <span class="name">다각형</span>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="label-area">
+          <p class="label">SW버전</p>
+        </div>
+        <div class="st-area">
+          <span class="name">1.0.0</span>
+        </div>
+      </div>
+    </div>
+  </div><!-- .inner -->
+  <div class="inner">
+    <p class="tit">EdgeRSU 스틸컷 조회</p>
+    <div class="input-wrap date-search">
+      <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+        <input id="datepicker-input" type="text" aria-label="Date">
+        <span class="tui-ico-date"></span>
+        <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
+      </div>
+      <input type="text" class="input-base tp1" value="00:00:00">
+      <a href="#" class="btn-search"></a>
+    </div>
+    <div class="view-area">
+      <div class="banner-swiper-wrap">
+        <div class="banner-swiper swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="https://placehold.co/288x160/000/FFF" alt="메인 배너" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="https://placehold.co/288x160/000/FFF" alt="메인 배너" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="https://placehold.co/288x160/000/FFF" alt="메인 배너" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="https://placehold.co/288x160/000/FFF" alt="메인 배너" /></a></div>
+          </div>
+        </div>
+        <a href="#" class="btn-prev"></a>
+        <a href="#" class="btn-next"></a>
+      </div>
+    </div>
+    <div class="view-area" style="height: 225px;"></div>
+  </div><!-- .inner -->
+  <div class="bottom-wrap">
+    <span class="swiper-pagination"></span>
+    <a href="#" class="btn-close"></a>
+  </div>
+</div></div>
+<script>$('.left-wrap .info-box .label-area .tip').on('click', function(){
+  if (!$(this).hasClass('on')) {
+    $(this).addClass('on');
+    $(this).closest('.info-box').find('.tip-wrap').show();
+  } else {
+    $(this).removeClass('on');
+    $(this).closest('.info-box').find('.tip-wrap').hide();
+  }
+});
+$('.tip-wrap .btn-close').on('click', function(e){
+  e.preventDefault();
+  $(this).closest('.tip-wrap').hide();
+  $(this).closest('.info-box').find('.tip').removeClass('on');
+});
+
+tui.DatePicker.localeTexts['customKey'] = {
+  titles: {
+      // days
+      DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      // daysShort
+      D: ['일', '월', '화', '수', '목', '금', '토'],
+      // months
+      MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+      // monthsShort
+      MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+  },
+  titleFormat: 'yyyy.MMM',
+  todayFormat: '오늘 : yyyy.MMMM.dd',
+  date: 'Date',
+  time: 'Time'
+};
+var datepicker = new tui.DatePicker('.date_wrapper#general', {
+  language: 'customKey',
+  date: new Date(),
+  input: {
+    element: '#datepicker-input',
+    format: 'YYYY-MM-dd',
+  }
+});
+var bnrSwiepr = new Swiper('.banner-swiper', {
+  pagination: {
+    el: '.bottom-wrap .swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.banner-swiper-wrap .btn-next',
+    prevEl: '.banner-swiper-wrap .btn-prev',
+  },
+  // autoplay: {
+  //   delay: 3000,
+  // },
+  loop: false,
+});
+
+$('.left-wrap .bottom-wrap .btn-close').on('click', function(e){
+  e.preventDefault();
+  $(this).closest('.left-wrap').hide();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>로딩</h2>
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="loading-wrap">
+  <div class="circle" data-dots="100" data-percent="100" style="--bgColor: linear-gradient(to bottom, #2962ff, #5c87ff)"></div>
+  <div class="text">
+      <h2><em>0</em>%</h2>
+      <small>LOADING</small>
+  </div>
+</div></div>
+
+<script>loading();</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div>
+
+      <div class="component-menu">
+        <ul class="component-list"></ul>
+        <span class="btn-base tp1"><a href="#">닫기</a></span><br />
+      </div>
+
+      </div><!-- .content-wrap -->
+
+    </div><!-- #container -->
+    <div id="footer">
+      <p class="copy">COPYRIGHT ©️ 2024 LivingLab. ALL RIGHTS RESERVED.</p>
+      <a href="#" class="btn-top"></a>
+    </div><!-- #footer -->
+  </div><!-- #wrapper -->
+
+  <script>
+    var compMenu = $('.component-menu');
+    var compSection = $('.component .section');
+    var compPosition = [];
+
+    compSection.each(function(){
+      compMenu.find('ul').append('<li>' + $(this).find('h2').text() + '</li>');
+      compPosition.push($(this).position().top)
+    });
+    compMenu.on('click', 'li', function(){
+      $('html, body').animate({ scrollTop: compSection.eq($(this).index()).position().top }, 300);
+    });
+
+    $(window).on('load scroll', function(){
+      var scTop = $(this).scrollTop();
+      var scBottom = scTop >= $(document).height() - $(window).height();
+      for (var i = 0; i < compPosition.length; i++) {
+        if (scBottom) {
+          compMenu.find('li').eq(compPosition.length - 1).addClass('on');
+          compMenu.find('li').eq(compPosition.length - 1).siblings().removeClass('on');
+        } else {
+          if (scTop >= compPosition[i] - 10 && scTop < compPosition[i + 1]) {
+            compMenu.find('li').eq(i).addClass('on')
+            compMenu.find('li').eq(i).siblings().removeClass('on');
+          }
+        }
+      }
+    });
+
+    compMenu.find('.btn-base a').on('click', function(e){
+      e.preventDefault();
+      if ($(this).text() === '닫기') {
+        $(this).text('열기');
+        compMenu.find('.component-list').hide();
+      } else {
+        $(this).text('닫기');
+        compMenu.find('.component-list').show();
+      }
+      
+    });
+
+    setTimeout(function(){
+      // $(window).scrollTop(compSection.eq(14).position().top);
+      compMenu.find('.btn-base a').click();
+    }, 150);
+  </script>
+  <script src="js/prism.js"></script>
+</body>
+</html>

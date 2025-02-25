@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>퍼블리싱 - 코딩맵</title>
+  <link rel="stylesheet" type="text/css" href="./_guide/guide.css" />
+	<script type="text/javascript" src="./_guide/dtree.js"></script>
+</head>
+<body>
+  <div class="guide-wrapper">
+    <div id="content_guide_list">
+      <h1>퍼블리싱 진행표</h1>
+      <h2>진행 표시</h2>
+      <ul>
+  			<li><span style="color:#aeaeae;">■ 작업전</span></li>
+  			<li><span style="color:green;">■ 작업중</span></li>
+  			<li><span style="color:#5727ff;">■ 완료</span></li>
+  			<li><span style="color:#37b4e7;">■ 신규</span></li>
+  			<li><span style="color:#f55;">■ 수정</span></li>
+      </ul>
+      <span id="t_title"></span>
+    </div>
+    <div class="dtree">
+  		<div class="area_btn">
+  			<a href="javascript: b.openAll();"><img src="./_guide/img/btn_expand.gif" alt="Expand All" /></a>
+  			<a href="javascript: b.closeAll();"><img src="./_guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+  		</div>
+  		<script type="text/javascript">
+			//<![CDATA[
+			b = new dTree('b');
+
+			b.add(0, -1, '자율차-일반차 혼재상황 대비 AI기반 자율주행모빌리티 운영 플랫폼 개발');
+			b.add(1, 0, '00 Login' );
+			b.add(1.011, 1, '1-1) 국5_00 Login : 01 Intro','login.html', '완료', '_blank');
+			b.add(1.012, 1, '1-2) 국5_00 Login : 02 Error','login.html?sample=valid1', '완료', '_blank');
+			b.add(1.013, 1, '1-3) 국5_00 Login : 03 Password Setting ','reset_password.html?sample=valid2', '완료', '_blank');
+
+			b.add(2, 0, '01 통합모니터링');
+			b.add(2.011, 2, '1-1) 국5_01-01 통합모니터링', 'main.html', '완료', '_blank');
+			b.add(2.012, 2, '1-2) 국5_01-01 통합모니터링 : 01-01 RSU > Tooltip 정상', 'main.html?sample=tooltip', '완료', '_blank');
+			b.add(2.013, 2, '1-3) 국5_01-01 통합모니터링 : 01-02 RSU > Tooltip 이상', 'main.html?sample=tooltip&type=strange', '완료', '_blank');
+			b.add(2.014, 2, '1-4) 국5_01-01 통합모니터링 : 01-05 RSU > Details : CAR', 'main.html?sample=detail', '완료', '_blank');
+			b.add(2.015, 2, '1-5) 국5_01-01 통합모니터링 : 01-06 RSU > Details : Weather', 'main.html?sample=weather', '완료', '_blank');
+			b.add(2.016, 2, '1-6) 국5_01-01 통합모니터링 : 01-07 RSU > Popup', 'main.html?sample=weather&popup=alert', '완료', '_blank');
+			b.add(2.017, 2, '1-7) 국5_01-01 통합모니터링 : EdgeRSU V2N 가이던스 정보', 'main.html?sample=info', '완료', '_blank');
+			b.add(2.018, 2, '1-8) 국5_01-01 통합모니터링 : 02-01 Car > Tooltip', 'main.html?sample=tooltip&type=car', '완료', '_blank');
+			b.add(2.0191, 2, '1-9-1) 국5_01-01 통합모니터링 : 02-02 Car > Details > Traffic : 원활', 'main.html?sample=carDetails', '완료', '_blank');
+			b.add(2.0192, 2, '1-9-2) 국5_01-01 통합모니터링 : 02-02 Car > Details > Traffic : 지체', 'main.html?sample=carDetails&type=yellow', '완료', '_blank');
+			b.add(2.0193, 2, '1-9-3) 국5_01-01 통합모니터링 : 02-02 Car > Details > Traffic : 정체', 'main.html?sample=carDetails&type=red', '완료', '_blank');
+			b.add(2.0193, 2, '1-9-3) 국5_01-01 통합모니터링 : 02-02 Car > Details > Traffic : 정보없음', 'main.html?sample=carDetails&type=no', '완료', '_blank');
+			b.add(2.0194, 2, '1-9-4) 국5_01-01 통합모니터링 : 02-02 Car > Details > Loading', 'main.html?sample=carDetails&loading=true', '완료', '_blank');
+			
+			b.add(2.020, 2, '1-10) 국5_01-01 통합모니터링 : 03-01 Road > Tooltip', 'main.html?sample=tooltip&type=road', '완료', '_blank');
+			b.add(2.021, 2, '1-11) 국5_01-01 통합모니터링 : 03-02 Road > Full Popup', 'main.html?fpopup=search', '완료', '_blank');
+
+			b.add(3, 0, '02 인프라모니터링');
+			b.add(3.011, 3, '1-1) 국5_02-01 EdegRSU 상태', 'infra.html', '완료', '_blank');
+			b.add(3.012, 3, '1-2) 국5_02-02 EdgeRSU 수집/제공 모니터링', 'infra.html?sample=2', '완료', '_blank');
+			b.add(3.013, 3, '1-3) 국5_02-01 EdegRSU 가공', 'infra.html?sample=3', '완료', '_blank');
+
+			b.add(4, 0, '03 컴포넌트');  
+			b.add(4.01, 4, '1) 컴포넌트 가이드', 'component.html', '작업중', '_blank');
+
+			b.add(5, 0, '04 3차 작업');  
+			b.add(5.01, 5, '1) 국5_01-01 통합모니터링 : 01-06 RSU > Details : Weather', 'main.html?sample=weather', '완료', '_blank');
+			b.add(5.021, 5, '2-1) 국5_01-01 통합모니터링 : 00:00:00 ~ 05:59:59', 'main.html?sample=time1', '완료', '_blank');
+			b.add(5.022, 5, '2-2) 국5_01-01 통합모니터링 : 06:00:00 ~ 11:59:59', 'main.html?sample=time2', '완료', '_blank');
+			b.add(5.023, 5, '2-3) 국5_01-01 통합모니터링 : 12:00:00 ~ 17:59:59', 'main.html?sample=time3', '완료', '_blank');
+			b.add(5.024, 5, '2-4) 국5_01-01 통합모니터링 : 18:00:00 ~ 23:59:59', 'main.html?sample=time4', '완료', '_blank');
+			b.add(5.03, 5, '3) 국5_01-01 통합모니터링 : 레이어 관리', 'main.html?sample=layer', '완료', '_blank');
+			b.add(5.041, 5, '4-1) 국5_01-01 통합모니터링 : 02-02 Car > Details > 가이던스 정보 +', 'main.html?sample=carDetails', '완료', '_blank');
+			b.add(5.042, 5, '4-2) 국5_01-01 통합모니터링 : 02-03 Car > Pop up', 'main.html?sample=carDetails&popup=v2n', '완료', '_blank');
+			b.add(5.051, 5, '5-1) 국5_02-01 EdegRSU 상태 : 멀티셀렉선택', 'multi_select.html', '완료', '_blank');
+			b.add(5.052, 5, '5-2) 국5_02-01 EdegRSU 상태 : 멀티셀렉선택 - 열림', 'multi_select.html?sample=open', '완료', '_blank');
+
+			document.write(b);
+			//]]>
+  		</script>
+  	</div>
+  </div>
+</body>
+</html>
