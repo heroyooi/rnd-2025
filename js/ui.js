@@ -471,16 +471,16 @@ var GUI = window.GUI || (function(){
         setTimeout(hide, 200);
       });
     },
-    toastUI: function(text, bottom, zIndex) {      
+    toastUI: function($html, top, zIndex) {      
       if (!runToast) {
         runToast = true;
         var $toast = $('.toast-area');
         if (zIndex) $toast.css('z-index', zIndex);        
         $toast.stop().css('display', 'block');
-        $toast.append('<p class="txt">'+ text +'</p>');
+        $toast.append($html);
         setTimeout(function(){
-          if (bottom) {
-            $toast.css({ bottom: bottom });
+          if (top) {
+            $toast.css({ top: top });
           }        
           $toast.addClass('on');
           setTimeout(function(){

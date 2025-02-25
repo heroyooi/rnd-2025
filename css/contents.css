@@ -228,3 +228,10 @@
 .home-box .link-box .sy{background:#2dbe85 url(../img/rnd2/img_sy.png) 50% bottom no-repeat;}
 .home-box .link-box a:hover{box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);}
 .home-box .link-box a:hover .arrow{display:flex;}
+
+.lt-item-wrap{position: absolute;left:22px;top:80px;background-color:#1d1e22;border-radius:20px;width:76px;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);overflow:hidden;}
+.lt-item-wrap li > a{display:block;padding:8px;font-size:13px;color:#fff;line-height:1.5;text-align:center;font-weight:bold;}
+.lt-item-wrap li > a::before{content:'';display:block;width:24px;height:24px;margin:0 auto 8px;}
+.lt-item-wrap li.li1 > a::before{background:url(../img/ico-notifi-def.png) 50% 50% no-repeat;}
+.lt-item-wrap li.li2 > a::before{background:url(../img/ico-event-def.png) 50% 50% no-repeat;}
+.lt-item-wrap li.on > a{background-color: #234091;}
