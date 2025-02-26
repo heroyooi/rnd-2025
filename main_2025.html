@@ -97,7 +97,7 @@
       <div class="left-wrap" id="left-unexpected" style="left: 107px; display: none;">
         <div class="inner">
           <p class="tit">돌발정보</p>
-          <div class="tb-wrap">
+          <div class="tb-wrap w-scrollbar">
             <table summary="돌발정보 현황" class="tb-status">
               <colgroup>
                 <col width="*" />
@@ -1242,7 +1242,9 @@
               <span class="con">2025-02-14 14:00:00</span>
             </li>
           </ul>
-          <div class="tip-info">&lt;공사&gt; 지방도1132호선 서사라사거리 한국병원앞 주의운전 공사 - 서광로, 서사라사거리 -제주시버스터미널 방향, 서사라사거리 직후 1차로, 중앙분리대 교체 작업</div>
+          <div class="tip-info">
+            <div class="inner c-scrollbar">&lt;공사&gt; 지방도1132호선 서사라사거리 한국병원앞 주의운전 공사 - 서광로, 서사라사거리 -제주시버스터미널 방향, 서사라사거리 직후 1차로, 중앙분리대 교체 작업 지방도1132호선 서사라사거리 한국병원앞 주의운전 공사 - 서광로, 서사라사거리 -제주시버스터미널 방향, 서사라사거리 직후 1차로, 중앙분리대 교체 작업 지방도1132호선 서사라사거리 한국병원앞 주의운전 공사 - 서광로, 서사라사거리 -제주시버스터미널 방향, 서사라사거리 직후 1차로, 중앙분리대 교체 작업</div>
+        </div>
         </div>
         <a href="#" class="btn-close tp2"></a>
       </div>
@@ -2055,14 +2057,14 @@
         }
       }
     });
-    $('.item-wrap ul li').on('click', function(){
-      if (!$(this).find('a').hasClass('btn-index')) {
+    $('.item-wrap > ul > li > a').on('click', function(){
+      if (!$(this).hasClass('btn-index')) {
         return;
       }
-      if (!$(this).hasClass('on')) {
-        $(this).addClass('on');
+      if (!$(this).closest('li').hasClass('on')) {
+        $(this).closest('li').addClass('on');
       } else {
-        $(this).removeClass('on');
+        $(this).closest('li').removeClass('on');
       }
     })
 

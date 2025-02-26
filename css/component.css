@@ -99,6 +99,7 @@ color:#fff;}
 .tooltip-area .tip-content .btns-wrap{margin-top:12px;}
 .tooltip-area .tip-content .btns-wrap .btn-base{width:100%;}
 .tooltip-area .tip-content .tip-info{line-height:1.5;font-size:14px;color:#fff;padding-top:16px;border-top:1px solid #1c4d9c;margin-top:16px;}
+.tooltip-area .tip-content .tip-info .inner{max-height:82px;}
 .tooltip-area .btn-close{position:absolute;left:50%;bottom:-28px;margin-left:-24px;width:48px;height:28px;}
 .tooltip-area .btn-close span{
   position: absolute;
@@ -346,6 +347,10 @@ color:#fff;}
 .tb-status tbody tr.tp4 td a:not(.none):hover, .tb-status tbody tr.tp4 td a.on{color:#f34bab;}
 .tb-status tbody tr.tp5 td a:not(.none):hover, .tb-status tbody tr.tp5 td a.on{color:#0eadd0;}
 .tb-status tbody tr.tp6 td a:not(.none):hover, .tb-status tbody tr.tp6 td a.on{color:#ff852e;}
+.tb-wrap.w-scrollbar{overflow-y:scroll;}
+.tb-wrap.w-scrollbar::-webkit-scrollbar{border-radius:8px;background:transparent;width:14px;}
+.tb-wrap.w-scrollbar::-webkit-scrollbar-track{border-radius:8px;background:transparent;} 
+.tb-wrap.w-scrollbar::-webkit-scrollbar-thumb{background-color:rgba(79, 82, 107, 0.3);border-radius:8px;background-clip:padding-box;border:4px solid transparent;}
 
 .badge-area{display:flex;gap:0 8px;align-items:center;}
 .badge-area .badge{padding:1.5px 12px;border-radius:14px;}
@@ -437,7 +442,7 @@ color:#fff;}
 }
 
 /* toast */
-.toast-area{position:fixed;border-radius: 8px;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);border: solid 1px #fe0000;background-color: rgba(254, 0, 0, 0.15);z-index:3;padding:14px 16px;opacity:0;top:-60px;transition:opacity .5s, top .5s;width:600px;left:50%;transform:translateX(-50%) !important;}
+.toast-area{position:absolute;border-radius: 8px;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);border: solid 1px #fe0000;background-color: rgba(254, 0, 0, 0.15);z-index:3;padding:14px 16px;opacity:0;top:-60px;transition:opacity .5s, top .5s;width:600px;right:calc(50% + 220px);margin-right:-300px;}
 .toast-area.on{top:34px;opacity:1;}
 .toast-area .toast-con{font-size:16px;font-weight:600;line-height:1.5;color:#e50000;display:flex;justify-content:space-between;align-items:center;gap:0 10px;}
 .toast-area .toast-con a{font-size:13px;font-weight:700;color:#fff;background-image: linear-gradient(to right, #e50000, #fe0000);padding:2px 12px;border-radius:14px;}

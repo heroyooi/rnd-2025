@@ -483,15 +483,15 @@ var GUI = window.GUI || (function(){
             $toast.css({ top: top });
           }        
           $toast.addClass('on');
-          setTimeout(function(){
-            $toast.attr('style', null);
-            $toast.removeClass('on');
-            setTimeout(function(){
-              $toast.stop().css('display', 'none');
-              $toast.find('.txt').remove();
-              runToast = false;
-            }, 500);
-          }, 2000);
+          // setTimeout(function(){
+          //   $toast.attr('style', null);
+          //   $toast.removeClass('on');
+          //   setTimeout(function(){
+          //     $toast.stop().css('display', 'none');
+          //     $toast.find('.txt').remove();
+          //     runToast = false;
+          //   }, 500);
+          // }, 2000);
         }, 150);
       }
     },
