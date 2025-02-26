@@ -2057,7 +2057,8 @@
         }
       }
     });
-    $('.item-wrap > ul > li > a').on('click', function(){
+    $('.item-wrap > ul > li > a').on('click', function(e){
+      e.stopPropagation();
       if (!$(this).hasClass('btn-index')) {
         return;
       }
@@ -2066,8 +2067,50 @@
       } else {
         $(this).closest('li').removeClass('on');
       }
-    })
+    });
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('.item-wrap').length) {
+        $('.item-wrap > ul > li.on').removeClass('on');
+      }
+    });
 
+    var toastQueue = [];
+    var maxToasts = 3;
+
+    function toastUI($html, top = 80, zIndex = 10) {
+      var $toast = $('<div class="toast-area"></div>');
+
+      if (zIndex) $toast.css('z-index', zIndex);
+      $toast.css({ top: top });
+
+      $toast.append($html);
+      $('body').append($toast);
+
+      setTimeout(() => {
+        $toast.addClass('on');
+      }, 50);
+
+      toastQueue.push($toast);
+
+      if (toastQueue.length > maxToasts) {
+        var oldToast = toastQueue.shift();
+        removeToast(oldToast);
+      }
+
+      setTimeout(() => {
+        removeToast($toast);
+      }, 3000);
+    }
+
+    function removeToast($toast) {
+      // $toast.removeClass('on');
+      $toast.addClass('remove');
+
+      setTimeout(() => {
+        $toast.stop().remove();
+        toastQueue = toastQueue.filter(item => item !== $toast);
+      }, 500);
+    }
     var Qsample = $.urlParam('sample');
     var Qtype = $.urlParam('type');
     var Qpopup = $.urlParam('popup');
@@ -2079,12 +2122,30 @@
           $('#tooltip_accident').show();
           $('#tooltip_construction').show();
           $('.btn-index').closest('li').click();
-          GUI.toastUI(
+          
+          toastUI(
             `<p class="toast-con">
-              <span class="txt">[자율주행차] 고장 - 센서 오작동[자율주행차] 고장 - 센서 오작동</span>
+              <span class="txt">첫 번째 메시지</span>
               <a href="#">위치보기 +</a>
-            </p>`
-          , 80);
+            </p>`, 80);
+
+          setTimeout(() => {
+            toastUI(
+              `<p class="toast-con">
+                <span class="txt">두 번째 메시지</span>
+                <a href="#">위치보기 +</a>
+              </p>`, 144);
+          }, 500);
+
+          setTimeout(() => {
+            toastUI(
+              `<p class="toast-con">
+                <span class="txt">세 번째 메시지</span>
+                <a href="#">위치보기 +</a>
+              </p>`, 208);
+          }, 1000);
+
+
         } else if (Qsample == 'leftUnexpected') {
           $('.lt-item-wrap li > a[href="#left-unexpected"]').click();
           $('#tooltip_accident').show();

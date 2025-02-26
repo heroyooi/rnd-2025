@@ -1,5 +1,4 @@
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
-var runToast = false;
 
 $.urlParam = function(name){
   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
@@ -470,30 +469,6 @@ var GUI = window.GUI || (function(){
         sub = 1;
         setTimeout(hide, 200);
       });
-    },
-    toastUI: function($html, top, zIndex) {      
-      if (!runToast) {
-        runToast = true;
-        var $toast = $('.toast-area');
-        if (zIndex) $toast.css('z-index', zIndex);        
-        $toast.stop().css('display', 'block');
-        $toast.append($html);
-        setTimeout(function(){
-          if (top) {
-            $toast.css({ top: top });
-          }        
-          $toast.addClass('on');
-          // setTimeout(function(){
-          //   $toast.attr('style', null);
-          //   $toast.removeClass('on');
-          //   setTimeout(function(){
-          //     $toast.stop().css('display', 'none');
-          //     $toast.find('.txt').remove();
-          //     runToast = false;
-          //   }, 500);
-          // }, 2000);
-        }, 150);
-      }
     },
     checkAllUI: function(selector, mode, callback){
       var chkGroup = null;

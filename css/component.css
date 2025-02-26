@@ -347,10 +347,10 @@ color:#fff;}
 .tb-status tbody tr.tp4 td a:not(.none):hover, .tb-status tbody tr.tp4 td a.on{color:#f34bab;}
 .tb-status tbody tr.tp5 td a:not(.none):hover, .tb-status tbody tr.tp5 td a.on{color:#0eadd0;}
 .tb-status tbody tr.tp6 td a:not(.none):hover, .tb-status tbody tr.tp6 td a.on{color:#ff852e;}
-.tb-wrap.w-scrollbar{overflow-y:scroll;}
 .tb-wrap.w-scrollbar::-webkit-scrollbar{border-radius:8px;background:transparent;width:14px;}
 .tb-wrap.w-scrollbar::-webkit-scrollbar-track{border-radius:8px;background:transparent;} 
 .tb-wrap.w-scrollbar::-webkit-scrollbar-thumb{background-color:rgba(79, 82, 107, 0.3);border-radius:8px;background-clip:padding-box;border:4px solid transparent;}
+.tb-wrap.w-scrollbar, .tb-wrap.w-scrollbar + .tb-wrap.c-scrollbar{overflow-y:scroll;width:calc(100% + 15px);}
 
 .badge-area{display:flex;gap:0 8px;align-items:center;}
 .badge-area .badge{padding:1.5px 12px;border-radius:14px;}
@@ -442,8 +442,30 @@ color:#fff;}
 }
 
 /* toast */
-.toast-area{position:absolute;border-radius: 8px;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);border: solid 1px #fe0000;background-color: rgba(254, 0, 0, 0.15);z-index:3;padding:14px 16px;opacity:0;top:-60px;transition:opacity .5s, top .5s;width:600px;right:calc(50% + 220px);margin-right:-300px;}
-.toast-area.on{top:34px;opacity:1;}
+.toast-area{
+  position: absolute;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: solid 1px #fe0000;
+  background-color: rgba(254, 0, 0, 0.15);
+  z-index: 3;
+  padding: 14px 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  width: 600px;
+  right: calc(50% + 220px);
+  margin-right: -300px;
+}
+.toast-area.on{
+  opacity: 1;
+  transform: translateY(0);
+}
+.toast-area.remove{
+  opacity: 0;
+  transform: translateY(-20px);
+}
 .toast-area .toast-con{font-size:16px;font-weight:600;line-height:1.5;color:#e50000;display:flex;justify-content:space-between;align-items:center;gap:0 10px;}
 .toast-area .toast-con a{font-size:13px;font-weight:700;color:#fff;background-image: linear-gradient(to right, #e50000, #fe0000);padding:2px 12px;border-radius:14px;}
 
