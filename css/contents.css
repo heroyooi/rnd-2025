@@ -234,4 +234,5 @@
 .lt-item-wrap li > a::before{content:'';display:block;width:24px;height:24px;margin:0 auto 8px;}
 .lt-item-wrap li.li1 > a::before{background:url(../img/ico-notifi-def.png) 50% 50% no-repeat;}
 .lt-item-wrap li.li2 > a::before{background:url(../img/ico-event-def.png) 50% 50% no-repeat;}
+.lt-item-wrap li.li3 > a::before{background:url(../img/ico-rotation-def.png) 50% 50% no-repeat;}
 .lt-item-wrap li.on > a{background-color: #234091;}

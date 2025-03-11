@@ -91,6 +91,7 @@
         <ul>
           <li class="li1"><a href="#left-unexpected">돌발정보</a></li>
           <li class="li2"><a href="#left-event">이벤트정보</a></li>
+          <li class="li3"><a href="#left-rotation">회전교통량</a></li>
         </ul>
       </div>
 
@@ -323,6 +324,134 @@
           <div class="tb-wrap c-scrollbar" id="noData" style="display: none;">
             <p class="no-data">이벤트 정보가 없습니다.</p>
           </div>
+        </div>
+        <div class="bottom-wrap">
+          <a href="#" class="btn-close"></a>
+        </div>
+      </div>
+
+      <div class="left-wrap" id="left-edgersu" style="left: 107px; display: none;">
+        <div class="inner">
+          <p class="tit">EdgeRSU 자율차 진입 예정 정보</p>
+          <div class="tb-wrap w-scrollbar">
+            <table summary="EdgeRSU 자율차 진입 예정 정보" class="tb-status">
+              <colgroup>
+                <col width="15%" />
+                <col width="15%" />
+                <col width="30%" />
+                <col width="*" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">과제명</th>
+                  <th scope="col">차종/차량ID</th>
+                  <th scope="col">진입예정/남은거리</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tb-wrap c-scrollbar">
+            <table summary="EdgeRSU 자율차 진입 예정 정보" class="tb-status">
+              <colgroup>
+                <col width="15%" />
+                <col width="15%" />
+                <col width="30%" />
+                <col width="*" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>40</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>39</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>38</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>37</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>36</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>35</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>34</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>33</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>32</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>31</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+                <tr>
+                  <td>29</td>
+                  <td>국-10</td>
+                  <td>스포티지 <br />(일이삼사오)</td>
+                  <td>5분 도착예정 <br />1,130m</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="total-wrap mt20">
+            <div class="total">
+              <span class="label">Total</span>
+              <span class="count">40</span>
+            </div>
+            <div class="paging-area">
+              <a href="#" class="btn-first disabled"></a>
+              <a href="#" class="btn-prev disabled"></a>
+              <div class="paging">
+                <input class="current" type="text" value="00" />
+                <span class="line">/</span>
+                <span class="num">2</span>
+              </div>
+              <a href="#" class="btn-next"></a>
+              <a href="#" class="btn-last"></a>
+            </div>
+          </div><!-- .total-wrap -->
         </div>
         <div class="bottom-wrap">
           <a href="#" class="btn-close"></a>
@@ -2158,6 +2287,8 @@
             $('#isData').hide();
             $('#noData').show();
           }
+        } else if (Qsample == 'edgersu') {
+          $('#left-edgersu').show();
         }
       }, 250);
     }
@@ -2195,6 +2326,7 @@
 
     $(window).on('load resize', function(){
       $('.left-wrap .tb-wrap.c-scrollbar').css('height', $(window).height() - 245);
+      $('.left-wrap#left-edgersu .tb-wrap.c-scrollbar').css('height', $(window).height() - 290);
     });
     
     $('.lt-item-wrap li').on('click', function(e){
