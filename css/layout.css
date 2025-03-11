@@ -130,6 +130,7 @@ body{width:100%;background-color:#313131;}
 .item-wrap ul > li > a.btn-index{background-image:url(../img/rnd2/ico-index-def.png);border-radius:20px;}
 .item-wrap ul > li > a.btn-plus{background-image:url(../img/rnd2/ico-plus-def.png);border-radius:20px 20px 0 0;}
 .item-wrap ul > li > a.btn-minus{background-image:url(../img/rnd2/ico-minus-def.png);border-radius:0 0 20px 20px}
+.item-wrap ul > li > a.btn-cctv{background-image:url(../img/ico-indexrsu-def.png);border-radius:20px;}
 .item-wrap ul li .tip{padding:4px 8px;border-radius:4px;background-color: rgba(29, 30, 34, 0.9);position: absolute;left:-9px;top:50%;transform:translate(-100%, -50%);white-space:nowrap;font-size:13px;line-height:1.5;display:none;}
 .item-wrap ul li .tip::after{content:'';display:inline-block;width:5px;height:10px;background:url(../img/rnd2/ico-tootip-point.png) 0 0 no-repeat;position: absolute;right:-5px;top:9px;}
 .item-wrap ul li:not(.on):hover .tip{display:inline-block;}
