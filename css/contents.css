@@ -106,6 +106,9 @@
 .left-wrap .bottom-wrap .swiper-pagination-bullet{border: solid 2px #2962ff;opacity:1;background-color:transparent;margin:0 2px;border-radius:4px;}
 .left-wrap .bottom-wrap .swiper-pagination-bullet-active{width:24px;background-color:#2962ff;}
 .left-wrap .bottom-wrap .btn-close{display:inline-block;width:18px;height:18px;background:url(../img/rnd2/ico-close-b.png) 0 0 no-repeat;position: absolute;right:-4px;top:13px;z-index:2;}
+.left-wrap.type-sub{-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);background-color: rgba(29, 33, 46, 0.9);}
+.left-wrap.type-sub .inner{background:none;min-height:926px;}
+.left-wrap#left-rotation .inner{min-height:926px;}
 
 .tip-wrap{position:absolute;right:16px;top:31px;padding: 12px 26px 12px 12px;border-radius: 8px;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);background-color: rgba(41, 98, 255, 0.3);width:140px;z-index:3;}
 .tip-wrap .c-info li{display:flex;align-items:center;gap:0 4px;margin-top:8px;}
@@ -130,6 +133,7 @@
 
 .info-tit-wrap{position: relative;display:flex;justify-content:space-between;align-items:center;}
 .info-tit-wrap .info-tit{font-size:14px;font-weight:bold;color:#5c87ff;line-height:1.5;}
+.info-tit-wrap .info-tit.lg{font-size:16px;}
 .info-tit-wrap .dot.back{font-size:0;position:relative;display:flex;gap:0 4px;flex-direction:row-reverse;}
 .info-tit-wrap .dot span{display:inline-block;width:4px;height:4px;border-radius:2px;}
 .info-tit-wrap .dot span:nth-child(1){background-color: #2962ff;}
@@ -143,6 +147,11 @@
 .info-car-wrap .car-item{display:flex;justify-content:space-between;align-items:center;}
 .info-car-wrap .car-item .c-id, .info-car-wrap .car-item .c-btn{font-size:13px;line-height:1.5;color:#fff;}
 .info-car-wrap .car-item .c-btn{padding:2px 14px;display:inline-block;border-radius:14px;background-image: linear-gradient(to right, #2962ff, #5c87ff);}
+.info-car-wrap .car-item .c-btn.green{background-image: linear-gradient(to left, #2dbe85, #1dba7c);
+}
+.info-car-wrap .car-item .car-text{text-align:left;}
+.info-car-wrap .car-item .car-btns .c-btn{display:block;}
+.info-car-wrap .car-item .car-btns .c-btn + .c-btn{margin-top:8px;}
 .info-chart-wrap{margin-top:40px;text-align:center;}
 
 .weather-swiper-wrap{width:calc(100% + 20px);}

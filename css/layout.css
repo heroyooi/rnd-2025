@@ -161,6 +161,12 @@ body{width:100%;background-color:#313131;}
 .item-wrap ul li .item-map .t-map:hover .label, .item-wrap ul li .item-map .t-map.on .label{opacity:1;}
 .item-wrap ul li .item-map .t-map:hover::before, .item-wrap ul li .item-map .t-map.on::before{background-color: rgba(41, 98, 255, 0.45);border-color:rgba(41, 98, 255, 0.45);}
 
+.item-wrap ul.toggle-list{width:auto;margin-top:15px;}
+.item-wrap ul.toggle-list li{margin-top:9px;display:flex;justify-content:space-between;padding:2px 0;align-items:center;}
+.item-wrap ul.toggle-list li:first-child{margin-top:0;}
+.item-wrap ul.toggle-list li .btn-switch{display:block;width:32px;height:16px;background:url(../img/ico-toggle-off.png) 50% 50% no-repeat;}
+.item-wrap ul.toggle-list li .btn-switch.on{background:url(../img/ico-toggle-on.png) 50% 50% no-repeat;}
+
 .item-wrap.left{right:initial;bottom:inherit;left:20px;top:50%;transform:translateY(-50%);}
 .item-wrap.left ul li .tip{left:initial;right:-9px;transform:translate(100%, -50%);}
 .item-wrap.left ul li .tip::after{right:initial;left:-5px;transform:rotate(180deg);}
