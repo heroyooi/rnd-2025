@@ -397,7 +397,7 @@
         </div>
       </div>
 
-      <div class="left-wrap type-sub" style="left: 527px; width: 340px; display: none;">
+      <div class="left-wrap type-sub" id="left-edgersu" style="left: 527px; width: 340px; display: none;">
         <div class="inner">
           <p class="tit">자율차 EdgeRSU 진입 예정 정보</p>
           <div class="tb-wrap">
@@ -1050,7 +1050,7 @@
               </div>
               <div class="car-btns">
                 <a href="#popup-v2n" class="c-btn btn-popup-anim-1">가이던스 정보 +</a>
-                <a href="#popup-v2n" class="c-btn btn-popup-anim-1 green">진입 예정정보 +</a>
+                <a href="#" class="c-btn green" id="openLeftedge">진입 예정정보 +</a>
               </div>
             </div>
             
@@ -1649,9 +1649,9 @@
 
     <div class="item-wrap">
       <ul>
-        <li>
+        <li class="li-cctv">
           <a href="#" class="btn-cctv"></a>
-          <span class="tip">CCTV</span>
+          <!-- <span class="tip">CCTV</span> -->
           <div class="item-tip">
             <span class="t-label">Edge RSU 정보</span>
             <ul class="toggle-list">
@@ -2531,6 +2531,7 @@
         }
       }
     });
+    
     $('.item-wrap > ul > li > a').on('click', function(e){
       e.stopPropagation();
       if (!$(this).hasClass('btn-index') && !$(this).hasClass('btn-cctv')) {
@@ -2670,7 +2671,7 @@
         } else if (Qsample == 'guide') {
           $('.left-wrap.type-2').css('left', 107);
           $('.left-wrap.type-2').show();
-          $('.left-wrap.type-sub').show();
+          // $('.left-wrap.type-sub').show();
           $('.i-time').show();
           setTimeout(() => {
             carSwiper.update(true);
@@ -2751,6 +2752,14 @@
         $(this).addClass('on');
       } else {
         $(this).removeClass('on');
+      }
+    })
+
+    $('#openLeftedge').on('click', function(){
+      if ($('#left-edgersu').css('display') == 'none') {
+        $('#left-edgersu').show();
+      } else {
+        $('#left-edgersu').hide();
       }
     })
   </script>

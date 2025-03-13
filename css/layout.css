@@ -124,6 +124,8 @@ body{width:100%;background-color:#313131;}
 .item-wrap{position:absolute;right:460px;bottom:20px;}
 .item-wrap ul{width:40px;}
 .item-wrap ul li{position: relative;}
+.item-wrap ul li.li-cctv:hover .item-tip{display:block;}
+.item-wrap ul li.li-cctv::before{content:'';display:block;width:10px;height:40px;position: absolute;top:0;right:40px;}
 .item-wrap ul > li > a{display:block;width:40px;height:40px;background-color:#1d1e22;background-repeat:no-repeat;background-position:50% 50%;}
 .item-wrap ul > li > a:hover,
 .item-wrap ul > li.on > a{background-color:#0041f5;}
