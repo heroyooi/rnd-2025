@@ -507,7 +507,7 @@ body.ver_light .tui-calendar .tui-calendar-body{padding-top:8px;}
 body.ver_light .tui-calendar th{height:21px;}
 body.ver_light .tui-calendar td{height:32px;}
 body.ver_light .tui-datepicker-input{height:38px;border:0;}
-body.ver_light .tui-datepicker-input > input{padding:9px 27px 9px 16px;font-size:14px;color:#181818;border-radius:4px;}
+body.ver_light .tui-datepicker-input > input{padding:9px 27px 9px 16px;font-size:14px;color:#181818;border-radius:4px;border:1px solid #f2f2f2;}
 body.ver_light .tui-datepicker-input > input{background-color: #fff;}
 body.ver_light .tui-calendar .tui-calendar-title-today{background-color:#f2f4f6;color:#181818;font-size:14px;}
 body.ver_light .tui-datepicker .tui-is-selectable.tui-is-selected, body.ver_light .tui-datepicker.tui-rangepicker .tui-is-selectable.tui-is-selected{background-color:#046bff;border-radius:4px;}
@@ -517,20 +517,20 @@ body.ver_light .tui-datepicker-input.tui-has-focus .tui-ico-date{background-posi
 
 body.ver_light .btn-search{width:28px;height:28px;background:url(../img/ico-search.png) 0 0 no-repeat;}
 
-.tab-search-wrap .tab-base{display:flex;}
-.tab-search-wrap .tab-base li{margin-left:1px;border-bottom:1px solid #fff;}
-.tab-search-wrap .tab-base li.on{border-bottom:1px solid #2962ff;}
-.tab-search-wrap .tab-base li:first-child{margin-left:0;}
-.tab-search-wrap .tab-base li a{display:block;padding:11px 40px;background-color: #f2f5f6;border-radius:20px 20px 0 0;font-size:16px;line-height:1.5;font-weight:bold;color:#4f526b;}
-.tab-search-wrap .tab-base li.on a{background-color: #2962ff;color:#fff;}
+.tab-area .tab-base{display:flex;}
+.tab-area .tab-base li{margin-left:1px;border-bottom:1px solid #fff;}
+.tab-area .tab-base li.on{border-bottom:1px solid #2962ff;}
+.tab-area .tab-base li:first-child{margin-left:0;}
+.tab-area .tab-base li a{display:block;padding:11px 40px;background-color: #f2f5f6;border-radius:20px 20px 0 0;font-size:16px;line-height:1.5;font-weight:bold;color:#4f526b;}
+.tab-area .tab-base li.on a{background-color: #2962ff;color:#fff;}
 
-body.ver_light .multi-select > a{background-color: #fff;color:#1d1e22;border:2px solid #fff;padding:6.5px 32px 6.5px 14px;}
-body.ver_light .multi-select.on > a{border:2px solid #2962ff;}
+body.ver_light .multi-select > a{background-color: #fff;color:#1d1e22;border:1px solid #dcdee2;padding:7.5px 33px 7.5px 15px;}
+body.ver_light .multi-select.on > a{border:2px solid #2962ff;padding:6.5px 32px 6.5px 14px;}
 body.ver_light .multi-select > a::after{background:url(../img/ico-arrow-setdf.png) 0 0 no-repeat;}
 body.ver_light .multi-select .chk-wrap{background-color: #fff;}
 body.ver_light .chk-base input + label:before{background: url(../img/check-off.png) 0 0 no-repeat;}
 body.ver_light .chk-base input:checked + label:before{background:url(../img/rnd2/check-ms-on.png) 50% 50% no-repeat;}
 body.ver_light .search-area .form-list > li .chk-list > li .chk-area label{font-weight:400;color:#121419;}
 body.ver_light .chk-list > li .chk-area .btn-arrow{background: url(../img/ico-arrow-setdf.png) 50% 50% no-repeat;}
-body.ver_light .form-list > li .label{margin-left:8px;}
+body.ver_light .form-list > li .label{margin-left:8px;min-width:50px;font-size:14px;color:#595959;font-weight:700;}
 body.ver_light .form-list > li .label:first-child{margin-left:0;}

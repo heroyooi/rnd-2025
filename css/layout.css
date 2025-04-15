@@ -208,3 +208,4 @@ body.home #container{min-height:calc(100vh - 184px);display:flex;justify-content
 .content-wrap{position: relative;margin-top:40px;}
 
 body.ver_light{background-color: #fff;}
+body.ver_light #gnb{gap:0 44px;}

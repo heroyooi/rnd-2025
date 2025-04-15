@@ -245,3 +245,8 @@
 .lt-item-wrap li.li2 > a::before{background:url(../img/ico-event-def.png) 50% 50% no-repeat;}
 .lt-item-wrap li.li3 > a::before{background:url(../img/ico-rotation-def.png) 50% 50% no-repeat;}
 .lt-item-wrap li.on > a{background-color: #234091;}
+
+.content-area{display:flex;flex-wrap:wrap;text-align:left;margin-top:40px;gap:35px 40px;}
+.content-area .chart-con{width:calc(50% - 20px);}
+.content-area .con-tit{font-size:18px;font-weight:600;color:#1d1e22;}
+.content-area .con-box{border:1px solid #f2f2f2;border-radius:20px;}
