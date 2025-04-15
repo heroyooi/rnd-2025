@@ -248,5 +248,7 @@
 
 .content-area{display:flex;flex-wrap:wrap;text-align:left;margin-top:40px;gap:35px 40px;}
 .content-area .chart-con{width:calc(50% - 20px);}
-.content-area .con-tit{font-size:18px;font-weight:600;color:#1d1e22;}
+.content-area .con-tit{font-size:18px;font-weight:600;color:#1d1e22;line-height:27px;position: relative;padding-left:22px;}
+.content-area .con-tit::before{content:'';display:block;width:18px;height:18px;background:url(../img/ico-chart.png) 50% 50% no-repeat;position: absolute;left:0;top:4.5px}
 .content-area .con-box{border:1px solid #f2f2f2;border-radius:20px;}
+.content-area .con-tit + .con-box{margin-top:8px;}
