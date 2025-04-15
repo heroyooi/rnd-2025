@@ -196,6 +196,7 @@ body.home #container{min-height:calc(100vh - 184px);display:flex;justify-content
 .tit-wrap .tit.faq::before{background:url(../img/icon-l-faq.png) 0 0 no-repeat;}
 .tit-wrap .tit.qna::before{background:url(../img/icon-l-qna.png) 0 0 no-repeat;}
 .tit-wrap .tit.org::before{background:url(../img/icon-l-m-institution.png) 0 0 no-repeat;}
+.tit-wrap .tit.aicar::before{background:url(../img/icon-l-aicar.png) 0 0 no-repeat;}
 .tit-wrap .navi-area{position: absolute;right:0;bottom:0;font-size:0;}
 .tit-wrap .navi-area li{float:left;position: relative;padding-left:22px;margin-left:4px;}
 .tit-wrap .navi-area li::before{content:'';display:block;width:18px;height:18px;background:url(../img/ico-arrow-location.png) 0 0 no-repeat;position: absolute;left:0;top:0;}
@@ -206,4 +207,4 @@ body.home #container{min-height:calc(100vh - 184px);display:flex;justify-content
 
 .content-wrap{position: relative;margin-top:40px;}
 
-body.ver_admin{background-color: #fff;}
+body.ver_light{background-color: #fff;}

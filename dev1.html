@@ -17,7 +17,7 @@
   <script src="js/swiper.js"></script>
   <script src="js/ui.js"></script>
 </head>
-<body class="search ver_admin">
+<body class="search ver_light"><!-- 라이트 모드(.ver_light) -->
   <div id="wrap">
     <div id="header">
       <h1 class="logo"><a href="#"><span>자율차-일반차 혼재상황 대비 AI기반 자율주행모빌리티 운영 플랫폼 개발</span></a></h1>
@@ -116,40 +116,233 @@
 
     <div id="container">
       <div class="tit-wrap">
-        <h3 class="tit faq">센싱정보 수집 이력 조회</h3>
+        <h3 class="tit aicar">센싱정보 수집 이력 조회</h3>
         <ul class="navi-area">
           <li class="home"><a href="#">홈</a></li>
-          <li><a href="#">개발자 센터</a></li>
-          <li class="current"><a href="#">FAQ</a></li>
+          <li><a href="#">자율차 센싱정보 수집 모니터링</a></li>
+          <li class="current"><a href="#">센싱정보 수집 이력 조회</a></li>
         </ul>
       </div><!-- .tit-wrap -->
       <div class="content-wrap">
-        
-        <div class="search-area tp2">
+        <div class="tab-search-wrap">
+          <ul class="tab-base">
+            <li class="on"><a href="#tab1">자율차</a></li>
+            <li><a href="#tab2">인프라</a></li>
+            <li><a href="#tab3">시뮬레이션</a></li>
+            <li><a href="#tab4">전체 통계</a></li>
+          </ul>
+        </div>
+        <div class="search-area">
           <ul class="form-list">
-            <li>
-              <label for="user_name">카테고리</label>
-              <span class="select-base tp2">
-                <span class="value"></span>
-                <select>
-                  <option value="0">선택</option>
-                  <option value="1" selected>장애/오류</option>
-                  <option value="2">값 2</option>
-                  <option value="3">값 3</option>
-                </select>
-              </span>
-              <div class="input-wrap">
-                <input type="text" class="input-base tp2" placeholder="검색어를 입력하세요" >
-                <button class="btn-del">삭제</button>
+            <li class="datepicker">
+              <span class="label">과제명</span>
+              <div class="multi-select" style="width: 200px;">
+                <a href="#">선택</a>
+                <div class="chk-wrap">
+                  <ul class="chk-list">
+                    <li>
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk-all" class="chk-all" />
+                          <label for="chk-all">전체</label>
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk-a" />
+                          <label for="chk-a">옵션 A</label>
+                        </span>
+                        <a href="#" class="btn-arrow"></a>
+                      </div>
+                      <ul>
+                        <li class="last-chk">
+                          <div class="chk-area">
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-a-1" />
+                              <label for="chk-a-1">옵션 A-1</label>
+                            </span>
+                          </div>
+                        </li>
+                        <li class="last-chk">
+                          <div class="chk-area">
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-a-2" />
+                              <label for="chk-a-2">옵션 A-2</label>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk-b" />
+                          <label for="chk-b">옵션 B</label>
+                        </span>
+                        <a href="#" class="btn-arrow"></a>
+                      </div>
+                      <ul>
+                        <li class="last-chk">
+                          <div class="chk-area">
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-b-1" />
+                              <label for="chk-b-1">옵션 B-1</label>
+                            </span>
+                          </div>
+                        </li>
+                        <li class="last-chk">
+                          <div class="chk-area">
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-b-2" />
+                              <label for="chk-b-2">옵션 B-2</label>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="last-chk">
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk-c" />
+                          <label for="chk-c">옵션 C</label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="last-chk">
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk-d" />
+                          <label for="chk-d">옵션 D</label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="last-chk">
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk-e" />
+                          <label for="chk-e">옵션 E</label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <span class="label">자율차ID</span>
+              <div class="multi-select" style="width: 200px;">
+                <a href="#">선택</a>
+                <div class="chk-wrap">
+                  <ul class="chk-list">
+                    <li>
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk2-all" class="chk-all" />
+                          <label for="chk2-all">전체</label>
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk2-a" />
+                          <label for="chk2-a">옵션 A</label>
+                        </span>
+                        <a href="#" class="btn-arrow"></a>
+                      </div>
+                      <ul>
+                        <li class="last-chk">
+                          <div class="chk-area">
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk2-a-1" />
+                              <label for="chk2-a-1">옵션 A-1</label>
+                            </span>
+                          </div>
+                        </li>
+                        <li class="last-chk">
+                          <div class="chk-area">
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk2-a-2" />
+                              <label for="chk2-a-2">옵션 A-2</label>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk2-b" />
+                          <label for="chk2-b">옵션 B</label>
+                        </span>
+                        <a href="#" class="btn-arrow"></a>
+                      </div>
+                      <ul>
+                        <li class="last-chk">
+                          <div class="chk-area">
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk2-b-1" />
+                              <label for="chk2-b-1">옵션 B-1</label>
+                            </span>
+                          </div>
+                        </li>
+                        <li class="last-chk">
+                          <div class="chk-area">
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk2-b-2" />
+                              <label for="chk2-b-2">옵션 B-2</label>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="last-chk">
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk2-c" />
+                          <label for="chk2-c">옵션 C</label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="last-chk">
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk2-d" />
+                          <label for="chk2-d">옵션 D</label>
+                        </span>
+                      </div>
+                    </li>
+                    <li class="last-chk">
+                      <div class="chk-area">
+                        <span class="chk-base">
+                          <input type="checkbox" id="chk2-e" />
+                          <label for="chk2-e">옵션 E</label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <span class="label">수집일자</span>
+              <div class="input-wrap input-datepicker">
+                <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+                  <input id="startpicker-input1" type="text" aria-label="Date">
+                  <span class="tui-ico-date"></span>
+                  <div id="startpicker-container1" style="margin-left: -1px;"></div>
+                </div>
+                <span class="bridge">~</span>
+                <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+                  <input id="endpicker-input1" type="text" aria-label="Date">
+                  <span class="tui-ico-date"></span>
+                  <div id="endpicker-container1" style="margin-left: -1px;"></div>
+                </div>
               </div>
             </li>
             <li class="btn">
               <a href="#" class="btn-search"></a>
             </li>
           </ul>
-          
-        </div><!-- .search-area -->
-
+        </div>
         
 
       </div><!-- .content-wrap -->
@@ -158,136 +351,84 @@
       <p class="copy">COPYRIGHT ©️ 2024 LivingLab. ALL RIGHTS RESERVED.</p>
       <a href="#" class="btn-top"></a>
     </div><!-- #footer -->
-
-
-    <div class="search-wrap">
-      <div class="search-header">
-        <div class="top-area">
-          <p class="tit">EdgeRSU의 상태 현황과 상태 변화 이력을 확인하여 이상 여부를 확인할 수 있는 모니터링 대시보드입니다.</p>
-          <a href="#" class="btn-close"></a>
-        </div>
-        <div class="input-wrap">
-          <span class="label">기간</span>
-          <div class="input-wrap input-datepicker">
-            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
-              <input id="startpicker-input1-1" type="text" aria-label="Date">
-              <span class="tui-ico-date"></span>
-              <div id="startpicker-container1-1" style="margin-left: -1px;"></div>
-            </div>
-            <span class="bridge">~</span>
-            <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
-              <input id="endpicker-input1-1" type="text" aria-label="Date">
-              <span class="tui-ico-date"></span>
-              <div id="endpicker-container1-1" style="margin-left: -1px;"></div>
-            </div>
-          </div>
-          <span class="label">장비</span>
-          <div class="multi-select">
-            <a href="#">선택</a>
-            <div class="chk-wrap">
-              <ul class="chk-list">
-                <li>
-                  <div class="chk-area">
-                    <span class="chk-base">
-                      <input type="checkbox" id="chk-all" />
-                      <label for="chk-all">전체</label>
-                    </span>
-                  </div>
-                </li>
-                <li>
-                  <div class="chk-area">
-                    <span class="chk-base">
-                      <input type="checkbox" id="chk-a" />
-                      <label for="chk-a">옵션 A</label>
-                    </span>
-                    <a href="#" class="btn-arrow"></a>
-                  </div>
-                  <ul>
-                    <li class="last-chk">
-                      <div class="chk-area">
-                        <span class="chk-base">
-                          <input type="checkbox" id="chk-a-1" />
-                          <label for="chk-a-1">옵션 A-1</label>
-                        </span>
-                      </div>
-                    </li>
-                    <li class="last-chk">
-                      <div class="chk-area">
-                        <span class="chk-base">
-                          <input type="checkbox" id="chk-a-2" />
-                          <label for="chk-a-2">옵션 A-2</label>
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <div class="chk-area">
-                    <span class="chk-base">
-                      <input type="checkbox" id="chk-b" />
-                      <label for="chk-b">옵션 B</label>
-                    </span>
-                    <a href="#" class="btn-arrow"></a>
-                  </div>
-                  <ul>
-                    <li class="last-chk">
-                      <div class="chk-area">
-                        <span class="chk-base">
-                          <input type="checkbox" id="chk-b-1" />
-                          <label for="chk-b-1">옵션 B-1</label>
-                        </span>
-                      </div>
-                    </li>
-                    <li class="last-chk">
-                      <div class="chk-area">
-                        <span class="chk-base">
-                          <input type="checkbox" id="chk-b-2" />
-                          <label for="chk-b-2">옵션 B-2</label>
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="last-chk">
-                  <div class="chk-area">
-                    <span class="chk-base">
-                      <input type="checkbox" id="chk-c" />
-                      <label for="chk-c">옵션 C</label>
-                    </span>
-                  </div>
-                </li>
-                <li class="last-chk">
-                  <div class="chk-area">
-                    <span class="chk-base">
-                      <input type="checkbox" id="chk-d" />
-                      <label for="chk-d">옵션 D</label>
-                    </span>
-                  </div>
-                </li>
-                <li class="last-chk">
-                  <div class="chk-area">
-                    <span class="chk-base">
-                      <input type="checkbox" id="chk-e" />
-                      <label for="chk-e">옵션 E</label>
-                    </span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <a href="#" class="btn-search ml8"></a>
-        </div>
-      </div><!-- .search-header -->
-
-      <div class="search-container">
-        <div class="search-content">
-          <div style="height: 100%; color: rgba(255, 255, 255, 0.1); font-size: 100px; display: flex; justify-content: center; align-items: center;">Grafana Dashboard Area</div>
-        </div><!-- .search-content -->
-      </div><!-- .search-container -->
-    </div><!-- .search-wrap -->
   </div><!-- #wrap -->
 
   <script>
+    tui.DatePicker.localeTexts['customKey'] = {
+      titles: {
+          // days
+          DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          // daysShort
+          D: ['일', '월', '화', '수', '목', '금', '토'],
+          // months
+          MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+          // monthsShort
+          MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+      },
+      titleFormat: 'yyyy.MMM',
+      todayFormat: '오늘 : yyyy.MMMM.dd',
+      date: 'Date',
+      time: 'Time'
+    };
+
+    $('.multi-select').each(function () {
+      const $multiSelect = $(this);
+
+      // 셀렉트 박스 열기/닫기
+      $multiSelect.find('> a').on('click', function (e) {
+        e.preventDefault();
+        $multiSelect.toggleClass('on');
+      });
+
+      // 화살표 버튼 클릭 시 하위 옵션 열기/닫기
+      $multiSelect.find('li .btn-arrow').on('click', function () {
+        $(this).closest('li').toggleClass('on');
+      });
+
+      // 전체 선택 체크박스
+      $multiSelect.find('.chk-base input[type="checkbox"].chk-all').on('change', function () {
+        const isChecked = $(this).is(':checked');
+        $multiSelect.find('.chk-base input[type="checkbox"]').prop('checked', isChecked);
+
+        const selectedCount = $multiSelect.find('li.last-chk input[type="checkbox"]:checked').length;
+        $multiSelect.find('> a').text(`${selectedCount} 장비 선택`);
+      });
+
+      // 개별 체크박스 변경 시
+      $multiSelect.find('.chk-list input[type="checkbox"]:not(.chk-all)').on('change', function () {
+        const $checkbox = $(this);
+
+        // 상위 옵션 클릭 시 하위 옵션도 같이 변경
+        if ($checkbox.closest('.chk-area').next('ul').length) {
+          $checkbox.closest('.chk-area').next('ul').find('li input[type="checkbox"]').prop('checked', $checkbox.is(':checked'));
+        }
+
+        // 하위 옵션 클릭 시 상위 옵션 상태도 반영
+        if ($checkbox.closest('ul').prev('.chk-area').length) {
+          const $siblingCheckboxes = $checkbox.closest('ul').find('li input[type="checkbox"]');
+          const isAllChecked = $siblingCheckboxes.length === $siblingCheckboxes.filter(':checked').length;
+          $checkbox.closest('ul').prev('.chk-area').find('input[type="checkbox"]').prop('checked', isAllChecked);
+        }
+
+        // 전체 체크 여부 업데이트
+        const $allCheckboxes = $multiSelect.find('.chk-base input[type="checkbox"]:not(.chk-all)');
+        const $checkedCheckboxes = $allCheckboxes.filter(':checked');
+        $multiSelect.find('.chk-base input[type="checkbox"].chk-all').prop('checked', $allCheckboxes.length === $checkedCheckboxes.length);
+
+        // 텍스트 업데이트
+        const selectedCount = $multiSelect.find('li.last-chk input[type="checkbox"]:checked').length;
+        $multiSelect.find('> a').text(`${selectedCount} 장비 선택`);
+      });
+    });
+
+
+    var Qsample = $.urlParam('sample');
+    if (Qsample == 'open') {
+      setTimeout(() => {
+        $('.multi-select > a').click();
+      }, 250);
+    }
+
     tui.DatePicker.localeTexts['customKey'] = {
       titles: {
           // days
@@ -310,13 +451,13 @@
       language: 'customKey',
       startpicker: {
         date: today1,
-        input: '#startpicker-input1-1',
-        container: '#startpicker-container1-1'
+        input: '#startpicker-input1',
+        container: '#startpicker-container1'
       },
       endpicker: {
         date: today1,
-        input: '#endpicker-input1-1',
-        container: '#endpicker-container1-1'
+        input: '#endpicker-input1',
+        container: '#endpicker-container1'
       },
       selectableRanges: [
         [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
@@ -324,57 +465,10 @@
       format: 'YYYY-MM-dd',
       // showAlways: true,
     });
+
     picker1.on('change:end', () => {
         console.log(123);
-    });
-
-    $('.multi-select > a').on('click', function(e){
-      e.preventDefault();
-      if (!$(this).closest('.multi-select').hasClass('on')) {
-        $(this).closest('.multi-select').addClass('on');
-      } else {
-        $(this).closest('.multi-select').removeClass('on');
-      }
-    })
-
-    $(window).on('load resize', function(){
-      $('.search-wrap .search-container').css('height', $(window).height() - 112 - 60);
-    });
-
-    $('.multi-select li .btn-arrow').on('click', function(){
-      if (!$(this).closest('li').hasClass('on')) {
-        $(this).closest('li').addClass('on');
-      } else {
-        $(this).closest('li').removeClass('on');
-      }
-    })
-
-    $('.multi-select .chk-base input[type="checkbox"]#chk-all').on('change', function(){ // 전체 체크박스 클릭 시
-      $('.multi-select .chk-base input[type="checkbox"]').prop('checked', $(this).is(':checked'));
-      $('.multi-select > a').text($('.multi-select li.last-chk input[type="checkbox"]:checked').length + ' 장비 선택');
-    });
-
-    $('.multi-select .chk-list input[type="checkbox"]:not(#chk-all)').on('change', function(){
-      if ($(this).closest('.chk-area').next('ul').length) { // 옵션 A, 옵션 B 클릭 시
-        $(this).closest('.chk-area').next('ul').find('li input[type="checkbox"]').prop('checked', $(this).is(':checked'));
-      }
-
-      if ($(this).closest('ul').prev('.chk-area').length) { // 옵션 A-1, A-2, B-1, B-2 클릭 시
-        $(this).closest('ul').prev('.chk-area').find('input[type="checkbox"]').prop('checked', $(this).closest('ul').find('li input[type="checkbox"]').length == $(this).closest('ul').find('li input[type="checkbox"]:checked').length)
-      }
-
-      // 전체를 제외한 나머지 체크박스가 다 체크되었을 경우 전체 체크박스 활성화
-      $('.multi-select .chk-base input[type="checkbox"]#chk-all').prop('checked', $('.multi-select .chk-base input[type="checkbox"]:not(#chk-all)').length == $('.multi-select .chk-base input[type="checkbox"]:not(#chk-all):checked').length);
-
-      $('.multi-select > a').text($('.multi-select li.last-chk input[type="checkbox"]:checked').length + ' 장비 선택');
-    });
-
-    var Qsample = $.urlParam('sample');
-    if (Qsample == 'open') {
-      setTimeout(() => {
-        $('.multi-select > a').click();
-      }, 250);
-    }
+    }); 
   </script>
 </body>
 </html>

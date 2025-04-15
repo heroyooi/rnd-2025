@@ -1,13 +1,13 @@
 @charset "utf-8";
 
 /* input - bar */
-.input-base{width:100%;border-radius:4px;font-size:14px;line-height:21px;background-color: #fff;border:0;}
-.input-base.tp1{padding:8.5px 26px 8.5px 16px;background-color: rgba(79, 82, 107, 0.3);
+body:not(.ver_light) .input-base{width:100%;border-radius:4px;font-size:14px;line-height:21px;background-color: #fff;border:0;}
+body:not(.ver_light) .input-base.tp1{padding:8.5px 26px 8.5px 16px;background-color: rgba(79, 82, 107, 0.3);
 color:#fff;}
-.input-base.tp1:focus{background-color: rgba(41, 98, 255, 0.3);}
-.input-base.tp2{border:0;padding:8.5px 26px 8.5px 16px;color:#1d1e22;}
-.input-base.tp2:focus{border:0;padding:8.5px 26px 8.5px 16px;}
-.input-base:disabled{color:rgba(255, 255, 255, 0.3);}
+body:not(.ver_light) .input-base.tp1:focus{background-color: rgba(41, 98, 255, 0.3);}
+body:not(.ver_light) .input-base.tp2{border:0;padding:8.5px 26px 8.5px 16px;color:#1d1e22;}
+body:not(.ver_light) .input-base.tp2:focus{border:0;padding:8.5px 26px 8.5px 16px;}
+body:not(.ver_light) .input-base:disabled{color:rgba(255, 255, 255, 0.3);}
 
 /* form */
 .form-list{display:flex;gap:0 16px;}
@@ -21,40 +21,50 @@ color:#fff;}
 .valid-wrap .valid{margin-top:0;}
 
 /* datepicker */
-.tui-datepicker{border-radius:4px;overflow:hidden;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);border: 0;background-color:transparent;}
-.tui-datepicker-type-date, .tui-calendar{width:238px;}
-.tui-datepicker .tui-calendar{padding-bottom:8px;background-color: rgba(59, 63, 92, 0.95);}
-.tui-datepicker-body .tui-timepicker, .tui-datepicker-footer .tui-timepicker{width:238px;}
-.tui-calendar .tui-calendar-body{padding-top:8px;}
-.tui-calendar th{height:21px;}
-.tui-calendar .tui-calendar-body-header th{color:rgba(255, 255, 255, 0.5);}
-.tui-calendar td{height:32px;color:#fff;}
-.tui-datepicker-input{height:38px;border:0;width:200px;}
-.tui-datepicker-input > input{padding:9px 27px 9px 16px;font-size:14px;color:#fff;border-radius:4px;background-color: rgba(79, 82, 107, 0.3);}
-.tui-datepicker-input > input:disabled{background-color:rgba(79, 82, 107, 0.3);color:rgba(255, 255, 255, 0.3);}
-.tui-calendar .tui-calendar-title{color:#fff;}
-.tui-calendar .tui-calendar-title-today{font-size:14px;}
-.tui-calendar .tui-calendar-title-today,
-.tui-calendar .tui-calendar-title-today:hover{background-color: rgba(0, 0, 0, 0.1);color:#fff;}
-.tui-calendar .tui-calendar-header{border-bottom:0;}
-.tui-calendar .tui-calendar-btn-prev-month:after{background:url(../img/rnd2/ico_prev_mini.png) 50% 50% no-repeat;}
-.tui-calendar .tui-calendar-btn-next-month:after{background:url(../img/rnd2/ico_next_mini.png) 50% 50% no-repeat;}
-.tui-calendar-btn{background-color: transparent;}
-.tui-datepicker .tui-is-selectable.tui-is-selected, .tui-datepicker.tui-rangepicker .tui-is-selectable.tui-is-selected{background-color:#046bff;border-radius:4px;}
-.tui-datepicker.tui-rangepicker .tui-is-selected-range{background-color:#f2f4f6;color:#0356cc;}
-.tui-datepicker .tui-is-selectable:hover{background-color:rgba(255, 255, 255, 0.1);color:#fff;border-radius:4px;}
-.tui-datepicker-input.tui-has-focus .tui-ico-date{background-position:0 0;width:18px;height:18px;right:8px;top:10px;margin:0;background-image:url(../img/rnd2/ico-calendar-b.png);}
-.tui-datepicker-input.tui-has-focus input:focus + .tui-ico-date{background-image:url(../img/rnd2/ico-calendar-bp.png);}
-.tui-datepicker-input.tui-has-focus input:disabled + .tui-ico-date{background-image:url(../img/rnd2/ico-calendar-db.png);}
+body:not(.ver_light) .tui-datepicker{border-radius:4px;overflow:hidden;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);border: 0;background-color:transparent;}
+body:not(.ver_light) .tui-datepicker-type-date, body:not(.ver_light) .tui-calendar{width:238px;}
+body:not(.ver_light) .tui-datepicker .tui-calendar{padding-bottom:8px;background-color: rgba(59, 63, 92, 0.95);}
+body:not(.ver_light) .tui-datepicker-body .tui-timepicker, body:not(.ver_light) .tui-datepicker-footer .tui-timepicker{width:238px;}
+body:not(.ver_light) .tui-calendar .tui-calendar-body{padding-top:8px;}
+body:not(.ver_light) .tui-calendar th{height:21px;}
+body:not(.ver_light) .tui-calendar .tui-calendar-body-header th{color:rgba(255, 255, 255, 0.5);}
+body:not(.ver_light) .tui-calendar td{height:32px;color:#fff;}
+body:not(.ver_light) .tui-datepicker-input{height:38px;border:0;width:200px;}
+body:not(.ver_light) .tui-datepicker-input > input{padding:9px 27px 9px 16px;font-size:14px;color:#fff;border-radius:4px;background-color: rgba(79, 82, 107, 0.3);}
+body:not(.ver_light) .tui-datepicker-input > input:disabled{background-color:rgba(79, 82, 107, 0.3);color:rgba(255, 255, 255, 0.3);}
+body:not(.ver_light) .tui-calendar .tui-calendar-title{color:#fff;}
+body:not(.ver_light) .tui-calendar .tui-calendar-title-today{font-size:14px;}
+body:not(.ver_light) .tui-calendar .tui-calendar-title-today,
+body:not(.ver_light) .tui-calendar .tui-calendar-title-today:hover{background-color: rgba(0, 0, 0, 0.1);color:#fff;}
+body:not(.ver_light) .tui-calendar .tui-calendar-header{border-bottom:0;}
+body:not(.ver_light) .tui-calendar .tui-calendar-btn-prev-month:after{background:url(../img/rnd2/ico_prev_mini.png) 50% 50% no-repeat;}
+body:not(.ver_light) .tui-calendar .tui-calendar-btn-next-month:after{background:url(../img/rnd2/ico_next_mini.png) 50% 50% no-repeat;}
+body:not(.ver_light) .tui-calendar-btn{background-color: transparent;}
+body:not(.ver_light) .tui-datepicker .tui-is-selectable.tui-is-selected,
+body:not(.ver_light) .tui-datepicker.tui-rangepicker .tui-is-selectable.tui-is-selected{background-color:#046bff;border-radius:4px;}
+body:not(.ver_light) .tui-datepicker.tui-rangepicker .tui-is-selected-range{background-color:#f2f4f6;color:#0356cc;}
+body:not(.ver_light) .tui-datepicker .tui-is-selectable:hover{background-color:rgba(255, 255, 255, 0.1);color:#fff;border-radius:4px;}
+body:not(.ver_light) .tui-datepicker-input.tui-has-focus .tui-ico-date{background-position:0 0;width:18px;height:18px;right:8px;top:10px;margin:0;background-image:url(../img/rnd2/ico-calendar-b.png);}
+body:not(.ver_light) .tui-datepicker-input.tui-has-focus input:focus + .tui-ico-date{background-image:url(../img/rnd2/ico-calendar-bp.png);}
+body:not(.ver_light) .tui-datepicker-input.tui-has-focus input:disabled + .tui-ico-date{background-image:url(../img/rnd2/ico-calendar-db.png);}
 
 /* selectbox */
-.select-base{position:relative;display:block;width:116px;height:38px;cursor:pointer;}
-.select-base:after{content:'';display:block;background:url(../img/rnd2/ico-arrow-set-df.png) 0 0 no-repeat;width:10px;height:10px;position:absolute;right:8px;top:14px;}
-.select-base .value{display:block;padding-left:16px;padding-right:34px;height:38px;line-height:38px;font-size:14px;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-radius:4px;background-color:rgba(79, 82, 107, 0.3);}
-.select-base select{position:absolute;left:0;top:0px;padding-left:16px;width:100%;height:38px;line-height:38px;font-size:14px;text-align:left;border:0;background:rgba(79, 82, 107, 0.3);opacity:0;filter:alpha(opacity=0);z-index:1;cursor:pointer;color:#000;}
-.select-base.disabled{cursor:default;}
-.select-base.disabled select{display:none;}
-.select-base.disabled .value{background-color:rgba(79, 82, 107, 0.3);color: rgba(255, 255, 255, 0.3);}
+body:not(.ver_light) .select-base{position:relative;display:block;width:116px;height:38px;cursor:pointer;}
+body:not(.ver_light) .select-base:after{content:'';display:block;background:url(../img/rnd2/ico-arrow-set-df.png) 0 0 no-repeat;width:10px;height:10px;position:absolute;right:8px;top:14px;}
+body:not(.ver_light) .select-base .value{display:block;padding-left:16px;padding-right:34px;height:38px;line-height:38px;font-size:14px;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-radius:4px;background-color:rgba(79, 82, 107, 0.3);}
+body:not(.ver_light) .select-base select{position:absolute;left:0;top:0px;padding-left:16px;width:100%;height:38px;line-height:38px;font-size:14px;text-align:left;border:0;background:rgba(79, 82, 107, 0.3);opacity:0;filter:alpha(opacity=0);z-index:1;cursor:pointer;color:#000;}
+body:not(.ver_light) .select-base.disabled{cursor:default;}
+body:not(.ver_light) .select-base.disabled select{display:none;}
+body:not(.ver_light) .select-base.disabled .value{background-color:rgba(79, 82, 107, 0.3);color: rgba(255, 255, 255, 0.3);}
+
+body.ver_light .select-base{position:relative;display:block;width:116px;height:38px;cursor:pointer;}
+body.ver_light .select-base:after{content:'';display:block;background:url(../img/ico-arrow-setdf.png) 0 0 no-repeat;width:10px;height:10px;position:absolute;right:8px;top:14px;}
+body.ver_light .select-base .value{display:block;padding-left:16px;padding-right:34px;height:38px;line-height:38px;font-size:14px;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-radius:4px;background-color:#fff;}
+body.ver_light .select-base.tp1 .value{border:1px solid #dcdee2;}
+body.ver_light .select-base.tp2 .value{border-color:#fff;}
+body.ver_light .select-base select{position:absolute;left:0;top:0px;padding-left:16px;width:100%;height:38px;line-height:38px;font-size:14px;text-align:left;border:0;background:#fff;opacity:0;filter:alpha(opacity=0);z-index:1;cursor:pointer;}
+body.ver_light .select-base.disabled{background:rgba(0, 0, 0, 0.04);cursor:default;}
+body.ver_light .select-base.disabled select{display:none;}
 
 /* multi select */
 .multi-select{width:300px;position: relative;display:inline-block;}
@@ -474,3 +484,53 @@ color:#fff;}
 .toast-area .toast-con a{font-size:13px;font-weight:700;color:#fff;background-image: linear-gradient(to right, #e50000, #fe0000);padding:2px 12px;border-radius:14px;}
 
 .tb-wrap .no-data{height:100%;display:flex;justify-content: center;align-items: center;padding: 0 16px;border-radius: 8px;-webkit-backdrop-filter: blur(50px);backdrop-filter: blur(50px);background-color: rgba(79, 82, 107, 0.15);font-size:14px;color:#fff;line-height:1.5;font-weight:600;}
+
+body.ver_light .input-base{width:100%;border-radius:4px;font-size:14px;line-height:21px;background-color: #fff;}
+body.ver_light .input-base.tp1{padding:7.5px 26px 7.5px 16px;border:1px solid #dcdee2;}
+body.ver_light .input-base.tp1:focus{border:2px solid #2962ff;padding:6.5px 25px 6.5px 15px;}
+body.ver_light .input-base.tp2{padding:8.5px 26px 8.5px 16px;border:0;}
+body.ver_light .input-base.tp2:focus{border:2px solid #2962ff;padding:6.5px 24px 6.5px 14px;}
+body.ver_light .input-base:disabled{background-color: #f2f2f2;color:#8c8c8c;}
+
+body.ver_light .search-area{padding:20px 40px;background-color:#f2f5f6;border-radius:0 40px 40px 40px;margin:0 auto;}
+body.ver_light .search-area .form-list > li label{color:#595959;font-weight:700;}
+body.ver_light .search-area .form-list > li.datepicker{flex-grow:0;}
+body.ver_light .search-area .form-list > li.btn{width:28px;}
+body.ver_light .search-area.tp2{width:809px;}
+body.ver_light .search-area.tp2 .select-base{width:140px;margin-right:8px;}
+
+body.ver_light .tui-datepicker{border-radius:4px;overflow:hidden;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);border: 0;}
+body.ver_light .tui-datepicker-type-date, .tui-calendar{width:238px;}
+body.ver_light .tui-datepicker .tui-calendar{padding-bottom:8px;}
+body.ver_light .tui-datepicker-body .tui-timepicker, body.ver_light .tui-datepicker-footer .tui-timepicker{width:238px;}
+body.ver_light .tui-calendar .tui-calendar-body{padding-top:8px;}
+body.ver_light .tui-calendar th{height:21px;}
+body.ver_light .tui-calendar td{height:32px;}
+body.ver_light .tui-datepicker-input{height:38px;border:0;}
+body.ver_light .tui-datepicker-input > input{padding:9px 27px 9px 16px;font-size:14px;color:#181818;border-radius:4px;}
+body.ver_light .tui-datepicker-input > input{background-color: #fff;}
+body.ver_light .tui-calendar .tui-calendar-title-today{background-color:#f2f4f6;color:#181818;font-size:14px;}
+body.ver_light .tui-datepicker .tui-is-selectable.tui-is-selected, body.ver_light .tui-datepicker.tui-rangepicker .tui-is-selectable.tui-is-selected{background-color:#046bff;border-radius:4px;}
+body.ver_light .tui-datepicker.tui-rangepicker .tui-is-selected-range{background-color:#f2f4f6;color:#0356cc;}
+body.ver_light .tui-datepicker .tui-is-selectable:hover{background-color:#f2f4f6;color:#0356cc;border-radius:4px;}
+body.ver_light .tui-datepicker-input.tui-has-focus .tui-ico-date{background-position:0 0;background-image:url(../img/ico-calendar.png);width:18px;height:18px;right:8px;top:10px;margin:0;}
+
+body.ver_light .btn-search{width:28px;height:28px;background:url(../img/ico-search.png) 0 0 no-repeat;}
+
+.tab-search-wrap .tab-base{display:flex;}
+.tab-search-wrap .tab-base li{margin-left:1px;border-bottom:1px solid #fff;}
+.tab-search-wrap .tab-base li.on{border-bottom:1px solid #2962ff;}
+.tab-search-wrap .tab-base li:first-child{margin-left:0;}
+.tab-search-wrap .tab-base li a{display:block;padding:11px 40px;background-color: #f2f5f6;border-radius:20px 20px 0 0;font-size:16px;line-height:1.5;font-weight:bold;color:#4f526b;}
+.tab-search-wrap .tab-base li.on a{background-color: #2962ff;color:#fff;}
+
+body.ver_light .multi-select > a{background-color: #fff;color:#1d1e22;border:2px solid #fff;padding:6.5px 32px 6.5px 14px;}
+body.ver_light .multi-select.on > a{border:2px solid #2962ff;}
+body.ver_light .multi-select > a::after{background:url(../img/ico-arrow-setdf.png) 0 0 no-repeat;}
+body.ver_light .multi-select .chk-wrap{background-color: #fff;}
+body.ver_light .chk-base input + label:before{background: url(../img/check-off.png) 0 0 no-repeat;}
+body.ver_light .chk-base input:checked + label:before{background:url(../img/rnd2/check-ms-on.png) 50% 50% no-repeat;}
+body.ver_light .search-area .form-list > li .chk-list > li .chk-area label{font-weight:400;color:#121419;}
+body.ver_light .chk-list > li .chk-area .btn-arrow{background: url(../img/ico-arrow-setdf.png) 50% 50% no-repeat;}
+body.ver_light .form-list > li .label{margin-left:8px;}
+body.ver_light .form-list > li .label:first-child{margin-left:0;}

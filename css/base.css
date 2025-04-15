@@ -79,3 +79,5 @@ body,input,select,textarea,button{font:14px/1 "Pretendard", "Malgun Gothic", "ë§
 .t-left{text-align:left !important;}
 .t-center{text-align:center !important;}
 .t-right{text-align:right !important;}
+
+body.ver_light{color:#1d1e22;}
