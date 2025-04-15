@@ -104,9 +104,8 @@ body{width:100%;background-color:#313131;}
 #gnb > li ul{position:absolute;top:73px;z-index:1;display:none;}
 #gnb > li ul li{font-size:16px;line-height:1.5;float:left;margin-left:40px;}
 #gnb > li ul li:first-child{margin-left:0;}
-#gnb > li:nth-child(5) ul{left:0;width:170px;}
-#gnb > li:nth-child(6) ul{right:-100px;width:360px;}
-#gnb > li:nth-child(7) ul{right:0;width:330px;}
+#gnb > li:nth-child(4) ul{right:-100px;width:360px;}
+#gnb > li:nth-child(5) ul{right:-100px;width:360px;}
 #gnb > li ul li a{font-weight:600;color:#4f526b;}
 #gnb > li ul li.active a, #gnb > li ul li a:hover{color:#2962ff;}
 #gnb > li.on > a,
@@ -186,3 +185,25 @@ body.home #container{min-height:calc(100vh - 184px);display:flex;justify-content
 #footer{background-color:#1d1e22;padding:40px;position: relative;}
 #footer .copy{font-size:14px;line-height:21px;color:#8c8c8c;padding:11.5px 0;}
 .btn-top{display:block;width:44px;height:44px;position:absolute;right:40px;bottom:40px;background:url(../img/ico-arrow-top.png) 50% 50% no-repeat;}
+
+#container{padding:100px 40px 100px;position: relative;min-height:calc(100vh - 184px);}
+#container::before{content:'';display:block;width:1130px;height:240px;background:url(../img/img-bg-top.png) 0 0 no-repeat;position: absolute;right:0;top:0;}
+
+.tit-wrap{position: relative;}
+.tit-wrap .tit{font-size:36px;font-weight:700;color:#1d1e22;line-height:51px;}
+.tit-wrap .tit::before{content:'';display:block;width:52px;height:52px;margin-bottom:8px;}
+.tit-wrap .tit.user::before{background:url(../img/icon-l-m-user.png) 0 0 no-repeat;}
+.tit-wrap .tit.faq::before{background:url(../img/icon-l-faq.png) 0 0 no-repeat;}
+.tit-wrap .tit.qna::before{background:url(../img/icon-l-qna.png) 0 0 no-repeat;}
+.tit-wrap .tit.org::before{background:url(../img/icon-l-m-institution.png) 0 0 no-repeat;}
+.tit-wrap .navi-area{position: absolute;right:0;bottom:0;font-size:0;}
+.tit-wrap .navi-area li{float:left;position: relative;padding-left:22px;margin-left:4px;}
+.tit-wrap .navi-area li::before{content:'';display:block;width:18px;height:18px;background:url(../img/ico-arrow-location.png) 0 0 no-repeat;position: absolute;left:0;top:0;}
+.tit-wrap .navi-area li.home::before{display:none;}
+.tit-wrap .navi-area li.home a{font-size:0;width:18px;height:18px;background:url(../img/ico-home-location.png) 0 0 no-repeat;}
+.tit-wrap .navi-area li a{display:block;font-size:13px;line-height:18px;color:#8c8c8c;cursor:default;pointer-events:none;}
+.tit-wrap .navi-area li.current a{color:#595959;}
+
+.content-wrap{position: relative;margin-top:40px;}
+
+body.ver_admin{background-color: #fff;}
