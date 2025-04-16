@@ -394,6 +394,7 @@
       // 셀렉트 박스 열기/닫기
       $multiSelect.find('> a').on('click', function (e) {
         e.preventDefault();
+        $('.multi-select.on').removeClass('on');
         $multiSelect.toggleClass('on');
       });
 
@@ -436,6 +437,13 @@
         const selectedCount = $multiSelect.find('li.last-chk input[type="checkbox"]:checked').length;
         $multiSelect.find('> a').text(`${selectedCount} 장비 선택`);
       });
+    });
+
+    $(document).on('click', function (e) {
+      // 클릭한 요소가 .multi-select 내부가 아니면 닫기
+      if (!$(e.target).closest('.multi-select').length) {
+        $('.multi-select.on').removeClass('on');
+      }
     });
 
 
