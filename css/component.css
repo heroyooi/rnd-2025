@@ -492,7 +492,7 @@ body.ver_light .input-base.tp2{padding:8.5px 26px 8.5px 16px;border:0;}
 body.ver_light .input-base.tp2:focus{border:2px solid #2962ff;padding:6.5px 24px 6.5px 14px;}
 body.ver_light .input-base:disabled{background-color: #f2f2f2;color:#8c8c8c;}
 
-body.ver_light .search-area{padding:20px 40px;background-color:#f2f5f6;border-radius:0 40px 40px 40px;margin:0 auto;}
+body.ver_light .search-area{padding:20px 40px;background-color:#f2f5f6;border-radius:0 40px 40px 40px;margin:0 auto;position: relative;z-index:1;}
 body.ver_light .search-area .form-list > li label{color:#595959;font-weight:700;}
 body.ver_light .search-area .form-list > li.datepicker{flex-grow:0;}
 body.ver_light .search-area .form-list > li.btn{width:28px;}
