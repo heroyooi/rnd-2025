@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자율차-일반차 혼재상황 대비 AI기반 자율주행모빌리티 운영 플랫폼 개발 - 3차</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="js/billboard.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body class="search ver_light"><!-- 라이트 모드(.ver_light) -->
+  <div id="wrap">
+    <div id="header">
+      <h1 class="logo"><a href="#"><span>자율차-일반차 혼재상황 대비 AI기반 자율주행모빌리티 운영 플랫폼 개발</span></a></h1>
+      <ul id="gnb" data-dp1="1" data-dp2="1">
+        <li>
+          <a href="#"><span>자율차 센싱정보 수집 모니터링</span></a>
+        </li>
+        <li>
+          <a href="#"><span>센싱정보 수집관리</span></a>
+        </li>
+        <li>
+          <a href="#"><span>운영 관리</span></a>
+        </li>
+        <li>
+          <a href="#"><span>LDM 관리</span></a>
+          <ul>
+            <li><a href="#"><span>자율차 전용 지도 제공 현황</span></a></li>
+            <li><a href="#"><span>자율차 전용 지도 제공 이력</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><span>개발자센터</span></a>
+          <ul>
+            <li><a href="#"><span>내 서비스</span></a></li>
+            <li><a href="#"><span>FAQ</span></a></li>
+            <li><a href="#"><span>Q&amp;A</span></a></li>
+            <li class="outlink"><a href="#"><span>개발 가이드</span></a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="utilmenu">
+        <li class="user"><a href="#"></a></li>
+        <li class="logout"><a href="#"></a></li>
+        <!-- <li class="menu"><a href="#"></a></li> -->
+      </ul>
+      <div class="ui-wrap">
+        <a href="#" class="btn-close"></a>
+        <span class="face" style="background:url(img/rnd2/icon-userdata-ad.png) 0 0 no-repeat;"></span>
+        <p class="email">abdasdadadadadasdasdcT123@mqnic.com</p>
+        <p class="username">홍길동</p>
+        <ul class="info">
+          <li>
+            <span class="label">기관</span>
+            <span class="result">화성시 1234567부서</span>
+          </li>
+          <li>
+            <span class="label">연락처</span>
+            <span class="result">010-0000-0000</span>
+          </li>
+          <li>
+            <span class="label">권한</span>
+            <span class="result">12345</span>
+          </li>
+        </ul>
+        <div class="btns-wrap">
+          <span class="btn-base tp1"><a href="#">로그아웃</a></span>
+        </div>
+      </div>
+      <div class="submenu-area"></div>
+    </div><!-- #header -->
+    <div class="menu-wrap">
+      <ul class="menu-list">
+        <li class="has-menu">
+          <dl>
+            <dt>인프라 모니터링</dt>
+            <dd>
+              <ul>
+                <li><a href="#">EdegRSU 상태</a></li>
+                <li><a href="#">EdegRSU 상태</a></li>
+                <li><a href="#">EdegRSU 가공</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>자율차전용지도 구축현황</dt>
+          </dl>
+        </li>
+        <li class="has-menu">
+          <dl>
+            <dt>개별 서비스</dt>
+            <dd>
+              <ul>
+                <li class="bg tp1"><a href="#">국-10 과제</a></li>
+                <li class="bg tp2"><a href="#">국-11 과제</a></li>
+                <li class="bg tp3"><a href="#">국-12 과제</a></li>
+                <li class="bg tp4"><a href="#">국-10 과제</a></li>
+                <li class="bg tp5"><a href="#">국-11 과제</a></li>
+                <li class="bg tp6"><a href="#">국-12 과제</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div><!-- .menu-wrap -->
+
+    <div id="fullContainer">
+      <canvas id="warpCanvas" style="background:black"></canvas>
+    </div><!-- #fullContainer -->
+    <div id="footer">
+      <p class="copy">COPYRIGHT ©️ 2024 LivingLab. ALL RIGHTS RESERVED.</p>
+      <a href="#" class="btn-top"></a>
+    </div><!-- #footer -->
+  </div><!-- #wrap -->
+
+  <style>
+    #fullContainer{position: relative;z-index:1;}
+    #footer{position: absolute; left: 0; width: 100%; z-index: 2;}
+  </style>
+
+  
+
+<script>
+const canvas = document.getElementById("warpCanvas");
+    const ctx = canvas.getContext("2d");
+
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+
+    const numStars = 500;
+    const stars = [];
+
+    for (let i = 0; i < numStars; i++) {
+      stars.push({
+        x: Math.random() * width - width / 2,
+        y: Math.random() * height - height / 2,
+        z: Math.random() * width,
+        pz: 0,
+      });
+    }
+
+    function animate() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+      ctx.fillRect(0, 0, width, height);
+      ctx.strokeStyle = "white";
+      ctx.lineWidth = 1;
+
+      for (let star of stars) {
+        star.pz = star.z;
+        star.z -= 10;
+
+        if (star.z < 1) {
+          star.z = width;
+          star.x = Math.random() * width - width / 2;
+          star.y = Math.random() * height - height / 2;
+          star.pz = star.z;
+        }
+
+        const sx = (star.x / star.z) * width / 2 + width / 2;
+        const sy = (star.y / star.z) * height / 2 + height / 2;
+        const px = (star.x / star.pz) * width / 2 + width / 2;
+        const py = (star.y / star.pz) * height / 2 + height / 2;
+
+        ctx.beginPath();
+        ctx.moveTo(px, py);
+        ctx.lineTo(sx, sy);
+        ctx.stroke();
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // ⭐ 브라우저 리사이즈 대응
+    window.addEventListener('resize', () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    });
+</script>
+</body>
+</html>
+
+
