@@ -297,7 +297,7 @@ body.ver_light .select-base.disabled select{display:none;}
 .btn-base{display:inline-block;vertical-align:middle;}
 .btn-base > *{display:block;text-align:center;border:0;cursor:pointer;border-radius:4px;padding:6px 16px;font-size:13px;line-height:1.5;color:#fff;font-weight:bold;}
 .btn-base.reverse > *{padding:9px 15px;}
-.btn-base.tp1 > *{background-color:#2962ff;}
+.btn-base.tp1 > *{background-color:#2962ff;border:1px solid #2962ff;}
 .btn-base.tp1:not(.disabled, .reverse) > *:hover{background-color:#0041f5;}
 .btn-base.tp1.reverse > *{background-color: rgba(41, 98, 255, 0.1);border:1px solid #2962ff;color:#2962ff;}
 .btn-base.tp1.reverse > *:hover{box-shadow: 0 4px 8px 0 rgba(41, 98, 255, 0.5);background-color: rgba(41, 98, 255, 0.1);}
@@ -306,6 +306,9 @@ body.ver_light .select-base.disabled select{display:none;}
 .btn-search{width:28px;height:28px;background:url(../img/rnd2/ico-search-b.png) 0 0 no-repeat;}
 .btn-refresh{width:24px;height:24px;background:url(../img/rnd2/ico-refresh-w.png) 0 0 no-repeat;}
 .btn-refresh:hover{background:url(../img/rnd2/ico-refresh-w2.png) 0 0 no-repeat;}
+
+.btn-base.md > *{font-size:16px;line-height:1.5;font-weight:700;padding:14px 20px;min-width:175px;}
+.btn-wrap{display:flex;justify-content: center;margin-top: 40px;gap:0 8px;}
 
 .input-wrap > *, .input-info > *,
 .input-password > *{display:inline-block;vertical-align:middle;}

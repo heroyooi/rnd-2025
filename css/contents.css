@@ -252,3 +252,12 @@
 .content-area .con-tit::before{content:'';display:block;width:18px;height:18px;background:url(../img/ico-chart.png) 50% 50% no-repeat;position: absolute;left:0;top:4.5px}
 .content-area .con-box{border:1px solid #f2f2f2;border-radius:20px;}
 .content-area .con-tit + .con-box{margin-top:8px;}
+
+.step-list{display:flex;align-items: center;justify-content: center;gap:0 16px;}
+.step-list li.arrow{width:18px;height:18px;background:url('/img/meta/ico-arrow-next-g.svg') 50% 50% no-repeat;}
+.step-list li.arrow.on{background:url('/img/meta/ico-arrow-next-b.svg') 50% 50% no-repeat;}
+.step-list li.label{padding:14px 44px;border-radius: 32px;background-color: rgba(28, 77, 156, 0.35);font-size:16px;font-weight:bold;color:#fff;line-height:1.5;flex-grow:1;}
+.step-list li.label.on{background-color: #2962ff;}
+
+.form_area{padding:40px;border-radius: 8px;border: solid 1px #132f7f;background-color: rgba(19, 47, 127, 0.25);}
+.step-list + .form_area{margin-top:32px;}
