@@ -12,10 +12,10 @@ const headerHeight = $header.outerHeight();
 const footerHeight = $footer.outerHeight();
 
 canvas.width = width;
-canvas.height = height - footerHeight - 2;
-$starWrapper.css('min-height', height - footerHeight - 2);
+canvas.height = height - 2;
+$starWrapper.css('min-height', height - 2);
 
-const numStars = 150;
+const numStars = 500;
 /*
 100 : 매우 적음 (허전함)
 200~300 : 적당함 (부드럽고 가볍게)
@@ -70,6 +70,6 @@ $(window).on('resize', function () {
     width = $(window).width();
     height = $(window).height();
     canvas.width = width;
-    canvas.height = height - $footer.outerHeight() - 2;
-    $starWrapper.css('min-height', height - footerHeight - 2);
+    canvas.height = height - 2;
+    $starWrapper.css('min-height', height - 2);
 });

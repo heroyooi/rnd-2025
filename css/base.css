@@ -41,10 +41,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{-webkit-appea
 input[type=number]{-moz-appearance:textfield;}/* Firefox */
 
 /* placeholder */
-::-webkit-input-placeholder{ color:rgba(255, 255, 255, 0.5);font-size:14px;}
-::-moz-placeholder{ color:rgba(255, 255, 255, 0.5);font-size:14px;}
-:-ms-input-placeholder{ color:rgba(255, 255, 255, 0.5);font-size:14px;}
-:-moz-placeholder{ color:rgba(255, 255, 255, 0.5);font-size:14px;}
+::-webkit-input-placeholder{ color:#5c87ff;font-size:14px;}
+::-moz-placeholder{ color:#5c87ff;font-size:14px;}
+:-ms-input-placeholder{ color:#5c87ff;font-size:14px;}
+:-moz-placeholder{ color:#5c87ff;font-size:14px;}
 
 /* base - a */
 a{color:#000}
