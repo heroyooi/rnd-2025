@@ -293,3 +293,9 @@ body:not(.ver_light) .form_area li .select-base{width:100%;}
 .search-area .form-list > li.datepicker .tui-datetime-input{width:auto;}
 .search-area .form-list > li .input-wrap.input-datepicker{display:flex;align-items: center;}
 .search-area .form-list > li.btn{width:28px;}
+
+.game_area{border-radius: 8px;border: solid 1px #132f7f;background-color: rgba(19, 47, 127, 0.25);height:496px;display:flex;margin-top:16px;justify-content: center;align-items: center;}
+.game_area a{display:inline-block;font-size:18px;color:#8eacff;font-weight:500;}
+.game_area a::before{content:'';display:block;width:28px;height:28px;background-repeat:no-repeat;background-position:50% 50%;margin: 0 auto 16px;}
+.game_area a.select-scenario::before{background-image:url('/img/meta/ico-scenario.svg');}
+.game_area a.challenge-rank::before{background-image:url('/img/meta/ico-trophy-no.svg');}

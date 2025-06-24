@@ -300,7 +300,7 @@ body.ver_light .select-base.disabled select{display:none;}
 .btn-base.reverse > *{padding:9px 15px;}
 .btn-base.tp1 > *{background-color:#2962ff;border:1px solid #2962ff;}
 .btn-base.tp1:not(.disabled, .reverse) > *:hover{background-color:#0041f5;}
-.btn-base.tp1.reverse > *{background-color:#fff;border:1px solid #2962ff;color:#2962ff;}
+.btn-base.tp1.reverse > *{background-color:transparent;border:1px solid #2962ff;color:#2962ff;}
 .btn-base.tp1.reverse > *:hover{box-shadow: 0 4px 8px 0 rgba(41, 98, 255, 0.5);background-color: rgba(41, 98, 255, 0.1);}
 .btn-base.tp1.ver_white > *{background-color: #fff;color:#2962ff;}
 .btn-base.tp1.ver_white > *:hover{background-color: #fff;color:#2962ff;}
