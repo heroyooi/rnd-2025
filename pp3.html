@@ -306,9 +306,7 @@ body,input,select,textarea,button{font:14px/1 "Pretendard", "Malgun Gothic", "�
           </p>
         </div>
         <div class="chart-area">
-          <div id="speedChart" style="width: 216px; height: 216px;"></div>
-          <div id="rotationChart" style="width: 216px; height: 216px;"></div>
-          <div id="accelChart" style="width: 216px; height: 216px;"></div>
+          <div id="chart" style="width: 100%; height: 216px;"></div>
         </div>
       </div>
     </div><!-- .content -->
@@ -317,37 +315,53 @@ body,input,select,textarea,button{font:14px/1 "Pretendard", "Malgun Gothic", "�
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    const xData = Array.from({ length: 20 }, (_, i) => i + 1);
-    const speedData = [5, 10, 15, 20, 30, 45, 40, 35, 30, 20, 10, 15, 25, 30, 20, 10, 15, 25, 35, 40];
-    const rotationData = [0, 45, 90, 180, -90, -180, 90, 0, -45, 180, -90, 90, 0, -180, 90, 0, -45, 45, 90, 0];
-    const accelData = [0, 0.1, 0.3, 0.7, 0.9, 0.6, 0.4, 0.2, 0.1, 0.05, 0.2, 0.4, 0.6, 0.7, 0.5, 0.3, 0.2, 0.1, 0.3, 0.2];
+    var myChart = echarts.init(document.getElementById('chart'));
 
-    function createChart(domId, title, data, yMin, yMax, unit) {
-      const chart = echarts.init(document.getElementById(domId));
-      chart.setOption({
-        tooltip: { trigger: 'axis' },
-        xAxis: { type: 'category', data: xData, show: false },
-        yAxis: { type: 'value', min: yMin, max: yMax },
-        grid: { left: 30, right: 10, top: 10, bottom: 30 },
-        series: [{
-          name: title,
-          type: 'line',
-          data: data,
-          smooth: true,
-          lineStyle: { color: '#0033cc', width: 2 },
-          symbol: 'none'
-        }],
-        title: {
-          text: title + (unit ? `(${unit})` : ''),
-          left: 'center',
-          top: 'bottom',
-          textStyle: { fontSize: 12 }
+    var option = {
+      grid: {
+        left: 30,
+        right: 20,
+        top: 10,
+        bottom: 40
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      xAxis: {
+        type: 'category',
+        data: Array.from({ length: 20 }, (_, i) => i + 1),
+        name: '속도(km/h)',
+        nameLocation: 'middle',
+        nameGap: 25,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: { show: false }
+      },
+      yAxis: {
+        type: 'value',
+        min: 0,
+        max: 20,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: {
+          show: true,
+          color: '#888',
+          fontSize: 12
         }
-      });
-    }
-    createChart('speedChart', '속도', speedData, 0, 60, 'km/h');
-    createChart('rotationChart', '회전', rotationData, -360, 360, '°');
-    createChart('accelChart', '감속', accelData, 0, 1, '');
+      },
+      series: [{
+        data: [5, 6, 5, 7, 10, 13, 17, 16, 14, 11, 15, 13, 12, 9, 13, 12, 10, 11, 12, 15],
+        type: 'line',
+        smooth: true,
+        symbol: 'none',
+        lineStyle: {
+          color: '#2a6edc',
+          width: 2
+        }
+      }]
+    };
+
+    myChart.setOption(option);
   </script>
 </body>
 </html>
