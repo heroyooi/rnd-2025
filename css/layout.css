@@ -226,7 +226,8 @@ body.ver_light #gnb{gap:0 44px;}
 #starWrapper .content .con_obj .tit_area p{font-size:16px;font-weight:700;color:#2962ff;}
 #starWrapper .content .con_obj .tit_area p em{font-style:normal;color:#5c87ff;font-weight:700;}
 
-.score_area{margin-top:16px;}
+.score_area_wrap{overflow:hidden;margin-top:16px;height:496px;position: relative;}
+.score_area.ver_swiping{touch-action: pan-y;}
 .score_area > li{padding: 20px 24px;border-radius: 16px;display:flex;justify-content:space-between;align-items: center;margin-top:8px;background-color: rgba(19, 47, 127, 0.25);position: relative;}
 .score_area > li.up{background-color: rgba(92, 135, 255, 0.25);}
 .score_area > li:first-child{margin-top:0;}

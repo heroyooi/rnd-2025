@@ -1,3 +1,4 @@
+// 스타워즈 효과
 const $starWrapper = $('#starWrapper');
 const $canvas = $('#warpCanvas');
 const canvas = $canvas[0];
@@ -72,4 +73,126 @@ $(window).on('resize', function () {
     canvas.width = width;
     canvas.height = height - 2;
     $starWrapper.css('min-height', height - 2);
+});
+
+
+
+
+// 시나리오 스와이핑
+$(document).ready(function () {
+    $('.score_area.ver_slide').each(function () {
+        const $list = $(this);
+        const $items = $list.children('li');
+        const itemHeight = $items.first().outerHeight(true);
+        let intervalId;
+        $list.css({ position: 'relative', top: 0 });
+        function startRolling() {
+            intervalId = setInterval(() => {
+                $list.animate({ top: `-=${itemHeight}px` }, 600, function () {
+                $list.append($list.children('li').first());
+                $list.css('top', 0);
+                });
+            }, 2500);
+        }
+        function stopRolling() {
+            clearInterval(intervalId);
+        }
+        startRolling();
+        $list.on('mouseenter', stopRolling);
+        $list.on('mouseleave', startRolling);
+    });
+  $('.score_area.ver_swiping').each(function () {
+    const $list = $(this);
+    const itemHeight = $list.children('li').first().outerHeight(true);
+    let intervalId;
+    let startY = 0;
+    let deltaY = 0;
+    let isDragging = false;
+    let isAnimating = false;
+
+    $list.css({ position: 'relative', top: 0 });
+
+    function startRolling() {
+      intervalId = setInterval(() => {
+        if (!isAnimating) scrollDown();
+      }, 3000);
+    }
+
+    function stopRolling() {
+      clearInterval(intervalId);
+    }
+
+    function scrollDown() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      $list.stop(true).animate({ top: -itemHeight }, 400, function () {
+        $list.append($list.children('li').first());
+        $list.css('top', 0);
+        isAnimating = false;
+      });
+    }
+
+    function scrollUp() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      $list.stop(true);
+      $list.prepend($list.children('li').last());
+      $list.css('top', -itemHeight);
+      $list.animate({ top: 0 }, 400, function () {
+        $list.css('top', 0);
+        isAnimating = false;
+      });
+    }
+
+    startRolling();
+
+    $list.on('mouseenter', stopRolling);
+    $list.on('mouseleave', startRolling);
+
+    // 터치 이벤트
+    $list.on('touchstart', function (e) {
+      stopRolling();
+      startY = e.originalEvent.touches[0].clientY;
+      deltaY = 0;
+    });
+
+    $list.on('touchmove', function (e) {
+      deltaY = e.originalEvent.touches[0].clientY - startY;
+    });
+
+    $list.on('touchend', function () {
+      handleSwipe();
+    });
+
+    // 마우스 이벤트
+    $list.on('mousedown', function (e) {
+      stopRolling();
+      isDragging = true;
+      startY = e.clientY;
+      deltaY = 0;
+    });
+
+    $(document).on('mousemove', function (e) {
+      if (!isDragging) return;
+      deltaY = e.clientY - startY;
+    });
+
+    $(document).on('mouseup', function () {
+      if (!isDragging) return;
+      handleSwipe();
+      isDragging = false;
+    });
+
+    function handleSwipe() {
+      if (Math.abs(deltaY) < 30 || isAnimating) return;
+
+      if (deltaY > 30) scrollUp();
+      else if (deltaY < -30) scrollDown();
+
+      deltaY = 0;
+      startRolling();
+    }
+  });
 });
