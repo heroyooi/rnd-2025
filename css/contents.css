@@ -252,3 +252,26 @@
 .content-area .con-tit::before{content:'';display:block;width:18px;height:18px;background:url(../img/ico-chart.png) 50% 50% no-repeat;position: absolute;left:0;top:4.5px}
 .content-area .con-box{border:1px solid #f2f2f2;border-radius:20px;}
 .content-area .con-tit + .con-box{margin-top:8px;}
+
+/* 2025-09 */
+body.ver_ga{background-color: #1d1e22;}
+#ga-wrap{padding-top:60px;}
+#ga-wrap .top-area{padding:10px 20px;display:flex;justify-content: space-between;align-items: center;background:url('/img/ga/divider-sub.svg') 50% bottom no-repeat;}
+#ga-wrap .top-area .tit{font-size:18px;font-weight:600;color:#5c87ff;}
+#ga-wrap .top-area .item-area{display:flex;align-items: center;gap:0 8px;}
+#ga-wrap .top-area .item-area .label{font-size:13px;font-weight:700;line-height:1.5;color:#5c87ff;}
+#ga-wrap .top-area .item-area .mode-list{display:flex;gap: 0 4px;}
+#ga-wrap .top-area .item-area .mode-list li{font-size:13px;font-weight:bold;color:#dcdee2;border-radius: 4px;border: solid 1px #4f526b;background-color: rgba(29, 30, 34, 0.3);padding:9px 4px 9px 12px;display:flex;gap:0 5px;align-items:center;}
+#ga-wrap .top-area .item-area .mode-list li::after{content:'';display:block;width:14px;height:14px;background:url('/img/ga/ico-bullet-blue-dark.svg') 50% 50% no-repeat;}
+#ga-wrap .top-area .item-area .mode-list li.on{border: solid 1px #2962ff;background-color: rgba(41, 98, 255, 0.15);color:#5c87ff;}
+#ga-wrap .top-area .item-area .mode-list li.on::after{background:url('/img/ga/ico-bullet-blue-light.svg') 50% 50% no-repeat;}
+#ga-wrap .date-area{padding:8px 20px;display:flex;align-items: center;gap:0 8px; }
+#ga-wrap .date-area .label{font-size:18px;font-weight:600;}
+
+#ga-wrap .map-area{padding:0 20px 20px;}
+#ga-wrap .map-frame{height:886px;padding: 24px;border-radius: 8px;background-color: #272830;}
+#ga-wrap .line-map-wrap{height:659px;padding:16px 80px;background-image: radial-gradient(circle at 50% 50%, #2b3759, #272830 22%);position: relative;border:1px solid red;}
+#ga-wrap .line-map-wrap .t-box{text-align:center;padding:24px 32px; border-radius: 16px;box-shadow: inset 0 0 12px 0 rgba(41, 98, 255, 0.25);border: solid 1px #1c4d9c;background-color: rgba(29, 30, 34, 0.8);position: absolute;width:248px;}
+#ga-wrap .line-map-wrap .t-box span{display:block;}
+#ga-wrap .line-map-wrap .t-box .tit{font-size:18px;font-weight:600;color:#fff;line-height:1.5;}
+#ga-wrap .line-map-wrap .t-box .sub{font-size:14px;font-weight:600;line-height:1.5;color: rgba(255, 255, 255, 0.6);}

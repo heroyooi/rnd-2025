@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자율차-일반차 혼재상황 대비 AI기반 자율주행모빌리티 운영 플랫폼 개발 - 3차</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/billboard.js/dist/billboard.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body class="ver_ga">
+  <div id="wrap">
+    <div id="header">
+      <h1 class="logo"><a href="#"><span>자율차-일반차 혼재상황 대비 AI기반 자율주행모빌리티 운영 플랫폼 개발</span></a></h1>
+      <ul id="utilmenu">
+        <li class="user"><a href="#"></a></li>
+        <li class="menu"><a href="#"></a></li>
+      </ul>
+    </div><!-- #header -->
+    <div class="ui-wrap">
+      <a href="#" class="btn-close"></a>
+      <span class="face" style="background:url(img/rnd2/icon-userdata-ad.png) 0 0 no-repeat;"></span>
+      <p class="email">abdasdadadadadasdasdcT123@mqnic.com</p>
+      <p class="username">홍길동</p>
+      <ul class="info">
+        <li>
+          <span class="label">기관</span>
+          <span class="result">화성시 1234567부서</span>
+        </li>
+        <li>
+          <span class="label">연락처</span>
+          <span class="result">010-0000-0000</span>
+        </li>
+        <li>
+          <span class="label">권한</span>
+          <span class="result">12345</span>
+        </li>
+      </ul>
+      <div class="btns-wrap">
+        <span class="btn-base tp1"><a href="#">로그아웃</a></span>
+      </div>
+    </div><!-- .ui-wrap -->
+    <div class="menu-dimm"></div>
+    <div class="menu-wrap">
+      <ul class="menu-list">
+        <li class="has-menu">
+          <dl>
+            <dt>인프라 모니터링</dt>
+            <dd>
+              <ul>
+                <li><a href="#">EdegRSU 상태</a></li>
+                <li><a href="#">EdegRSU 상태</a></li>
+                <li><a href="#">EdegRSU 가공</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>자율차전용지도 구축현황</dt>
+          </dl>
+        </li>
+        <li class="has-menu">
+          <dl>
+            <dt>개별 서비스</dt>
+            <dd>
+              <ul>
+                <li class="bg tp1"><a href="#">국-10 과제</a></li>
+                <li class="bg tp2"><a href="#">국-11 과제</a></li>
+                <li class="bg tp3"><a href="#">국-12 과제</a></li>
+                <li class="bg tp4"><a href="#">국-10 과제</a></li>
+                <li class="bg tp5"><a href="#">국-11 과제</a></li>
+                <li class="bg tp6"><a href="#">국-12 과제</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div><!-- .menu-wrap -->
+    <div id="ga-wrap">
+      <div class="top-area">
+        <p class="tit">통합상황판</p>
+        <div class="item-area">
+          <span class="label">관제모드</span>
+          <ul class="mode-list">
+            <li>AUTO</li>
+            <li>WIDE</li>
+            <li class="on">LIVE</li>
+            <li>DIVE</li>
+            <li>SIDE</li>
+          </ul>
+        </div>
+        <div class="item-area">
+          <span class="label">표출화면</span>
+          <span class="select-base" style="width: 180px;">
+            <span class="value"></span>
+            <select>
+              <option value="0" selected>자율차 서비스 연계</option>
+              <option value="1">값 1</option>
+              <option value="2">값 2</option>
+              <option value="3">값 3</option>
+            </select>
+          </span>
+        </div>
+      </div><!-- .top-area -->
+      <div class="date-area">
+        <span class="label">플랫폼 연계/수집 일별 통계</span>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+          <input id="datepicker-input" type="text" aria-label="Date">
+          <span class="tui-ico-date"></span>
+          <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
+        </div>
+      </div><!-- .date-area -->
+      <div class="map-area">
+        <div class="map-frame">
+          <div class="line-map-wrap">
+            <div class="t-box" style="left:711px; top:16px;">
+              <span class="tit">인프라 플랫폼</span>
+              <span class="sub">[국-1] 자율자 전용지도</span>
+            </div>
+
+            <div class="t-box" style="right:80px; top:16px;">
+              <span class="tit">도로교통공단</span>
+              <span class="sub">외부연계 기관</span>
+            </div>
+          </div><!-- .line-map-wrap -->
+        </div>
+      </div><!-- .map-area -->
+    </div><!-- #ga-wrap -->
+    
+  </div><!-- #wrap -->
+
+  <script>
+    tui.DatePicker.localeTexts['customKey'] = {
+      titles: {
+          // days
+          DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          // daysShort
+          D: ['일', '월', '화', '수', '목', '금', '토'],
+          // months
+          MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+          // monthsShort
+          MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+      },
+      titleFormat: 'yyyy.MMM',
+      todayFormat: '오늘 : yyyy.MMMM.dd',
+      date: 'Date',
+      time: 'Time'
+    };
+
+    var datepicker = new tui.DatePicker('.date_wrapper#general', {
+      language: 'customKey',
+      date: new Date(),
+      input: {
+        element: '#datepicker-input',
+        format: 'YYYY-MM-dd',
+      }
+    });
+
+    var Qsample = $.urlParam('sample');
+    var Qtype = $.urlParam('type');
+    var Qpopup = $.urlParam('popup');
+    var Qfpopup = $.urlParam('fpopup');
+    var Qloading = $.urlParam('loading');
+    if (Qsample) {
+      setTimeout(() => {
+        if (Qsample == 'ntooltip') {
+          $('#tooltip_accident').show();
+          $('#tooltip_construction').show();
+          $('.btn-index').closest('li').click();
+          
+          toastUI(
+            `<p class="toast-con">
+              <span class="txt">첫 번째 메시지</span>
+              <a href="#">위치보기 +</a>
+            </p>`, 80);
+
+          setTimeout(() => {
+            toastUI(
+              `<p class="toast-con">
+                <span class="txt">두 번째 메시지</span>
+                <a href="#">위치보기 +</a>
+              </p>`, 144);
+          }, 500);
+
+          setTimeout(() => {
+            toastUI(
+              `<p class="toast-con">
+                <span class="txt">세 번째 메시지</span>
+                <a href="#">위치보기 +</a>
+              </p>`, 208);
+          }, 1000);
+
+
+        } else if (Qsample == 'leftUnexpected') {
+          $('.lt-item-wrap li > a[href="#left-unexpected"]').click();
+          $('#tooltip_accident').show();
+        } else if (Qsample == 'leftEvent') {
+          $('.lt-item-wrap li > a[href="#left-event"]').click();
+          $('#tooltip1').show();
+          $('#cctvEvent .i-weather').remove();
+          $('#cctvEvent').append(`<span class="e-point tp7"></span>`);
+          if (Qtype == 'noData') {
+            $('#isData').hide();
+            $('#noData').show();
+          }
+          $('#tooltip4').show();
+          $('.btn-cctv').click();
+        } else if (Qsample == 'leftRotation') {
+          $('.lt-item-wrap li > a[href="#left-rotation"]').click();
+          $('.i-obj#ro1, .i-obj#ro2').show();
+          $('#tooltip-chart').show();
+          
+          setTimeout(() => {
+              eChart1.resize();
+              eChart2.resize();
+            }, 10);
+        } else if (Qsample == 'edgersu') {
+          // $('#left-edgersu').show();
+          $('.left-wrap.type-1').css('left', 107);
+          $('.left-wrap.type-1').show();
+          $('#cctv1').prev().hide();
+          $('#cctv1').show();
+          $('#cctv1').find('.e-cctv').show();
+          $('#cctv1').find('.status.normal').hide();
+          setTimeout(() => {
+            leftSwiper.update(true);
+            bnrSwiper.update(true);
+            leftSwiper.slideTo(1);
+            
+            $('.detail-list li .label-area .tip').click();
+          }, 250);
+        } else if (Qsample == 'guide') {
+          $('.left-wrap.type-2').css('left', 107);
+          $('.left-wrap.type-2').show();
+          // $('.left-wrap.type-sub').show();
+          $('.i-time').show();
+          setTimeout(() => {
+            carSwiper.update(true);
+          }, 250);
+          if (Qtype == 'yellow') {
+            $('#traffic-green').hide();
+            $('#traffic-yellow').show();
+          } else if (Qtype == 'red') {
+            $('#traffic-green').hide();
+            $('#traffic-red').show();
+          } else if (Qtype == 'no') {
+            $('#traffic-green').hide();
+            $('#traffic-no').show();
+          }
+        }
+      }, 250);
+    }
+    if (Qpopup) {
+      $.magnificPopup.open(getOptions('#popup-' + Qpopup));
+    }
+    if (Qfpopup == 'search') {
+      $('.fp-popup-wrap').show();
+    }
+    if (Qloading == 'true') {
+      $('.loading-dimm').show();
+      $('.loading-wrap').css('display', 'flex');
+      loading(hideLoading);
+
+      async function hideLoading() {
+        await new Promise((f) => setTimeout(f, 1000));
+        $('.loading-wrap, .loading-dimm').hide();
+      }
+    }
+    if (Qsample == undefined || Qsample.indexOf('time') == -1) {
+      getTime();
+      
+      setInterval(function() {
+        getTime();
+      }, 1000);
+    } else {
+      $('.time-wrap').hide();
+      $('#' + Qsample).show();
+    }
+    if (Qsample == 'layer') {
+      setTimeout(() => {
+        $('.btn-index').closest('li').click();
+      }, 1000);
+    }
+
+    $(window).on('load resize', function(){
+      $('.left-wrap .tb-wrap.c-scrollbar').css('height', $(window).height() - 245);
+      $('.left-wrap.type-sub .inner').css('height', $(window).height() - 155);
+    });
+
+    
+  </script>
+</body>
+</html>
+
+
