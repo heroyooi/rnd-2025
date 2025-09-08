@@ -123,45 +123,88 @@
 
         <div class="code-area">
           <h3>타입1 <button>코드 보기</button></h3>
-<div class="code-box"><svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- 첫 번째 선 -->
-  <line x1="20" y1="30" x2="280" y2="30" 
-        stroke="cyan" stroke-width="4" 
-        stroke-dasharray="26" stroke-dashoffset="0">
-    <animate attributeName="stroke-dashoffset" 
-              from="0" to="-26" 
-              dur="1.5s" 
-              repeatCount="indefinite"/>
-  </line>
-
-  <!-- 두 번째 선 -->
-  <line x1="20" y1="70" x2="280" y2="70" 
-        stroke="magenta" stroke-width="4" 
-        stroke-dasharray="26" stroke-dashoffset="0">
-    <animate attributeName="stroke-dashoffset" 
-              from="0" to="26" 
-              dur="1.5s" 
-              repeatCount="indefinite"/>
-  </line>
-</svg></div>
+<div class="code-box"><div class="ribbon-wrap t1" aria-label="Background SVG with animated dotted overlay">
+    <svg class="overlay" viewBox="0 0 474 62" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="track1"
+          d="M1.293 48.599s110.986 14.513 236.47-17.52C363.248-.952 472.734 13.063 472.734 13.063"
+          pathLength="300" />
+      </defs>
+      <use href="#track1" class="dots" />
+    </svg>
+  </div></div>
 <style>
-svg {
-  width: 80%;
-  height: auto;
-}
+  /* 공통 */
+  .ribbon-wrap svg.overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: transparent;
+    mix-blend-mode: normal;
+    pointer-events: none;
+  }
+  .ribbon-wrap .dots {
+    fill: none;
+    stroke: #eafff4;
+    stroke-opacity: 0.95;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 1 10;
+    animation: moveDots 1.2s linear infinite;
+  }
+  @keyframes moveDots { to { stroke-dashoffset: -11; } }
+  @media (prefers-reduced-motion: reduce) { .ribbon-wrap .dots { animation: none; } }
+
+  /* t1 */
+  .ribbon-wrap.t1 {
+    position: relative;
+    width: 474px;
+    height: 62px;
+    background-image: url("/img/ani/line-left-bottom-green-line.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-color: transparent;
+    isolation: isolate;
+  }
 </style>
 <pre class="language-html"></pre>
+<pre class="language-css"></pre>
         </div>
 
+
+
         <div class="code-area">
-          <h3>타입1 - 비활성화 <button>코드 보기</button></h3>
-<div class="code-box"><div>
-  <div class="input-wrap">
-    <input type="text" class="input-base tp1" placeholder="검색어를 입력해 주세요." value="자율주행" disabled>
-    <button class="btn-del">삭제</button>
-  </div>
-</div></div>
+          <h3>타입2 <button>코드 보기</button></h3>
+<div class="code-box"><div class="ribbon-wrap t2" aria-label="Background SVG with animated dotted overlay">
+    <svg class="overlay" viewBox="0 0 478 239" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="track2"
+          d="M476.999 1.001S366.133 15.016 252.764 123.63C139.396 232.243 1.001 237.749 1.001 237.749"
+          pathLength="300"
+          fill="none" />
+      </defs>
+      <use href="#track2" class="dots" />
+    </svg>
+  </div></div>
+<style>
+  /* t2 */
+  .ribbon-wrap.t2 {
+    position: relative;
+    width: 478px;
+    height: 257px;
+    background-image: url("/img/ani/line-left-bottom-blue-line.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-color: transparent;
+    isolation: isolate;
+  }
+</style>
 <pre class="language-html"></pre>
+<pre class="language-css"></pre>
         </div>
       </div><!-- .section -->
 

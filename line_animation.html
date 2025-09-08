@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>BG SVG(img) + Animated Dots Overlay</title>
+<style>
+  .ribbon-wrap {
+    position: relative;
+    width: 474px;  /* 배경 SVG 원본 크기 */
+    height: 62px;  /* 배경 SVG 원본 크기 */
+  }
+  .ribbon-wrap img.bg {
+    display: block;  /* baseline 여백 제거 */
+    width: 100%;
+    height: 100%;
+  }
+  .ribbon-wrap svg.overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+
+    /* ✅ 합성 안정화: 투명 배경 보장 */
+    background: transparent;
+    mix-blend-mode: normal;
+    isolation: isolate;
+    pointer-events: none;
+  }
+
+  /* 점선(애니메이션) — 필터 제거 */
+  .dots {
+    fill: none;
+    stroke: #eafff4;
+    stroke-opacity: 0.95;
+    stroke-width: 3;          /* 점 크기 */
+    stroke-linecap: round;
+    stroke-dasharray: 1 10;   /* 1(점) + 10(간격) */
+    animation: moveDots 1.2s linear infinite;
+  }
+
+  /* 주기 = 1 + 10 = 11 → offset도 -11이면 끊김 없이 순환 */
+  @keyframes moveDots {
+    to { stroke-dashoffset: -11; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dots { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="ribbon-wrap">
+    <!-- 1) 배경: 선 SVG는 <img>로 표시 (원본 그라데이션 유지) -->
+    <img class="bg" src="img/ani/line-left-bottom-green-line.svg" alt="green ribbon background" width="474" height="62" />
+
+    <!-- 2) 오버레이: 동일 경로에 점선만 얹기 -->
+    <svg class="overlay" viewBox="0 0 474 62" xmlns="http://www.w3.org/2000/svg" aria-label="Animated dots overlay">
+      <!-- 배경 라인 SVG와 동일한 path (정확히 겹치도록) -->
+      <path id="track"
+        d="M1.293 48.599s110.986 14.513 236.47-17.52C363.248-.952 472.734 13.063 472.734 13.063"
+        pathLength="300" />
+
+      <!-- 점선 애니메이션 -->
+      <use href="#track" class="dots" />
+    </svg>
+  </div>
+</body>
+</html>
