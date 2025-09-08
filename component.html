@@ -119,6 +119,53 @@
 </pre>
 
       <div class="section">
+        <h2>애니메이션 라인</h2>
+
+        <div class="code-area">
+          <h3>타입1 <button>코드 보기</button></h3>
+<div class="code-box"><svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 첫 번째 선 -->
+  <line x1="20" y1="30" x2="280" y2="30" 
+        stroke="cyan" stroke-width="4" 
+        stroke-dasharray="26" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" 
+              from="0" to="-26" 
+              dur="1.5s" 
+              repeatCount="indefinite"/>
+  </line>
+
+  <!-- 두 번째 선 -->
+  <line x1="20" y1="70" x2="280" y2="70" 
+        stroke="magenta" stroke-width="4" 
+        stroke-dasharray="26" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" 
+              from="0" to="26" 
+              dur="1.5s" 
+              repeatCount="indefinite"/>
+  </line>
+</svg></div>
+<style>
+svg {
+  width: 80%;
+  height: auto;
+}
+</style>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입1 - 비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><div>
+  <div class="input-wrap">
+    <input type="text" class="input-base tp1" placeholder="검색어를 입력해 주세요." value="자율주행" disabled>
+    <button class="btn-del">삭제</button>
+  </div>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
         <h2>인풋</h2>
 
         <div class="code-area">
