@@ -152,10 +152,17 @@
     stroke-width: 3;
     stroke-linecap: round;
     stroke-dasharray: 1 10;
-    animation: moveDots 1.2s linear infinite;
+    animation: moveDots 1s linear infinite;
   }
-  @keyframes moveDots { to { stroke-dashoffset: -11; } }
-  @media (prefers-reduced-motion: reduce) { .ribbon-wrap .dots { animation: none; } }
+  @keyframes moveDots {
+    to { stroke-dashoffset: -11; } /* 좌 → 우 */
+  }
+  @keyframes moveDotsReverse {
+    to { stroke-dashoffset: 11; }  /* 우 → 좌 */
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ribbon-wrap .dots { animation: none; }
+  }
 
   /* t1 */
   .ribbon-wrap.t1 {
@@ -174,15 +181,13 @@
 <pre class="language-css"></pre>
         </div>
 
-
-
         <div class="code-area">
           <h3>타입2 <button>코드 보기</button></h3>
 <div class="code-box"><div class="ribbon-wrap t2" aria-label="Background SVG with animated dotted overlay">
-    <svg class="overlay" viewBox="0 0 478 239" xmlns="http://www.w3.org/2000/svg">
+    <svg class="overlay" viewBox="0 0 478 62" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <path id="track2"
-          d="M476.999 1.001S366.133 15.016 252.764 123.63C139.396 232.243 1.001 237.749 1.001 237.749"
+          d="M1.001 4.28s111.117-14.513 236.75 17.52c125.632 32.033 235.248 18.018 235.248 18.018"
           pathLength="300"
           fill="none" />
       </defs>
@@ -194,6 +199,41 @@
   .ribbon-wrap.t2 {
     position: relative;
     width: 478px;
+    height: 62px;
+    background-image: url("/img/ani/line-left-top-green-line.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-color: transparent;
+    isolation: isolate;
+  }
+  .ribbon-wrap.t2 .dots {
+    transform: translateY(9px);
+  }
+</style>
+<pre class="language-html"></pre>
+<pre class="language-css"></pre>
+        </div>
+        
+
+        <div class="code-area">
+          <h3>타입3 <button>코드 보기</button></h3>
+<div class="code-box"><div class="ribbon-wrap t3" aria-label="Background SVG with animated dotted overlay">
+    <svg class="overlay" viewBox="0 0 478 257" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="track3"
+          d="M476.999 1.001S366.133 15.016 252.764 123.63C139.396 232.243 1.001 237.749 1.001 237.749"
+          pathLength="300"
+          fill="none" />
+      </defs>
+      <use href="#track3" class="dots" />
+    </svg>
+  </div></div>
+<style>
+  /* t3 */
+  .ribbon-wrap.t3 {
+    position: relative;
+    width: 478px;
     height: 257px;
     background-image: url("/img/ani/line-left-bottom-blue-line.svg");
     background-repeat: no-repeat;
@@ -201,6 +241,183 @@
     background-size: 100% 100%;
     background-color: transparent;
     isolation: isolate;
+  }
+  .ribbon-wrap.t3 .dots {
+    transform: translateY(9px);
+  }
+</style>
+<pre class="language-html"></pre>
+<pre class="language-css"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입4 <button>코드 보기</button></h3>
+<div class="code-box"><div class="ribbon-wrap t4" aria-label="Background SVG with animated dotted overlay">
+    <svg class="overlay" viewBox="0 0 20 130" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="track4"
+          d="M1 1v128"
+          pathLength="300"
+          fill="none" />
+      </defs>
+      <use href="#track4" class="dots" />
+    </svg>
+  </div></div>
+<style>
+  /* t4 */
+  .ribbon-wrap.t4 {
+    position: relative;
+    width: 20px;
+    height: 130px;
+    background-image: url("/img/ani/line-top-green-line.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    background-color: transparent;
+    isolation: isolate;
+  }
+  .ribbon-wrap.t4 .dots {
+    transform: translateX(9px);
+    stroke-width: 3;               /* 필요시 2.5 ~ 3 사이로 조절 */
+    stroke-dasharray: 2 18;        /* ✅ 점:2, 간격:18 (세로 스케일 대응) */
+    animation: moveDots20 1s linear infinite;
+  }
+  @keyframes moveDots20{ to { stroke-dashoffset: -20; } }
+</style>
+<pre class="language-html"></pre>
+<pre class="language-css"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입5 <button>코드 보기</button></h3>
+<div class="code-box"><div class="ribbon-wrap t5" aria-label="Background SVG with animated dotted overlay">
+    <svg class="overlay" viewBox="0 0 478 256" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="track5"
+          d="M1.264 246.076s110.904-13.975 224.312-122.283C338.984 15.485 477.427 9.995 477.427 9.995"
+          pathLength="300"
+          fill="none" />
+      </defs>
+      <use href="#track5" class="dots" />
+    </svg>
+  </div></div>
+<style>
+  /* t5 */
+  .ribbon-wrap.t5 {
+    position: relative;
+    width: 478px;
+    height: 256px;
+    background-image: url("/img/ani/line-right-top-glay-line.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-color: transparent;
+    isolation: isolate;
+  }
+
+  .ribbon-wrap.t5 .dots {
+    animation: moveDotsReverse 1s linear infinite;
+  }
+</style>
+<pre class="language-html"></pre>
+<pre class="language-css"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입6 <button>코드 보기</button></h3>
+<div class="code-box"><div class="ribbon-wrap t6" aria-label="Background SVG with animated dotted overlay">
+    <svg class="overlay" viewBox="0 0 475 62" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="track6"
+          d="M1.292 13.303S112.514-1.224 238.265 30.839c125.751 32.063 235.469 18.035 235.469 18.035"
+          pathLength="300"
+          fill="none" />
+      </defs>
+      <use href="#track6" class="dots" />
+    </svg>
+  </div></div>
+<style>
+  /* t6 */
+  .ribbon-wrap.t6 {
+    position: relative;
+    width: 475px;
+    height: 62px;
+    background-image: url("/img/ani/line-right-top-green-line.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-color: transparent;
+    isolation: isolate;
+  }
+
+  .ribbon-wrap.t6 .dots {
+    animation: moveDotsReverse 1s linear infinite;
+  }
+</style>
+<pre class="language-html"></pre>
+<pre class="language-css"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입7 <button>코드 보기</button></h3>
+<div class="code-box"><div class="ribbon-wrap t7" aria-label="Background SVG with animated dotted overlay">
+    <svg class="overlay" viewBox="0 0 474 62" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="track7"
+          d="M1.293 48.599s110.986 14.513 236.47-17.52C363.248-.952 472.734 13.063 472.734 13.063"
+          pathLength="300"
+          fill="none" />
+      </defs>
+      <use href="#track7" class="dots" />
+    </svg>
+  </div></div>
+<style>
+  /* t7 */
+  .ribbon-wrap.t7 {
+    position: relative;
+    width: 474px;
+    height: 62px;
+    background-image: url("/img/ani/line-right-bottom-blue-line.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-color: transparent;
+    isolation: isolate;
+  }
+</style>
+<pre class="language-html"></pre>
+<pre class="language-css"></pre>
+        </div>
+
+
+        <div class="code-area">
+          <h3>타입8 <button>코드 보기</button></h3>
+<div class="code-box"><div class="ribbon-wrap t8" aria-label="Background SVG with animated dotted overlay">
+    <svg class="overlay" viewBox="0 0 478 256" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="track8"
+          d="M1.265 9.924s110.788 13.975 224.077 122.283 251.586 113.798 251.586 113.798"
+          pathLength="300"
+          fill="none" />
+      </defs>
+      <use href="#track8" class="dots" />
+    </svg>
+  </div></div>
+<style>
+  /* t8 */
+  .ribbon-wrap.t8 {
+    position: relative;
+    width: 478px;
+    height: 256px;
+    background-image: url("/img/ani/line-right-bottom-glay-line.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-color: transparent;
+    isolation: isolate;
+  }
+  .ribbon-wrap.t8 .dots {
+    animation: moveDotsReverse 1s linear infinite;
   }
 </style>
 <pre class="language-html"></pre>
