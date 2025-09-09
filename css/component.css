@@ -406,7 +406,9 @@ body.ver_light .select-base.disabled select{display:none;}
 .popup-wrap .con-wrap .info dt{font-size:16px;font-weight:bold;color:#4f526b;line-height:1.5;}
 .popup-wrap .con-wrap .info dd{font-size:14px;color:#595959;line-height:1.5;margin-top:8px;}
 .popup-wrap .tit-wrap{padding:16px 16px 12px;background:url(../img/rnd2/divider-sub-498.png) 50% bottom no-repeat;display:flex;align-items:center;gap:0 8px;}
+.popup-wrap .tit-wrap.dw_998{background:url(../img/divider-sub.svg) 50% bottom no-repeat;}
 .popup-wrap .tit-wrap .tit{font-size:18px;line-height:1.5;font-weight:600;color:#fff;}
+.popup-wrap .tit-wrap .tit.no_icon::before{display:none;}
 .popup-wrap .tit-wrap .car-id{display:inline-block;padding:2px 12px;border-radius:14px;background-color:#2962ff;font-size:13px;line-height:1.5;color:#fff;font-weight:700;}
 .popup-wrap button.mfp-close,
 .popup-wrap button.mfp-arrow{width:34px;height:34px;background:url(../img/ico-del-s.png) 50% 50% no-repeat;top:0;right:0;font-size:0;opacity:1;}

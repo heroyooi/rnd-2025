@@ -1,0 +1,10 @@
+<svg width="998" height="1" viewBox="0 0 998 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="url(#aunt58gaja)" d="M0 0h998v1H0z"/>
+    <defs>
+        <linearGradient id="aunt58gaja" x1="0" y1=".5" x2="998" y2=".5" gradientUnits="userSpaceOnUse">
+            <stop offset=".056" stop-color="#5C87FF" stop-opacity="0"/>
+            <stop offset=".51" stop-color="#33ADFF"/>
+            <stop offset=".936" stop-color="#5C87FF" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+</svg>
