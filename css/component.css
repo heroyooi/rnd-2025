@@ -110,6 +110,7 @@ body.ver_light .select-base.disabled select{display:none;}
 .tooltip-area .tip-content li .label{color:rgba(255, 255, 255, 0.8);}
 .tooltip-area .tip-content li .con{font-weight:600;color:#fff;}
 .tooltip-area .tip-content li .con.red{color:#e50000;}
+.tooltip-area .tip-content li .con.green{color:#3ec200;}
 .tooltip-area .tip-content .btns-wrap{margin-top:12px;}
 .tooltip-area .tip-content .btns-wrap .btn-base{width:100%;}
 .tooltip-area .tip-content .btns-wrap.col2{display:flex;flex-wrap:wrap;gap:12px;}

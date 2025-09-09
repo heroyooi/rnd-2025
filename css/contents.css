@@ -249,6 +249,12 @@
 .lt-item-wrap li.li5 > a::before{background:url(../img/ico-rsu-def.svg) 50% 50% no-repeat;}
 .lt-item-wrap li.li6 > a::before{background:url(../img/ico-aocar-def.svg) 50% 50% no-repeat;}
 .lt-item-wrap li.on > a{background-color: #234091;}
+.lt-item-wrap li.top{text-align:center;background-color: #000;padding:4px 4px 4px 12px;cursor:pointer;}
+.lt-item-wrap li.top span{display:flex;width:100%;justify-content: center;align-items: center;font-size:13px;line-height:1.5;}
+.lt-item-wrap li.top span::after{content:'';display:block;width:18px;height:18px;background:url(../img/new/ico-arrow-open-w.svg) 50% 50% no-repeat;}
+
+.lt-item-wrap.collapse li:not(.top){display:none;}
+.lt-item-wrap.collapse li.top span::after{transform:rotate(180deg);}
 
 .content-area{display:flex;flex-wrap:wrap;text-align:left;margin-top:40px;gap:35px 40px;}
 .content-area .chart-con{width:calc(50% - 20px);}
@@ -523,7 +529,7 @@ body.ver_new .n-top-area{-webkit-backdrop-filter: blur(8px);backdrop-filter: blu
 
 body.ver_new #header{-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);background-color: #1d1e22;}
 body.ver_new .lt-item-wrap{top:140px;}
-body.ver_new .left-wrap{top:140px;}
+body.ver_new .left-wrap{top:140px;width:500px;}
 body.ver_new .left-wrap#left-rotation .inner{min-height:875px;}
 .left-wrap .tb-date{display:flex;justify-content: space-between;width:100%;align-items: center;padding:8px 16px;border-radius: 8px;background-color: rgba(79, 82, 107, 0.15);margin:16px 0;}
 .left-wrap .tb-date .date{font-size:14px;font-weight:600;color:#5c87ff;}

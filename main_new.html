@@ -92,9 +92,9 @@
         <div class="item-area">
           <span class="label">관제모드</span>
           <ul class="mode-list">
-            <li>AUTO</li>
+            <li class="on">AUTO</li>
             <li>WIDE</li>
-            <li class="on">LIVE</li>
+            <li>LIVE</li>
             <li>DIVE</li>
             <li>SIDE</li>
           </ul>
@@ -104,7 +104,7 @@
           <span class="select-base" style="width: 180px;">
             <span class="value"></span>
             <select>
-              <option value="0" selected>자율차 서비스 연계</option>
+              <option value="0" selected>GIS 관제</option>
               <option value="1">값 1</option>
               <option value="2">값 2</option>
               <option value="3">값 3</option>
@@ -115,6 +115,7 @@
 
       <div class="lt-item-wrap">
         <ul>
+          <li class="top"><span>MENU</span></li>
           <li class="li1"><a href="#left-unexpected">돌발정보</a></li>
           <li class="li2"><a href="#left-event">이벤트정보 <span class="info"><img src="img/ico-info-red.svg" alt=""></span></a></li>
           <li class="li3"><a href="#left-rotation">회전교통량</a></li>
@@ -442,6 +443,107 @@
                 <a href="#" class="btn-last"></a>
               </div>
             </div><!-- .total-wrap -->
+          </div>
+        </div>
+        <div class="bottom-wrap">
+          <a href="#" class="btn-close"></a>
+        </div>
+      </div>
+
+      <div class="left-wrap" id="left-event2" style="left: 107px; display: none;">
+        <div class="inner">
+          <p class="tit">트래킹 모드</p>
+          <div class="info-box-wrap">
+            <div class="info-box top">
+              <div class="label-area">
+                <p class="label">EdgeRSU ID</p>
+              </div>
+              <div class="st-area">
+                <span class="name">12345</span>
+                <span class="status normal">정상</span>
+                <span class="status error" style="display: none;">이상</span>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="label-area">
+                <p class="label">위도</p>
+              </div>
+              <div class="st-area">
+                <span class="name">37.450675</span>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="label-area">
+                <p class="label">경도</p>
+              </div>
+              <div class="st-area">
+                <span class="name">126.791891</span>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="label-area">
+                <p class="label">고도</p>
+              </div>
+              <div class="st-area">
+                <span class="name">54.71</span>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="label-area">
+                <p class="label">센서정보</p>
+                <a href="#" class="tip"></a>
+              </div>
+              <ul class="tip-list">
+                <li class="c">C</li>
+                <li class="l">L</li>
+                <li class="r">R</li>
+                <li class="w">W</li>
+              </ul>
+              <div class="tip-wrap" style="display: none;">
+                <ul class="c-info">
+                  <li>
+                    <span class="label c">C</span>
+                    <span class="name">Camera</span>
+                  </li>
+                  <li>
+                    <span class="label l">L</span>
+                    <span class="name">Lidar</span>
+                  </li>
+                  <li>
+                    <span class="label r">R</span>
+                    <span class="name">Rader</span>
+                  </li>
+                  <li>
+                    <span class="label w">W</span>
+                    <span class="name">Weather</span>
+                  </li>
+                </ul>
+                <a href="#" class="btn-close"></a>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="label-area">
+                <p class="label">센싱번위</p>
+              </div>
+              <div class="st-area">
+                <span class="name">다각형</span>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="label-area">
+                <p class="label">SW버전</p>
+              </div>
+              <div class="st-area">
+                <span class="name">1.0.0</span>
+              </div>
+            </div>
+          </div><!-- .info-box-wrap -->
+          <div class="info-tit-wrap mt16">
+            <span class="info-tit">이벤트 스틸컷</span>
+            <div class="dot back"><span></span><span></span><span></span></div>
+          </div>
+          <div class="view-area" style="height: 225px; margin-top: 4px; text-align: center;">
+            <img src="https://placehold.co/404x225/000/FFF" alt="메인 배너">
           </div>
         </div>
         <div class="bottom-wrap">
@@ -1349,239 +1451,116 @@
           <a href="#" class="btn-close"><span></span></a>
         </div>
       </span>
-      
-      <!-- <span class="i-obj cctv" style="left: 663px; top: 294px;">
-        <span class="i-cctv"><img src="img/rnd2/ico-cctv.png" alt="" /></span>
-      </span>
-      <span class="i-obj cctv" style="left: 1071px; top: 270px;">
-        <span class="i-weather rainfall"></span>
+
+      <span class="i-obj" style="left: 725px; top: 786px;">
+        <span class="i-etc rwis"></span>
       </span>
 
-      <span class="i-obj" id="ro1" style="left: 677px; top: 470px; display: none;">
-        <img src="img/ico-tr-out.png" alt="" />
+      <span class="i-obj" style="left: 916px; top: 790px;">
+        <span class="i-poi accidents"></span>
       </span>
-      <span class="i-obj" id="ro2" style="left: 1173px; top: 383px; display: none;">
-        <img src="img/ico-tr-in.png" alt="" />
-      </span> -->
 
-      <!-- <div class="tooltip-area" id="tooltip-chart" style="left: 694px; top: 112px; width: 454px; display: none;">
-        <div class="tip-header">
-          <p class="tit">회전  교통현황</p>
-          <div class="st-area">
-            <span class="name">모락로 사거리</span>
-          </div>
-        </div>
-        <div class="tip-content">
-          <div id="echart2" style="width: 100%; height: 215px;"></div>
-        </div>
-        <a href="#" class="btn-close"><span></span></a>
-      </div>
+      <span class="i-obj" style="left: 941px; top: 839px;">
+        <span class="i-poi bicycles"></span>
+      </span>
 
-      <span class="i-obj" style="left: 790px; top: 739px;">
-        <span class="i-cctv"><img src="img/rnd2/ico-cctv.png" alt=""></span>
-        <span class="e-point tp7"></span>
-        <div class="tooltip-area" id="tooltip4" style="left: 50%; transform: translateX(-50%); bottom: 116px; display: none;">
+      <span class="i-obj" style="left: 990px; top: 814px;">
+        <span class="i-poi pedestrians"></span>
+      </span>
+
+      <span class="i-obj" style="left: 1011px; top: 953px;">
+        <span class="i-etc rwis"></span>
+      </span>
+
+      <span class="i-obj" style="left: 1177px; top: 442px;">
+        <span class="i-poi bicycles"></span>
+      </span>
+
+      <span class="i-obj" style="left: 1143px; top: 592px;">
+        <span class="i-etc rwis"></span>
+      </span>
+
+      <span class="i-obj" style="left: 1231px; top: 720px;">
+        <span class="i-poi bicycles"></span>
+      </span>
+
+      <span class="i-obj" style="left: 1436px; top: 727px;">
+        <span class="i-poi accidents tracking"></span>
+        <div class="tooltip-area" id="tooltip2" style="left: 50%; transform: translateX(-50%); bottom: 65px;">
           <div class="tip-header">
-            <p class="tit">EdgeRSU ID</p>
-            <div class="st-area">
-              <span class="name">RSU12345</span>
-              <span class="status normal">정상</span>
-              <span class="status error" style="display: none;">이상</span>
+            <div class="label-tit">
+              <span class="label">이벤트</span>
+              <span class="tit">낙하물 검지</span>
             </div>
           </div>
           <div class="tip-content">
             <ul>
               <li>
-                <span class="label">위도</span>
-                <span class="con">37.450675</span>
+                <span class="label">분류/ID</span>
+                <span class="con">인프라 / RSU00010</span>
               </li>
-              <li>
-                <span class="label">경도</span>
-                <span class="con">126.791891</span>
-              </li>
-              <li>
-                <span class="label">SW버전</span>
-                <span class="con">1.0.0</span>
-              </li>
-              <li>
-                <span class="label">자율차 진입 예정 정보</span>
-                <span class="con">20대</span>
-              </li>
-            </ul>
-            <div class="btns-wrap col2">
-              <span class="btn-base tp1 reverse ver_white"><a href="#">상세정보</a></span>
-              <span class="btn-base tp1 reverse ver_white"><a href="#">기상정보</a></span>
-              <span class="btn-base tp1 reverse ver_white"><a href="#">진입예정</a></span>
-              <span class="btn-base tp1 reverse ver_white"><a href="#">가이던스</a></span>
-            </div>
-          </div>
-          <a href="#" class="btn-close"><span></span></a>
-        </div>
-      </span> -->
-
-      <!-- <span class="i-obj" style="left: 209.3px; top: 595.1px;">
-        <span class="i-car" style="transform: rotate(-113.35deg);"><img src="img/rnd2/ico-car.png" alt="" /></span>
-        <span class="e-point tp1"></span>
-      </span> -->
-      <!-- <span class="i-obj cctv" style="left: 263px; top: 531px;">
-        <span class="i-cctv"><img src="img/rnd2/ico-cctv.png" alt="" /></span>
-        <span class="e-cctv e-absolute"></span>
-      </span>
-
-      <span class="i-obj" style="left: 1235.9px; top: 297.2px;">
-        <span class="i-car" style="transform: rotate(-102.28deg);"><img src="img/rnd2/ico-car.png" alt="" /></span>
-        <span class="e-point tp1"></span>
-      </span>
-
-      <span class="i-obj" style="left: 770.2px; top: 821.3px;">
-        <span class="i-car" style="transform: rotate(-15.2deg);"><img src="img/rnd2/ico-car.png" alt="" /></span>
-        <span class="e-point tp1"></span>
-        <div class="tooltip-area" id="tooltip2" style="left: 50%; transform: translateX(-50%); bottom: 116px; display: none;">
-          <div class="tip-header">
-            <p class="tit">차량 ID</p>
-            <div class="st-area">
-              <span class="name">Car12345</span>
-            </div>
-          </div>
-          <div class="tip-content">
-            <ul>
-              <li>
-                <span class="label">과제명</span>
-                <span class="con">교통약자 이동지원</span>
-              </li>
-              <li>
-                <span class="label">주행유형</span>
-                <span class="con">주행중</span>
-              </li>
-              <li>
-                <span class="label">주행속도</span>
-                <span class="con">65km/h</span>
-              </li>
-              <li>
-                <span class="label">자율주행상태</span>
-                <span class="con">ON</span>
-              </li>
-            </ul>
-            <div class="btns-wrap">
-              <span class="btn-base tp1 reverse"><a href="#">자율차 주행이력 분석</a></span>
-            </div>
-          </div>
-          <a href="#" class="btn-close"><span></span></a>
-        </div>
-      </span>
-      <span class="i-obj cctv" id="cctvEvent" style="left: 810px; top: 759px; display: none;">
-        <span class="i-cctv"><img src="img/rnd2/ico-cctv.png" alt="" /></span>
-        <span class="i-weather rainfall e-absolute"></span>
-        <div class="tooltip-area" id="tooltip1" style="left: 50%; transform: translateX(-50%); bottom: 86px; display: none;">
-          <div class="tip-header">
-            <p class="tit">EdgeRSU ID</p>
-            <div class="st-area">
-              <span class="name">RSU12345</span>
-              <span class="status normal">정상</span>
-              <span class="status error" style="display: none;">이상</span>
-            </div>
-          </div>
-          <div class="tip-content">
-            <ul>
-              <li>
-                <span class="label">위도</span>
-                <span class="con">37.450675</span>
-              </li>
-              <li>
-                <span class="label">경도</span>
-                <span class="con">126.791891</span>
-              </li>
-              <li>
-                <span class="label">SW버전</span>
-                <span class="con">1.0.0</span>
-              </li>
-              <li>
-                <span class="label">자율차 진입 예정 정보</span>
-                <span class="con">20대</span>
-              </li>
-            </ul>
-            <div class="btns-wrap">
-              <span class="btn-base tp1 reverse"><a href="#">상세정보</a></span>
-            </div>
-          </div>
-          <a href="#" class="btn-close"><span></span></a>
-        </div>
-      </span>
-
-      <div class="tooltip-area" id="tooltip3" style="left: 599px; top: 292px; display: none;">
-        <div class="tip-header tp-road">
-          <p class="tit">도로 ID : 8133610</p>
-          <div class="st-area">
-            <span class="name">경기도 성남시 수정구 수진2동 고속도로 (4차로) 수도권제1순환 고속도로</span>
-          </div>
-        </div>
-        <div class="tip-content">
-          <ul>
-            <li>
-              <span class="label">제한속도</span>
-              <span class="con">100Km/h</span>
-            </li>
-            <li>
-              <span class="label">평균속도</span>
-              <span class="con">80Km/h</span>
-            </li>
-            <li>
-              <span class="label">혼재율</span>
-              <span class="con">0.67%</span>
-            </li>
-            <li>
-              <span class="label">시간단위</span>
-              <span class="con">5분</span>
-            </li>
-          </ul>
-          <div class="btns-wrap">
-            <span class="btn-base tp1 reverse"><a href="#">자율차 주행이력 분석</a></span>
-          </div>
-        </div>
-        <a href="#" class="btn-close"><span></span></a>
-      </div> -->
-
-      <!-- <span class="i-obj" style="left: 495.1px; top: 611.1px;">
-        <span class="i-acc"><img src="img/ico-construction.png" alt="" /></span>
-        <span class="e-point tp7"></span>
-        
-      </span>
-      <span class="i-obj" style="left: 813px; top: 642px;">
-        <span class="i-acc"><img src="img/ico-accident.png" alt="" /></span>
-        <span class="e-point tp7"></span>
-        <div class="tooltip-area" id="tooltip_accident" style="left: 50%; transform: translateX(-50%); bottom: 86px; display: none;">
-          <div class="tip-header">
-            <p class="badge-area">
-              <span class="badge red">사고(A등급)</span>
-              <span class="label">고장 차량</span>
-            </p>
-          </div>
-          <div class="tip-content">
-            <ul>
               <li>
                 <span class="label">차선</span>
                 <span class="con">1차선</span>
               </li>
               <li>
-                <span class="label">발생일자</span>
+                <span class="label">발행일자</span>
                 <span class="con">2025-02-14 14:00:00</span>
               </li>
               <li>
-                <span class="label">종료일자</span>
-                <span class="con">-</span>
-              </li>
-              <li>
-                <span class="label">시간단위</span>
-                <span class="con">5분</span>
+                <span class="label">처리상태</span>
+                <span class="con green">트래킹</span>
               </li>
             </ul>
             <div class="btns-wrap">
-              <span class="btn-base tp1 reverse"><a href="#">상세정보</a></span>
+              <span class="btn-base tp1 reverse"><a href="#">트래킹모드</a></span>
             </div>
           </div>
           <a href="#" class="btn-close"><span></span></a>
         </div>
-      </span> -->
+      </span>
+
+      <span class="i-obj" style="left: 1212px; top: 859px;">
+        <span class="i-poi accidents new"></span>
+        <div class="s-tooltip">장애물 검지</div>
+      </span>
+
+      <span class="i-obj" style="left: 1212px; top: 905px;">
+        <span class="i-poi bicycles tracking"></span>
+        <div class="s-tooltip">장애물 검지</div>
+      </span>
+
+      <span class="i-obj" style="left: 1599px; top: 704px;">
+        <span class="i-poi bicycles"></span>
+      </span>
+
+      <span class="i-obj ver_detail" id="ro1" style="left: 833px; top: 196px; display: none;">
+        <img src="img/ico-tr-out.png" alt="">
+      </span>
+
+      <span class="i-obj ver_detail" id="ro2" style="left: 992px; top: 766px; display: none;">
+        <img src="img/ico-tr-in.png" alt="">
+      </span>
+
+      <span class="i-obj ver_detail" style="left: 838px; top: 254px; display: none;">
+        <span class="i-car" style="transform: rotate(-15.2deg);"><img src="img/rnd2/ico-car.png" alt=""></span>
+        <span class="e-point tp1"></span>
+      </span>
+
+      <span class="i-obj ver_detail" style="left: 1448px; top: 274px; display: none;">
+        <span class="i-car" style="transform: rotate(-102.28deg);"><img src="img/rnd2/ico-car.png" alt=""></span>
+        <span class="e-point tp1"></span>
+      </span>
+
+      <span class="i-obj ver_detail" style="left: 996px; top: 821px; display: none;">
+        <span class="i-car" style="transform: rotate(-15.2deg);"><img src="img/rnd2/ico-car.png" alt=""></span>
+        <span class="e-point tp1"></span>
+      </span>
+
+      <span class="i-obj ver_detail" style="left: 1036px; top: 759px; display: none;">
+        <span class="i-cctv"><img src="img/rnd2/ico-cctv.png" alt=""></span>
+        <span class="e-point tp7"></span>
+      </span>
 
       <div class="tooltip-area" id="tooltip_construction" style="width: 330px; right: 455px; top: 90px; display: none;">
         <div class="tip-header tp2">
@@ -1725,304 +1704,6 @@
 
   <script src="/js/echarts.min.js"></script>
   <script>
-    var eChart1 = echarts.init(document.getElementById('echart1'));
-    var option1 = {
-      backgroundColor: 'rgba(79, 82, 107, 0.15)',
-      textStyle: {
-          color: '#fff' 
-      },
-      title: {
-          show: false
-      },
-      tooltip: {
-          trigger: 'item',
-          backgroundColor: 'rgba(0, 0, 0, 0.7)',
-          textStyle: {
-              color: '#fff',
-              fontFamily: 'Pretendard',
-              fontSize: 12,
-              fontWeight: '600'
-          },
-          borderWidth: 0,
-          formatter: '{a} - {b} {c}초'
-      },
-      legend: {
-          itemWidth: 12,
-          itemHeight: 12,
-          data: ['신호시간', '평균회전시간'],
-          textStyle: {
-              color: '#fff',
-              fontFamily: 'Pretendard',
-          },
-          bottom: '5%'
-      },
-      grid: {
-        left: '5%',
-        right: '5%',
-        bottom: '18%', 
-        containLabel: true,
-        top: '20%'
-      },
-      xAxis: {
-          type: 'category',
-          boundaryGap: true,
-          data: ['직진', '우회전', '좌회전'],
-          axisLine: {
-              show: true,
-              lineStyle: {
-                  color: '#4f526b'
-              }
-          },
-          axisLabel: {
-              textStyle: {
-                  fontSize: 13,
-                  fontWeight: 700,
-                  fontFamily: 'Pretendard',
-                  color: '#7e7e7e'
-              },
-              interval: 0
-          },
-          axisTick: {
-              show: false
-          }
-      },
-      yAxis: {
-          type: 'value',
-          position: 'left',
-          alignTicks: true,
-          name: '초(S)',
-          nameLocation: 'end',
-          nameTextStyle: {
-              color: '#fff',
-              fontSize: 12,
-              fontFamily: 'Pretendard',
-              padding: [0, 30, 0, 0]
-          },
-          axisLine: {
-              show: true,
-              lineStyle: {
-                  color: '#4f526b',
-              }
-          },
-          splitLine: {
-              show: false,
-          },
-          axisLabel: {
-              textStyle: {
-                  fontSize: 11,
-                  fontWeight: 400,
-                  fontFamily: 'Pretendard',
-                  color: '#7E7E7E'
-              }
-          },
-          min: 0,
-          max: 200,
-          interval: 50
-      },
-      series: [
-          {
-              name: "신호시간",
-              type: "bar",
-              itemStyle: {
-                  borderRadius: [2, 2, 0, 0]
-              },
-              data: [69, 52, 17],
-              color: '#2dbe85',
-              barWidth: '20%',
-              label: {
-                show: true,
-                position: 'top',
-                color: '#fff',
-                fontSize: 12,
-                fontWeight: 'bold'
-              },
-          },
-          {
-              name: "평균회전시간",
-              type: "bar",
-              itemStyle: {
-                  borderRadius: [2, 2, 0, 0]
-              },
-              data: [144, 182, 2],
-              color: '#516af0',
-              barWidth: '20%',
-              label: {
-                show: true,
-                position: 'top',
-                color: '#fff',
-                fontSize: 12,
-                fontWeight: 'bold'
-              },
-          }
-      ]
-    };
-    eChart1.setOption(option1);
-
-    var eChart2 = echarts.init(document.getElementById('echart2'));
-    var option2 = {
-        // backgroundColor: 'rgba(79, 82, 107, 0.15)',
-        textStyle: { color: '#fff' },
-        tooltip: {
-            trigger: 'axis',
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
-            textStyle: { color: '#fff' },
-            borderWidth: 0,
-            formatter: '{a} <br/>{b}: {c}'
-        },
-        legend: {
-            data: ['유효녹색시간', '평균회전시간', '교통량'],
-            bottom: '5%',
-            textStyle: { color: '#fff' }
-        },
-        grid: {
-            left: '8%',
-            right: '8%',
-            bottom: '15%',
-            containLabel: true,
-            top: '20%'
-        },
-        xAxis: {
-            type: 'category',
-            boundaryGap: false,
-            data: ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
-            axisLine: { lineStyle: { color: '#4f526b' } },
-            axisLabel: {
-                textStyle: {
-                    fontSize: 12,
-                    fontWeight: 400,
-                    color: '#7e7e7e'
-                },
-                interval: 0,
-                rotate: 30
-            },
-            axisTick: { show: false },
-            splitLine: { show: true, lineStyle: { color: '#4f526b' } }
-        },
-        yAxis: [
-          {
-            type: 'value',
-            name: '초(S)',
-            position: 'left',
-            nameLocation: 'middle',
-            nameGap: 35,
-            nameTextStyle: { color: '#fff', fontSize: 12 },
-            axisLine: { lineStyle: { color: '#4f526b' } },
-            splitLine: { show: true, lineStyle: { color: '#4f526b' } },
-            axisLabel: { textStyle: { color: '#7E7E7E' } },
-            min: 0,
-            max: 250,
-            interval: 50
-          },
-          {
-            type: 'value',
-            name: '교통량(대)',
-            position: 'right',
-            nameLocation: 'middle',
-            nameGap: 35,
-            nameRotate: 270,
-            nameTextStyle: { color: '#fff', fontSize: 12 },
-            axisLine: { lineStyle: { color: '#4f526b' } },
-            splitLine: { show: false },
-            axisLabel: { textStyle: { color: '#7E7E7E' } },
-            min: 0,
-            max: 250,
-            interval: 50
-          }
-        ],
-        series: [
-            {
-                name: '유효녹색시간',
-                type: 'line',
-                symbol: 'none',
-                symbolSize: 6,
-                lineStyle: { width: 2 },
-                color: '#2dbe85',
-                data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
-            },
-            {
-                name: '평균회전시간',
-                type: 'line',
-                symbol: 'none',
-                symbolSize: 6,
-                lineStyle: { width: 2 },
-                color: '#516af0',
-                data: [30, 60, 120, 180, 200, 190, 180, 140, 100, 50, 20, 10]
-            },
-            {
-                name: '교통량',
-                type: 'line',
-                symbol: 'none',
-                symbolSize: 6,
-                lineStyle: { width: 2 },
-                color: '#f06292',
-                yAxisIndex: 1,
-                data: [20, 40, 80, 160, 150, 140, 130, 110, 90, 50, 30, 10]
-            }
-        ]
-    };    
-    eChart2.setOption(option2);
-
-    function getDate(){
-      let date = new Date();
-      let year = date.getFullYear();
-      let month = new String(date.getMonth()+1);
-      let day = new String(date.getDate());
-
-      if(month.length == 1){
-        month = "0" + month;
-      }
-      if(day.lnegth == 1){
-        day = "0" + day;
-      }
-
-      $('.time-wrap .yymmdd').html(year + "." + month + "." + day);
-      let dayOfWeek = new Date(year + '-' + month + '-' + day).getDay();
-      switch (dayOfWeek) {
-        case 0:
-          $('.time-wrap .day').html('Sunday');
-          break;
-        case 1:
-          $('.time-wrap .day').html('Monday');
-          break;
-        case 2:
-          $('.time-wrap .day').html('Tuesday');
-          break;
-        case 3:
-          $('.time-wrap .day').html('Wednesday');
-          break;
-        case 4:
-          $('.time-wrap .day').html('Thursday');
-          break;
-        case 5:
-          $('.time-wrap .day').html('Friday');
-          break;
-        case 6:
-          $('.time-wrap .day').html('Saturday');
-          break;
-        default:
-          $('.time-wrap .day').html('Sunday');
-      }
-    }
-    function getTime(){
-      let c_date = new Date();
-      let c_hours = c_date.getHours();
-      let c_minutes = c_date.getMinutes();
-      let c_seconds = c_date.getSeconds();
-      if (c_hours < 10) {
-        c_hours = "0" + c_hours;
-      }
-      if (c_minutes < 10) {
-        c_minutes = "0" + c_minutes;
-      }
-      if (c_seconds < 10){
-        c_seconds = "0" + c_seconds;
-      }
-      let c_delimeter = ":";
-      let c_time = c_hours + c_delimeter + c_minutes + c_delimeter + c_seconds;
-      $(".time-wrap .clock-area").html(c_time);
-    }
-    getDate();
-
     $('.tooltip-area .btn-close').on('click', function(e){
       e.preventDefault();
       $(this).closest('.tooltip-area').hide();
@@ -2380,16 +2061,11 @@
       }
     })
     var Qsample = $.urlParam('sample');
-    var Qtype = $.urlParam('type');
     var Qpopup = $.urlParam('popup');
-    var Qfpopup = $.urlParam('fpopup');
-    var Qloading = $.urlParam('loading');
     if (Qsample) {
       setTimeout(() => {
         if (Qsample == 'tracking') {
-          $('.n-top-area .item-area .mode-list li:eq(0)').click();
           $('.lt-item-wrap li > a[href="#left-event"]').click();
-          return;
           toastUI(
             `<p class="toast-con">
               <span class="txt">[이벤트 발생] 낙하물 검지 (RSU000000)</span>
@@ -2411,130 +2087,32 @@
                 <a href="#">위치보기 +</a>
               </p>`, 208);
           }, 1000);
-        }
-        if (Qsample == 'ntooltip') {
-          $('#tooltip_accident').show();
-          $('#tooltip_construction').show();
-          $('.btn-index').closest('li').click();
-          
-          toastUI(
-            `<p class="toast-con">
-              <span class="txt">첫 번째 메시지</span>
-              <a href="#">위치보기 +</a>
-            </p>`, 80);
-
-          setTimeout(() => {
-            toastUI(
-              `<p class="toast-con">
-                <span class="txt">두 번째 메시지</span>
-                <a href="#">위치보기 +</a>
-              </p>`, 144);
-          }, 500);
-
-          setTimeout(() => {
-            toastUI(
-              `<p class="toast-con">
-                <span class="txt">세 번째 메시지</span>
-                <a href="#">위치보기 +</a>
-              </p>`, 208);
-          }, 1000);
-
-
-        } else if (Qsample == 'leftUnexpected') {
-          $('.lt-item-wrap li > a[href="#left-unexpected"]').click();
-          $('#tooltip_accident').show();
-        } else if (Qsample == 'leftEvent') {
+        } else if (Qsample == 'detailA' || Qsample == 'detailB') {
           $('.lt-item-wrap li > a[href="#left-event"]').click();
-          $('#tooltip1').show();
-          $('#cctvEvent .i-weather').remove();
-          $('#cctvEvent').append(`<span class="e-point tp7"></span>`);
-          if (Qtype == 'noData') {
-            $('#isData').hide();
-            $('#noData').show();
-          }
-          $('#tooltip4').show();
-          $('.btn-cctv').click();
-        } else if (Qsample == 'leftRotation') {
-          $('.lt-item-wrap li > a[href="#left-rotation"]').click();
-          $('.i-obj#ro1, .i-obj#ro2').show();
-          $('#tooltip-chart').show();
-          
-          setTimeout(() => {
-              eChart1.resize();
-              eChart2.resize();
-            }, 10);
-        } else if (Qsample == 'edgersu') {
-          // $('#left-edgersu').show();
-          $('.left-wrap.type-1').css('left', 107);
-          $('.left-wrap.type-1').show();
-          $('#cctv1').prev().hide();
-          $('#cctv1').show();
-          $('#cctv1').find('.e-cctv').show();
-          $('#cctv1').find('.status.normal').hide();
-          setTimeout(() => {
-            leftSwiper.update(true);
-            bnrSwiper.update(true);
-            leftSwiper.slideTo(1);
-            
-            $('.detail-list li .label-area .tip').click();
-          }, 250);
-        } else if (Qsample == 'guide') {
-          $('.left-wrap.type-2').css('left', 107);
-          $('.left-wrap.type-2').show();
-          // $('.left-wrap.type-sub').show();
-          $('.i-time').show();
-          setTimeout(() => {
-            carSwiper.update(true);
-          }, 250);
-          if (Qtype == 'yellow') {
-            $('#traffic-green').hide();
-            $('#traffic-yellow').show();
-          } else if (Qtype == 'red') {
-            $('#traffic-green').hide();
-            $('#traffic-red').show();
-          } else if (Qtype == 'no') {
-            $('#traffic-green').hide();
-            $('#traffic-no').show();
+          $('.lt-item-wrap li.li2 > a .info').hide();
+          $('#dashboard-wrap .i-obj').hide();
+          $('#dashboard-wrap .i-obj.ver_detail').show();
+          if (Qsample == 'detailA') {
+            $('#left-event').hide();
+            $('#left-event2').show();
           }
         }
       }, 250);
-    }
-    if (Qpopup) {
-      $.magnificPopup.open(getOptions('#popup-' + Qpopup));
-    }
-    if (Qfpopup == 'search') {
-      $('.fp-popup-wrap').show();
-    }
-    if (Qloading == 'true') {
-      $('.loading-dimm').show();
-      $('.loading-wrap').css('display', 'flex');
-      loading(hideLoading);
-
-      async function hideLoading() {
-        await new Promise((f) => setTimeout(f, 1000));
-        $('.loading-wrap, .loading-dimm').hide();
-      }
-    }
-    if (Qsample == undefined || Qsample.indexOf('time') == -1) {
-      getTime();
-      
-      setInterval(function() {
-        getTime();
-      }, 1000);
-    } else {
-      $('.time-wrap').hide();
-      $('#' + Qsample).show();
-    }
-    if (Qsample == 'layer') {
-      setTimeout(() => {
-        $('.btn-index').closest('li').click();
-      }, 1000);
     }
 
     $(window).on('load resize', function(){
       $('.left-wrap#left-event .c-scrollbar').css('height', $(window).height() - 385);
       $('.left-wrap.type-sub .inner').css('height', $(window).height() - 215);
     });
+
+    $('.lt-item-wrap li.top').on('click', function(e){
+      if (!$('.lt-item-wrap').hasClass('collapse')) {
+        $('.lt-item-wrap').addClass('collapse');
+      } else {
+        $('.lt-item-wrap').removeClass('collapse');
+      }
+      
+    })
     
     $('.lt-item-wrap li').on('click', function(e){
       e.preventDefault();
@@ -2562,14 +2140,6 @@
         $(this).addClass('on');
       } else {
         $(this).removeClass('on');
-      }
-    })
-
-    $('#openLeftedge').on('click', function(){
-      if ($('#left-edgersu').css('display') == 'none') {
-        $('#left-edgersu').show();
-      } else {
-        $('#left-edgersu').hide();
       }
     })
   </script>
