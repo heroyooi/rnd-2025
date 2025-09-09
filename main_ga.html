@@ -87,7 +87,7 @@
       </ul>
     </div><!-- .menu-wrap -->
     <div id="ga-wrap">
-      <div class="top-area">
+      <div class="n-top-area">
         <p class="tit">통합상황판</p>
         <div class="item-area">
           <span class="label">관제모드</span>
@@ -111,7 +111,7 @@
             </select>
           </span>
         </div>
-      </div><!-- .top-area -->
+      </div><!-- .n-top-area -->
       <div class="date-area">
         <span class="label">플랫폼 연계/수집 일별 통계</span>
         <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
@@ -373,7 +373,25 @@
         <p class="tit no_icon">플랫폼 연계/수집 통계</p>
       </div>
       <div class="con-wrap">
-        
+        <div class="input-wrap select-date">
+          <span class="select-base">
+            <span class="value"></span>
+            <select>
+              <option value="0" selected>기상정보 수집 데이터(MB)</option>
+              <option value="1">값 1</option>
+              <option value="2">값 2</option>
+              <option value="3">값 3</option>
+            </select>
+          </span>
+          <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+            <input id="datepicker-input2" type="text" aria-label="Date">
+            <span class="tui-ico-date"></span>
+            <div class="date_wrapper" id="general2" style="margin-left: -1px;"></div>
+          </div>
+        </div>
+        <div class="search-content mt12" style="height: 300px;">
+          <div style="height: 100%; color: rgba(255, 255, 255, 0.1); font-size: 50px; display: flex; justify-content: center; align-items: center;">Grafana Dashboard Area</div>
+        </div>
       </div>
     </div><!-- .popup-wrap -->
     
@@ -398,11 +416,20 @@
       time: 'Time'
     };
 
-    var datepicker = new tui.DatePicker('.date_wrapper#general', {
+    new tui.DatePicker('.date_wrapper#general', {
       language: 'customKey',
       date: new Date(),
       input: {
         element: '#datepicker-input',
+        format: 'YYYY-MM-dd',
+      }
+    });
+
+    new tui.DatePicker('.date_wrapper#general2', {
+      language: 'customKey',
+      date: new Date(),
+      input: {
+        element: '#datepicker-input2',
         format: 'YYYY-MM-dd',
       }
     });
@@ -415,11 +442,6 @@
     $(window).on('load resize', function(){
       $('.left-wrap .tb-wrap.c-scrollbar').css('height', $(window).height() - 245);
       $('.left-wrap.type-sub .inner').css('height', $(window).height() - 155);
-    });
-
-    $('#ga-wrap .top-area .item-area .mode-list li').on('click', function(){
-      $(this).siblings('.on').removeClass('on');
-      $(this).addClass('on');
     });
   </script>
 </body>

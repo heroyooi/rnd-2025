@@ -22,6 +22,9 @@
     .ex_wrp .code-box > .i-obj:first-child{margin-left:0;}
     .ex_wrp .left-wrap{position:relative;left:0;top:0;}
     .ex_wrp .loading-wrap{display:flex;position: relative;left:0;top:0;transform:none;}
+    .ex_wrp .ribbon-wrap{position: relative;}
+
+    .ex_wrp .obj-area{position: relative;width:32px;height:32px;margin-top:9px;}
 
     .component-menu{position:fixed;right:20px;top:70px;padding:10px;background-color:#000;border:1px solid #333;box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.07);border-radius:5px;z-index:1;}
     .component-menu li{font-size:14px;margin-top:10px;cursor:pointer;}
@@ -123,7 +126,7 @@
 
         <div class="code-area">
           <h3>타입1 <button>코드 보기</button></h3>
-<div class="code-box"><div class="ribbon-wrap t1" aria-label="Background SVG with animated dotted overlay">
+<div class="code-box"><div class="ribbon-wrap t1">
     <svg class="overlay" viewBox="0 0 474 62" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <path id="track1"
@@ -183,7 +186,7 @@
 
         <div class="code-area">
           <h3>타입2 <button>코드 보기</button></h3>
-<div class="code-box"><div class="ribbon-wrap t2" aria-label="Background SVG with animated dotted overlay">
+<div class="code-box"><div class="ribbon-wrap t2">
     <svg class="overlay" viewBox="0 0 478 62" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <path id="track2"
@@ -194,31 +197,13 @@
       <use href="#track2" class="dots" />
     </svg>
   </div></div>
-<style>
-  /* t2 */
-  .ribbon-wrap.t2 {
-    position: relative;
-    width: 478px;
-    height: 62px;
-    background-image: url("/img/ani/line-left-top-green-line.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100% 100%;
-    background-color: transparent;
-    isolation: isolate;
-  }
-  .ribbon-wrap.t2 .dots {
-    transform: translateY(9px);
-  }
-</style>
 <pre class="language-html"></pre>
-<pre class="language-css"></pre>
         </div>
         
 
         <div class="code-area">
           <h3>타입3 <button>코드 보기</button></h3>
-<div class="code-box"><div class="ribbon-wrap t3" aria-label="Background SVG with animated dotted overlay">
+<div class="code-box"><div class="ribbon-wrap t3">
     <svg class="overlay" viewBox="0 0 478 257" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <path id="track3"
@@ -229,30 +214,12 @@
       <use href="#track3" class="dots" />
     </svg>
   </div></div>
-<style>
-  /* t3 */
-  .ribbon-wrap.t3 {
-    position: relative;
-    width: 478px;
-    height: 257px;
-    background-image: url("/img/ani/line-left-bottom-blue-line.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100% 100%;
-    background-color: transparent;
-    isolation: isolate;
-  }
-  .ribbon-wrap.t3 .dots {
-    transform: translateY(9px);
-  }
-</style>
 <pre class="language-html"></pre>
-<pre class="language-css"></pre>
         </div>
 
         <div class="code-area">
           <h3>타입4 <button>코드 보기</button></h3>
-<div class="code-box"><div class="ribbon-wrap t4" aria-label="Background SVG with animated dotted overlay">
+<div class="code-box"><div class="ribbon-wrap t4">
     <svg class="overlay" viewBox="0 0 20 130" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <path id="track4"
@@ -263,34 +230,12 @@
       <use href="#track4" class="dots" />
     </svg>
   </div></div>
-<style>
-  /* t4 */
-  .ribbon-wrap.t4 {
-    position: relative;
-    width: 20px;
-    height: 130px;
-    background-image: url("/img/ani/line-top-green-line.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: auto 100%;
-    background-color: transparent;
-    isolation: isolate;
-  }
-  .ribbon-wrap.t4 .dots {
-    transform: translateX(9px);
-    stroke-width: 3;               /* 필요시 2.5 ~ 3 사이로 조절 */
-    stroke-dasharray: 2 18;        /* ✅ 점:2, 간격:18 (세로 스케일 대응) */
-    animation: moveDots20 1s linear infinite;
-  }
-  @keyframes moveDots20{ to { stroke-dashoffset: -20; } }
-</style>
 <pre class="language-html"></pre>
-<pre class="language-css"></pre>
         </div>
 
         <div class="code-area">
           <h3>타입5 <button>코드 보기</button></h3>
-<div class="code-box"><div class="ribbon-wrap t5" aria-label="Background SVG with animated dotted overlay">
+<div class="code-box"><div class="ribbon-wrap t5">
     <svg class="overlay" viewBox="0 0 478 256" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <path id="track5"
@@ -301,31 +246,12 @@
       <use href="#track5" class="dots" />
     </svg>
   </div></div>
-<style>
-  /* t5 */
-  .ribbon-wrap.t5 {
-    position: relative;
-    width: 478px;
-    height: 256px;
-    background-image: url("/img/ani/line-right-top-glay-line.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100% 100%;
-    background-color: transparent;
-    isolation: isolate;
-  }
-
-  .ribbon-wrap.t5 .dots {
-    animation: moveDotsReverse 1s linear infinite;
-  }
-</style>
 <pre class="language-html"></pre>
-<pre class="language-css"></pre>
         </div>
 
         <div class="code-area">
           <h3>타입6 <button>코드 보기</button></h3>
-<div class="code-box"><div class="ribbon-wrap t6" aria-label="Background SVG with animated dotted overlay">
+<div class="code-box"><div class="ribbon-wrap t6">
     <svg class="overlay" viewBox="0 0 475 62" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <path id="track6"
@@ -336,31 +262,12 @@
       <use href="#track6" class="dots" />
     </svg>
   </div></div>
-<style>
-  /* t6 */
-  .ribbon-wrap.t6 {
-    position: relative;
-    width: 475px;
-    height: 62px;
-    background-image: url("/img/ani/line-right-top-green-line.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100% 100%;
-    background-color: transparent;
-    isolation: isolate;
-  }
-
-  .ribbon-wrap.t6 .dots {
-    animation: moveDotsReverse 1s linear infinite;
-  }
-</style>
 <pre class="language-html"></pre>
-<pre class="language-css"></pre>
         </div>
 
         <div class="code-area">
           <h3>타입7 <button>코드 보기</button></h3>
-<div class="code-box"><div class="ribbon-wrap t7" aria-label="Background SVG with animated dotted overlay">
+<div class="code-box"><div class="ribbon-wrap t7">
     <svg class="overlay" viewBox="0 0 474 62" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <path id="track7"
@@ -371,28 +278,13 @@
       <use href="#track7" class="dots" />
     </svg>
   </div></div>
-<style>
-  /* t7 */
-  .ribbon-wrap.t7 {
-    position: relative;
-    width: 474px;
-    height: 62px;
-    background-image: url("/img/ani/line-right-bottom-blue-line.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100% 100%;
-    background-color: transparent;
-    isolation: isolate;
-  }
-</style>
 <pre class="language-html"></pre>
-<pre class="language-css"></pre>
         </div>
 
 
         <div class="code-area">
           <h3>타입8 <button>코드 보기</button></h3>
-<div class="code-box"><div class="ribbon-wrap t8" aria-label="Background SVG with animated dotted overlay">
+<div class="code-box"><div class="ribbon-wrap t8">
     <svg class="overlay" viewBox="0 0 478 256" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <path id="track8"
@@ -403,25 +295,7 @@
       <use href="#track8" class="dots" />
     </svg>
   </div></div>
-<style>
-  /* t8 */
-  .ribbon-wrap.t8 {
-    position: relative;
-    width: 478px;
-    height: 256px;
-    background-image: url("/img/ani/line-right-bottom-glay-line.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100% 100%;
-    background-color: transparent;
-    isolation: isolate;
-  }
-  .ribbon-wrap.t8 .dots {
-    animation: moveDotsReverse 1s linear infinite;
-  }
-</style>
 <pre class="language-html"></pre>
-<pre class="language-css"></pre>
         </div>
       </div><!-- .section -->
 
@@ -749,6 +623,96 @@ picker1.on('change:end', () => {
 <span class="i-obj">
   <span class="i-car"><img src="img/rnd2/ico-car.png" alt="" /></span>
   <span class="e-point tp6"></span>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>POI <button>코드 보기</button></h3>
+<div class="code-box"><span class="i-obj">
+  <span class="i-poi pedestrians"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi bicycles"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi accidents"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi accident"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi weather"></span>
+</span>
+
+<span class="i-obj">
+  <span class="i-poi pedestrians new"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi bicycles new"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi accidents new"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi accident new"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi weather new"></span>
+</span>
+
+<span class="i-obj">
+  <span class="i-poi pedestrians tracking"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi bicycles tracking"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi accidents tracking"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi accident tracking"></span>
+</span>
+<span class="i-obj">
+  <span class="i-poi weather tracking"></span>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>POI - 툴팁(레드) <button>코드 보기</button></h3>
+<div class="code-box"><span class="i-obj">
+  <span class="i-poi pedestrians new"></span>
+  <div class="s-tooltip">장애물 검지</div>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>POI - 툴팁(그린) <button>코드 보기</button></h3>
+<div class="code-box"><span class="i-obj">
+  <span class="i-poi pedestrians tracking"></span>
+  <div class="s-tooltip">장애물 검지</div>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>ETC <button>코드 보기</button></h3>
+<div class="code-box"><span class="i-obj">
+  <span class="i-etc reservation"></span>
+</span>
+<span class="i-obj">
+  <span class="i-etc use"></span>
+</span>
+<span class="i-obj">
+  <span class="i-etc normal"></span>
+</span>
+<span class="i-obj">
+  <span class="i-etc illegal"></span>
+</span>
+<span class="i-obj">
+  <span class="i-etc rwis"></span>
 </span></div>
 <pre class="language-html"></pre>
         </div>

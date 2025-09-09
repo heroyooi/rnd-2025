@@ -68,6 +68,13 @@ var GUI = window.GUI || (function(){
         e.preventDefault();
         $('html, body').stop().animate({ scrollTop: 0 }, 150);
       });
+
+      if ($('.item-area .mode-list').length) {
+        $('.item-area .mode-list li').on('click', function(){
+          $(this).siblings('.on').removeClass('on');
+          $(this).addClass('on');
+        });
+      }
     },
     baseUI: function($this){
       var _ = $this;
