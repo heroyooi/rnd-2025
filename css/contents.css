@@ -561,17 +561,18 @@ body.ver_new .left-wrap .inner{background:url(../img/new/bg-title-sub.svg) 0 0 n
 .right-wrap .bottom-wrap{height:44px;background:url(../img/rnd2/divider-sub.png) 50% 0 no-repeat;position: relative;}
 .right-wrap .bottom-wrap .btn-close{display:inline-block;width:18px;height:18px;background:url(../img/rnd2/ico-close-b.png) 0 0 no-repeat;position: absolute;right:-4px;top:13px;z-index:2;}
 .right-wrap .cctv-list{}
-.right-wrap .cctv-list > li{padding:8px;border-radius:8px;-webkit-backdrop-filter: blur(50px);backdrop-filter: blur(50px);margin-top:8px;}
+.right-wrap .cctv-list > li{padding:8px;border-radius:8px;-webkit-backdrop-filter: blur(50px);backdrop-filter: blur(50px);margin-top:8px;background-color: rgba(79, 82, 107, 0.15);}
 .right-wrap .cctv-list > li:first-child{margin-top:0;;}
 .right-wrap .cctv-list > li dd{display:flex;justify-content: space-between;align-items: center;}
 .right-wrap .cctv-list > li dd span{font-size:14px;font-weight:600;line-height:1.5;}
+.right-wrap .cctv-list > li dd .label{color:#fff;}
 .right-wrap .cctv-list > li dd .distance{color:#fff;}
 .right-wrap .cctv-list > li dt{margin-top:4px;}
-.right-wrap .cctv-list > li.li1{background-color: rgba(251, 129, 255, 0.15);}
-.right-wrap .cctv-list > li.li1 dd .label{color:#d420da;}
-.right-wrap .cctv-list > li.li2{background-color: rgba(124, 255, 196, 0.15);}
-.right-wrap .cctv-list > li.li2 dd .label{color:#13cf7a;}
-.right-wrap .cctv-list > li.li3{background-color: rgba(253, 233, 128, 0.15);}
-.right-wrap .cctv-list > li.li3 dd .label{color:#ffe767;}
-.right-wrap .cctv-list > li.li4{background-color: rgba(101, 206, 255, 0.15);}
-.right-wrap .cctv-list > li.li4 dd .label{color:#50c7ff;}
+.right-wrap .cctv-list > li.on.li1{background-color: rgba(251, 129, 255, 0.15);}
+.right-wrap .cctv-list > li.on.li1 dd .label{color:#d420da;}
+.right-wrap .cctv-list > li.on.li2{background-color: rgba(124, 255, 196, 0.15);}
+.right-wrap .cctv-list > li.on.li2 dd .label{color:#13cf7a;}
+.right-wrap .cctv-list > li.on.li3{background-color: rgba(253, 233, 128, 0.15);}
+.right-wrap .cctv-list > li.on.li3 dd .label{color:#ffe767;}
+.right-wrap .cctv-list > li.on.li4{background-color: rgba(101, 206, 255, 0.15);}
+.right-wrap .cctv-list > li.on.li4 dd .label{color:#50c7ff;}
