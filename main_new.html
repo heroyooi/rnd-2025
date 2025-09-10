@@ -449,92 +449,75 @@
           <a href="#" class="btn-close"></a>
         </div>
       </div>
-
+ 
       <div class="left-wrap" id="left-event2" style="left: 107px; display: none;">
         <div class="inner">
-          <p class="tit">트래킹 모드</p>
+          <div class="tit-area">
+            <a href="javascript:void(0);" class="back"></a>
+            <p class="tit">트래킹 모드</p>
+          </div>
           <div class="info-box-wrap">
             <div class="info-box top">
               <div class="label-area">
-                <p class="label">EdgeRSU ID</p>
+                <div class="label-tit">
+                  <span class="s-label">이벤트</span>
+                  <span class="s-tit">낙하물 검지</span>
+                </div>
               </div>
               <div class="st-area">
-                <span class="name">12345</span>
-                <span class="status normal">정상</span>
-                <span class="status error" style="display: none;">이상</span>
+                <span class="name accent">RSU00041</span>
+                <div class="switch-area">
+                  <span class="label">CCTV 영상</span>
+                  <a href="" class="btn-switch on"></a>
+                </div>
               </div>
             </div>
             <div class="info-box">
               <div class="label-area">
-                <p class="label">위도</p>
+                <p class="label">분류</p>
               </div>
               <div class="st-area">
-                <span class="name">37.450675</span>
+                <span class="name">인프라</span>
               </div>
             </div>
             <div class="info-box">
               <div class="label-area">
-                <p class="label">경도</p>
+                <p class="label">상세유형</p>
               </div>
               <div class="st-area">
-                <span class="name">126.791891</span>
+                <span class="name">보행자 검지</span>
               </div>
             </div>
             <div class="info-box">
               <div class="label-area">
-                <p class="label">고도</p>
+                <p class="label">발생일시</p>
               </div>
               <div class="st-area">
-                <span class="name">54.71</span>
+                <span class="name">2025.04.11 13:42:57</span>
               </div>
             </div>
             <div class="info-box">
               <div class="label-area">
-                <p class="label">센서정보</p>
-                <a href="#" class="tip"></a>
+                <p class="label">확인일시</p>
               </div>
-              <ul class="tip-list">
-                <li class="c">C</li>
-                <li class="l">L</li>
-                <li class="r">R</li>
-                <li class="w">W</li>
-              </ul>
-              <div class="tip-wrap" style="display: none;">
-                <ul class="c-info">
-                  <li>
-                    <span class="label c">C</span>
-                    <span class="name">Camera</span>
-                  </li>
-                  <li>
-                    <span class="label l">L</span>
-                    <span class="name">Lidar</span>
-                  </li>
-                  <li>
-                    <span class="label r">R</span>
-                    <span class="name">Rader</span>
-                  </li>
-                  <li>
-                    <span class="label w">W</span>
-                    <span class="name">Weather</span>
-                  </li>
-                </ul>
-                <a href="#" class="btn-close"></a>
+              <div class="st-area">
+                <span class="name">2025.04.11 13:42:57</span>
               </div>
             </div>
             <div class="info-box">
               <div class="label-area">
-                <p class="label">센싱번위</p>
+                <p class="label">발생차선</p>
               </div>
               <div class="st-area">
-                <span class="name">다각형</span>
+                <span class="name">1차선</span>
               </div>
             </div>
             <div class="info-box">
               <div class="label-area">
-                <p class="label">SW버전</p>
+                <p class="label">처리상태</p>
               </div>
               <div class="st-area">
-                <span class="name">1.0.0</span>
+                <span class="name tracking">트래킹 중</span>
               </div>
             </div>
           </div><!-- .info-box-wrap -->
@@ -546,863 +529,64 @@
             <img src="https://placehold.co/404x225/000/FFF" alt="메인 배너">
           </div>
         </div>
-        <div class="bottom-wrap">
-          <a href="#" class="btn-close"></a>
+        <div class="bottom-wrap ver_btn">
+          <div class="bottom-inner">
+            <button class="btn btn-prev"></button>
+            <div class="btns-wrap col2">
+              <span class="btn-base tp1 reverse ver_white"><a href="#">확인</a></span>
+              <span class="btn-base tp1 reverse ver_white"><a href="#">종료</a></span>
+            </div>
+            <button class="btn btn-next"></button>
+          </div>
         </div>
       </div>
 
-      <div class="left-wrap" id="left-rotation" style="left: 107px; display: none;">
+      <div class="right-wrap" id="right-event" style="display: none;">
         <div class="inner">
-          <p class="tit">회전 교통량 조회</p>
-          <div class="info-tit-wrap">
-            <span class="info-tit lg">모락로사거리(#2)</span>
-          </div>
-          <div class="tb-wrap mt4">
-            <table summary="이벤트 정보 현황" class="tb-status">
-              <colgroup>
-                <col width="*" />
-                <col width="20%" />
-                <col width="20%" />
-                <col width="20%" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th>진입</th>
-                  <th>진입</th>
-                  <th>진입</th>
-                  <th>진입</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="t-left pl16"><span class="ellipsis">도로등급</span></td>
-                  <td>일반도로</td>
-                  <td>시군구</td>
-                  <td>시군도</td>
-                </tr>
-                <tr>
-                  <td class="t-left pl16"><span class="ellipsis">차로구성성</span></td>
-                  <td>5</td>
-                  <td>3</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td class="t-left pl16"><span class="ellipsis">포화교통포화교통포화교통포화교통</span></td>
-                  <td>10450</td>
-                  <td>992</td>
-                  <td>2090</td>
-                </tr>
-                <tr>
-                  <td class="t-left pl16"><span class="ellipsis">회전교통비율(%)</span></td>
-                  <td>96.21</td>
-                  <td>3.76</td>
-                  <td>-</td>
-                </tr>
-                <tr class="blue">
-                  <td class="t-left pl16"></td>
-                  <td>C</td>
-                  <td>C</td>
-                  <td>C</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="info-tit-wrap mt16">
-            <span class="info-tit">회전 교통류 지체현황</span>
-            <div class="dot back"><span></span><span></span><span></span></div>
-          </div>
-          <div id="echart1" class="mt4" style="width: 100%; height: 246px;"></div>
+          <p class="tit">EdgeRSU CCTV</p>
+          <ul class="cctv-list c-scrollbar">
+            <li class="li1">
+              <dl>
+                <dd>
+                  <span class="label">CCTV ID</span>
+                  <span class="distance">20m</span>
+                </dd>
+                <dt><img src="https://placehold.co/284x158/000/FFF" alt="CCTV 정보없음"></dt>
+              </dl>
+            </li>
+            <li class="li2">
+              <dl>
+                <dd>
+                  <span class="label">CCTV ID</span>
+                  <span class="distance">20m</span>
+                </dd>
+                <dt><img src="https://placehold.co/284x158/000/FFF" alt="CCTV 정보없음"></dt>
+              </dl>
+            </li>
+            <li class="li3">
+              <dl>
+                <dd>
+                  <span class="label">CCTV ID</span>
+                  <span class="distance">20m</span>
+                </dd>
+                <dt><img src="https://placehold.co/284x158/000/FFF" alt="CCTV 정보없음"></dt>
+              </dl>
+            </li>
+            <li class="li4">
+              <dl>
+                <dd>
+                  <span class="label">CCTV ID</span>
+                  <span class="distance">20m</span>
+                </dd>
+                <dt><img src="https://placehold.co/284x158/000/FFF" alt="CCTV 정보없음"></dt>
+              </dl>
+            </li>
+          </ul>
         </div>
         <div class="bottom-wrap">
           <a href="#" class="btn-close"></a>
         </div>
       </div>
-
-      <div class="left-wrap type-sub" id="left-edgersu" style="left: 527px; width: 340px; display: none;">
-        <div class="inner">
-          <p class="tit">자율차 EdgeRSU 진입 예정 정보</p>
-          <div class="tb-wrap">
-            <table summary="자율차 EdgeRSU 진입 예정 정보" class="tb-status">
-              <colgroup>
-                <col width="20%" />
-                <col width="35%" />
-                <col width="*" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">EdgeRSU ID</th>
-                  <th scope="col">진입예정/남은거리</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>40</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>39</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>38</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>37</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>36</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>35</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>34</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>33</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>32</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>31</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>30</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-                <tr>
-                  <td>29</td>
-                  <td>RSU90002 <br />(창의존)</td>
-                  <td>5분 도착예정 <br />1,130m</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="total-wrap mt20">
-            <div class="total">
-              <span class="label">Total</span>
-              <span class="count">40</span>
-            </div>
-            <div class="paging-area">
-              <a href="#" class="btn-first disabled"></a>
-              <a href="#" class="btn-prev disabled"></a>
-              <div class="paging">
-                <input class="current" type="text" value="00" />
-                <span class="line">/</span>
-                <span class="num">2</span>
-              </div>
-              <a href="#" class="btn-next"></a>
-              <a href="#" class="btn-last"></a>
-            </div>
-          </div><!-- .total-wrap -->
-        </div>
-        <div class="bottom-wrap">
-          <a href="#" class="btn-close"></a>
-        </div>
-      </div>
-
-      <div class="left-wrap type-1" style="display: none;">
-        <div class="full-swiper swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide left1-slide1">
-              <div class="inner pb40">
-                <p class="tit">EdgeRSU</p>
-                <div class="info-box-wrap">
-                  <div class="info-box top">
-                    <div class="label-area">
-                      <p class="label">EdgeRSU ID</p>
-                    </div>
-                    <div class="st-area">
-                      <span class="name">12345</span>
-                      <span class="status normal">정상</span>
-                      <span class="status error" style="display: none;">이상</span>
-                    </div>
-                  </div>
-                  <div class="info-box">
-                    <div class="label-area">
-                      <p class="label">위도</p>
-                    </div>
-                    <div class="st-area">
-                      <span class="name">37.450675</span>
-                    </div>
-                  </div>
-                  <div class="info-box">
-                    <div class="label-area">
-                      <p class="label">경도</p>
-                    </div>
-                    <div class="st-area">
-                      <span class="name">126.791891</span>
-                    </div>
-                  </div>
-                  <div class="info-box">
-                    <div class="label-area">
-                      <p class="label">고도</p>
-                    </div>
-                    <div class="st-area">
-                      <span class="name">54.71</span>
-                    </div>
-                  </div>
-                  <div class="info-box">
-                    <div class="label-area">
-                      <p class="label">센서정보</p>
-                      <a href="#" class="tip"></a>
-                    </div>
-                    <ul class="tip-list">
-                      <li class="c">C</li>
-                      <li class="l">L</li>
-                      <li class="r">R</li>
-                      <li class="w">W</li>
-                    </ul>
-                    <div class="tip-wrap" style="display: none;">
-                      <ul class="c-info">
-                        <li>
-                          <span class="label c">C</span>
-                          <span class="name">Camera</span>
-                        </li>
-                        <li>
-                          <span class="label l">L</span>
-                          <span class="name">Lidar</span>
-                        </li>
-                        <li>
-                          <span class="label r">R</span>
-                          <span class="name">Rader</span>
-                        </li>
-                        <li>
-                          <span class="label w">W</span>
-                          <span class="name">Weather</span>
-                        </li>
-                      </ul>
-                      <a href="#" class="btn-close"></a>
-                    </div>
-                  </div>
-                  <div class="info-box">
-                    <div class="label-area">
-                      <p class="label">센싱번위</p>
-                    </div>
-                    <div class="st-area">
-                      <span class="name">다각형</span>
-                    </div>
-                  </div>
-                  <div class="info-box">
-                    <div class="label-area">
-                      <p class="label">SW버전</p>
-                    </div>
-                    <div class="st-area">
-                      <span class="name">1.0.0</span>
-                    </div>
-                  </div>
-                </div><!-- .info-box-wrap -->
-              </div><!-- .inner -->
-              <div class="inner">
-                <p class="tit">EdgeRSU 스틸컷 조회</p>
-                <div class="input-wrap date-search">
-                  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
-                    <input id="datepicker-input" type="text" aria-label="Date">
-                    <span class="tui-ico-date"></span>
-                    <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
-                  </div>
-                  <input type="text" class="input-base tp1" placeholder="00:00:00">
-                  <a href="#" class="btn-search"></a>
-                </div>
-                <div class="view-area">
-                  <div class="banner-swiper-wrap">
-                    <div class="banner-swiper swiper-container">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a href="#"><img src="https://placehold.co/288x160/000/FFF" alt="메인 배너" /></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="https://placehold.co/288x160/000/FFF" alt="메인 배너" /></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="https://placehold.co/288x160/000/FFF" alt="메인 배너" /></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="https://placehold.co/288x160/000/FFF" alt="메인 배너" /></a></div>
-                      </div>
-                    </div>
-                    <a href="#" class="btn-prev"></a>
-                    <a href="#" class="btn-next"></a>
-                  </div>
-                </div>
-                <div class="view-area" style="height: 225px;"></div>
-              </div><!-- .inner -->
-            </div><!-- .full-swiper > .swiper-slide -->
-            <div class="swiper-slide left1-slide2">
-              <div class="inner">
-                <p class="tit">EdgeRSU 자율차 진입 예정 정보</p>
-                <div class="tb-wrap">
-                  <table summary="과제별 자율주행 차량 현황" class="tb-status">
-                    <colgroup>
-                      <col width="15%" />
-                      <col width="15%" />
-                      <col width="30%" />
-                      <col width="*" />
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">과제명</th>
-                        <th scope="col">차종/차량ID</th>
-                        <th scope="col">진입예정/남은거리</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>40</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>39</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>38</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>37</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>36</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>35</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>34</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>33</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>32</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>31</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>30</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                      <tr>
-                        <td>29</td>
-                        <td>국-10</td>
-                        <td>스포티지 <br />(일이삼사오)</td>
-                        <td>5분 도착예정 <br />1,130m</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="total-wrap mt20">
-                  <div class="total">
-                    <span class="label">Total</span>
-                    <span class="count">40</span>
-                  </div>
-                  <div class="paging-area">
-                    <a href="#" class="btn-first disabled"></a>
-                    <a href="#" class="btn-prev disabled"></a>
-                    <div class="paging">
-                      <input class="current" type="text" value="00" />
-                      <span class="line">/</span>
-                      <span class="num">2</span>
-                    </div>
-                    <a href="#" class="btn-next"></a>
-                    <a href="#" class="btn-last"></a>
-                  </div>
-                </div><!-- .total-wrap -->
-              </div>
-            </div><!-- .full-swiper > .swiper-slide -->
-            <div class="swiper-slide left1-slide3">
-              <div class="inner pb40">
-                <p class="tit">EdgeRSU 기상정보 수집현황</p>
-                <div class="weather-info">
-                  <div class="ico-detail">
-                    <span class="i-weather rain ani"></span>
-                  </div>
-                  <div class="info-detail">
-                    <div class="detail-top">
-                      <span>2024.02.28 14:09:45</span>
-                      <a href="#" class="btn-refresh"></a>
-                    </div>
-                    <ul class="detail-list">
-                      <li>
-                        <span class="value">0.1~0.5mm</span>
-                        <div class="label-area">
-                          <a href="#" class="tip"></a>
-                          <span class="label">강도</span>
-                          <em class="num">5</em>
-                        </div>
-                        <div class="tip-wrap" style="display: none;">
-                          <p class="s-tit">기상정보 등급 현황</p>
-                          <p class="s-con">ODD환경요소 기준으로 강수, 강설 등급 구분</p>
-                          <ul class="s-info">
-                            <li>
-                              <span class="i-label">비</span>
-                              <ul>
-                                <li>
-                                  <span class="i-label">강도 0</span>
-                                  <span class="i-con">0.1mm ~ 0.5mm</span>
-                                </li>
-                                <li>
-                                  <span class="i-label">강도 1</span>
-                                  <span class="i-con">0.6mm ~ 1.0mm</span>
-                                </li>
-                                <li>
-                                  <span class="i-label">강도 2</span>
-                                  <span class="i-con">1.1mm 이상</span>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <span class="i-label">눈</span>
-                              <ul>
-                                <li>
-                                  <span class="i-label">강도 0</span>
-                                  <span class="i-con">0mm ~ 3mm</span>
-                                </li>
-                                <li>
-                                  <span class="i-label">강도 1</span>
-                                  <span class="i-con">4mm ~ 6mm</span>
-                                </li>
-                                <li>
-                                  <span class="i-label">강도 2</span>
-                                  <span class="i-con">7mm~ 10mm 이상</span>
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <span class="i-label">기타</span>
-                              <ul>
-                                <li>
-                                  <span class="i-label">정보없음</span>
-                                  <span class="i-con">기상정보 없거나 확인 안되는 경우</span>
-                                </li>
-                                <li>
-                                  <span class="i-label">특이사항 없음</span>
-                                  <span class="i-con">비, 눈 정보가 없는 날씨</span>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                          <a href="#" class="btn-close"></a>
-                        </div>
-                      </li>
-                      <li>
-                        <span class="value">100m</span>
-                        <div class="label-area">
-                          <span class="label">가시거리</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="inner">
-                <p class="tit">EdgeRSU 기상정보 이력현황</p>
-                <div class="input-wrap date-search">
-                  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
-                    <input id="datepicker-input-weather" type="text" aria-label="Date">
-                    <span class="tui-ico-date"></span>
-                    <div class="date_wrapper" id="weather" style="margin-left: -1px;"></div>
-                  </div>
-                  <span class="select-base">
-                    <span class="value"></span>
-                    <select>
-                      <option value="0" selected>00</option>
-                      <option value="1">값 1</option>
-                      <option value="2">값 2</option>
-                      <option value="3">값 3</option>
-                    </select>
-                  </span>
-                  <span class="select-base">
-                    <span class="value"></span>
-                    <select>
-                      <option value="0" selected>00</option>
-                      <option value="1">값 1</option>
-                      <option value="2">값 2</option>
-                      <option value="3">값 3</option>
-                    </select>
-                  </span>
-                  <a href="#" class="btn-search"></a>
-                </div>
-                <div class="c-scrollbar mt16">
-                  <div class="info-tit-wrap">
-                    <span class="info-tit">도로기상정보</span>
-                    <div class="dot back"><span></span><span></span><span></span></div>
-                  </div>
-                  <div class="info-box-wrap mt8">
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">평균 기온</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">-3.1℃</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">평균 습도</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">17.1%</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">평균 기압</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">1025.7hpa</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">평균 풍속</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">10.1m/s</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">평균 풍향</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">0.1°</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">컴파스</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">0°</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">강우감지</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">0.1mm</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">상태정보</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">채널오류</span>
-                        <span class="status error"></span>
-                      </div>
-                    </div>
-                  </div><!-- .info-box-wrap -->
-                  <div class="info-tit-wrap mt16">
-                    <span class="info-tit">가시거리센터 데이터</span>
-                    <div class="dot back"><span></span><span></span><span></span></div>
-                  </div>
-                  <div class="info-box-wrap mt8">
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">평균 가시거리</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">11m</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">상태정보</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">채널오류</span>
-                        <span class="status error"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="info-tit-wrap mt16">
-                    <span class="info-tit">노면센서 데이터</span>
-                    <div class="dot back"><span></span><span></span><span></span></div>
-                  </div>
-                  <div class="info-box-wrap mt8">
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">노면온도</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">-3.1℃</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">어는점</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">-24.6℃</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">수막두께</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">0.1㎛</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">얼음두께</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">0.1㎛</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">적설량</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">0.3mm</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">결빙율</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">17.1%</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">도로상태</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">얼음</span>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="label-area">
-                        <p class="label">마찰계수</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">0.5μ</span>
-                      </div>
-                    </div>
-                    <div class="info-box full">
-                      <div class="label-area">
-                        <p class="label">마찰계수</p>
-                      </div>
-                      <div class="st-area">
-                        <span class="name">채널 정상</span>
-                        <span class="status normal"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- .c-srollbar -->
-              </div>
-            </div><!-- .full-swiper > .swiper-slide -->
-            <div class="swiper-slide left1-slide4">
-              <div class="inner">
-                <p class="tit">EdgeRSU V2N 가이던스 정보</p>
-                <div style="height: 860px;"></div>
-              </div>
-            </div><!-- .full-swiper > .swiper-slide -->
-          </div>
-        </div>
-        <div class="bottom-wrap">
-          <span class="swiper-pagination"></span>
-          <a href="#" class="btn-close"></a>
-        </div>
-      </div><!-- .left-wrap.type-1 -->
-
-      <div class="left-wrap type-2" style="display: none;">
-        <div class="inner">
-          <p class="tit">자율차 상세정보 현황</p>
-          <div class="info-car-wrap">
-            <div class="car-item">
-              <div class="car-text">
-                <span class="c-id">차량 ID : 8133610</span>
-                <span class="car-name">교통약자 이동지원</span>
-              </div>
-              <div class="car-btns">
-                <a href="#popup-v2n" class="c-btn btn-popup-anim-1">가이던스 정보 +</a>
-                <a href="#" class="c-btn green" id="openLeftedge">진입 예정정보 +</a>
-              </div>
-            </div>
-            
-          </div><!-- .info-car-wrap -->
-          <div class="info-chart-wrap">
-            <div class="gauge-chart-wrap">
-              <div id="gaugeChart1" class="gauge-chart" style="width: 150px; height: 150px;"></div>
-              <div class="gauge-value">
-                <span class="value">86</span>
-                <span class="label">Km/h</span>
-              </div>
-              <span class="type-label">주행속도</span>
-            </div>
-            <div class="gauge-chart-wrap">
-              <div id="gaugeChart2" class="gauge-chart" style="width: 150px; height: 150px;"></div>
-              <div class="gauge-value">
-                <span class="value">+10</span>
-                <span class="label">Km/h</span>
-              </div>
-              <span class="type-label">가속도</span>
-            </div>
-          </div>
-          <div class="car-simulation-wrap">
-            <div class="car-simulation">
-              <span class="car-shadow fe"></span>
-              <span class="car-shadow lg"></span>
-              <span class="car-shadow md"></span>
-              <div class="car-navi">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="car-swiper-wrap">
-                <div class="car-swiper swiper-container">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="#"><img src="img/rnd2/ico-car-mo.png" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="img/rnd2/ico-car-mo.png" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="img/rnd2/ico-car-mo.png" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="img/rnd2/ico-car-mo.png" alt=""></a></div>
-                  </div>
-                </div>
-                <a href="#" class="btn-prev"></a>
-                <a href="#" class="btn-next"></a>
-              </div>
-              <span class="car-traffic-light" id="traffic-green">
-                <span class="dot green current"></span>
-                <span class="dot yellow"></span>
-                <span class="dot red"></span>
-              </span>
-              <span class="car-traffic-light" id="traffic-yellow" style="display: none;">
-                <span class="dot green"></span>
-                <span class="dot yellow current"></span>
-                <span class="dot red"></span>
-              </span>
-              <span class="car-traffic-light" id="traffic-red" style="display: none;">
-                <span class="dot green"></span>
-                <span class="dot yellow"></span>
-                <span class="dot red current"></span>
-              </span>
-              <span class="car-traffic-light" id="traffic-no" style="display: none;">
-                <span class="dot green"></span>
-                <span class="dot yellow"></span>
-                <span class="dot red"></span>
-              </span>
-            </div>
-          </div><!-- .car-simulation-wrap -->
-          <div class="info-tit-wrap mt16">
-            <span class="info-tit">주행 상태</span>
-            <div class="dot back"><span></span><span></span><span></span></div>
-          </div>
-          <div class="info-box-wrap mt8">
-            <div class="info-box">
-              <div class="label-area">
-                <p class="label">주행유형</p>
-              </div>
-              <div class="st-area">
-                <span class="name">주행중</span>
-              </div>
-            </div>
-            <div class="info-box">
-              <div class="label-area">
-                <p class="label">주행방향</p>
-              </div>
-              <div class="st-area">
-                <span class="name">37.2°</span>
-              </div>
-            </div>
-            <div class="info-box">
-              <div class="label-area">
-                <p class="label">차량기어</p>
-              </div>
-              <div class="st-area">
-                <span class="name">D</span>
-              </div>
-            </div>
-            <div class="info-box">
-              <div class="label-area">
-                <p class="label">자율주행상태</p>
-              </div>
-              <div class="st-area">
-                <span class="name">On</span>
-              </div>
-            </div>
-            <div class="info-box">
-              <div class="label-area">
-                <p class="label">차량방향 지시등</p>
-              </div>
-              <div class="st-area">
-                <span class="name">Left</span>
-              </div>
-            </div>
-          </div><!-- .info-box-wrap -->
-          <div class="info-tit-wrap mt16">
-            <span class="info-tit">장치/센서 데이터</span>
-            <div class="dot back"><span></span><span></span><span></span></div>
-          </div>
-          <div class="info-box-wrap mt8">
-            <div class="info-box full">
-              <div class="label-area">
-                <p class="label">GPS상태</p>
-              </div>
-              <div class="st-area">
-                <span class="name">일이삼사오율칠팔구십</span>
-              </div>
-            </div>
-          </div><!-- .info-box-wrap -->
-        </div>
-        <div class="bottom-wrap tp2">
-          <a href="#" class="btn-close"></a>
-        </div>
-      </div><!-- .left-wrap.type-2 -->
 
       <span class="i-obj" style="left: 734px; top: 278px;">
         <span class="i-etc rwis"></span>
@@ -1739,41 +923,6 @@
       }
     });
 
-    tui.DatePicker.localeTexts['customKey'] = {
-      titles: {
-          // days
-          DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-          // daysShort
-          D: ['일', '월', '화', '수', '목', '금', '토'],
-          // months
-          MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-          // monthsShort
-          MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-      },
-      titleFormat: 'yyyy.MMM',
-      todayFormat: '오늘 : yyyy.MMMM.dd',
-      date: 'Date',
-      time: 'Time'
-    };
-
-    var datepicker1 = new tui.DatePicker('.date_wrapper#general', {
-      language: 'customKey',
-      date: new Date(),
-      input: {
-        element: '#datepicker-input',
-        format: 'YYYY-MM-dd',
-      }
-    });
-
-    var datepicker2 = new tui.DatePicker('.date_wrapper#weather', {
-      language: 'customKey',
-      date: new Date(),
-      input: {
-        element: '#datepicker-input-weather',
-        format: 'YYYY-MM-dd',
-      }
-    });
-
     var swiperOptions = ({ wrap, target, mode = 'slide', simulateTouch = true }) => new Swiper(`${wrap} ${target}`, {
       effect: mode,
       pagination: {
@@ -1819,161 +968,14 @@
       $(this).closest('.left-wrap').hide();
     });
 
+    $('.right-wrap .bottom-wrap .btn-close').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.right-wrap').hide();
+    });
+
     $('.fp-popup-wrap .btn-close').on('click', function(e){
       e.preventDefault();
       $(this).closest('.fp-popup-wrap').hide();
-    });
-
-    var gChart1 = bb.generate({
-      data: {
-        columns: [
-          ["data", 0]
-        ],
-        type: "gauge", // for ESM specify as: gauge()
-        // onclick: function(d, i) {
-        //   console.log("onclick", d, i);
-        // },
-        // onover: function(d, i) {
-        //   console.log("onover", d, i);
-        // },
-        // onout: function(d, i) {
-        //   console.log("onout", d, i);
-        // }
-      },
-      arc: {
-        cornerRadius: 15
-      },
-
-      // https://naver.github.io/billboard.js/release/latest/doc/Options.html#.gauge
-      gauge: {
-        background: 'rgba(0, 0, 0, 0.5)',
-        width: 10,
-        arcLength: 70,
-        fullCircle: true,
-        label: {
-          show: false,
-          // format: function (value, ratio) { return value + "\nKm/h"; },
-        },
-        startingAngle: -2.2,
-      },
-      color: {
-        pattern: [
-          "#2962ff",
-          "#2962ff",
-          "#2962ff",
-          "#2962ff"
-        ],
-        threshold: {
-          values: [
-            30,
-            60,
-            90,
-            100
-          ]
-        }
-      },
-      // size: {
-      //   width: 140,
-      //   height: 140
-      // },
-      legend: {
-        show: false,
-      },
-      bindto: "#gaugeChart1"
-    });
-    
-    setTimeout(function() {
-      gChart1.load({
-        columns: [["data", 80]]
-      });
-    }, 500);
-    // setTimeout(function() {
-    //   gChart1.load({
-    //     columns: [["data", 70]]
-    //   });
-    // }, 1000);
-    // setTimeout(function() {
-    //   gChart1.load({
-    //     columns: [["data", 80]]
-    //   });
-    // }, 1500);
-
-    var gChart2 = bb.generate({
-      data: {
-        columns: [
-          ["data", 0]
-        ],
-        type: "gauge",
-      },
-      arc: {
-        cornerRadius: 15
-      },
-
-      gauge: {
-        background: 'rgba(0, 0, 0, 0.5)',
-        width: 10,
-        arcLength: 70,
-        fullCircle: true,
-        label: {
-          show: false,
-        },
-        startingAngle: -2.2,
-      },
-      color: {
-        pattern: [
-          "#9646ef",
-          "#9646ef",
-          "#9646ef",
-          "#9646ef"
-        ],
-        threshold: {
-          values: [
-            30,
-            60,
-            90,
-            100
-          ]
-        }
-      },
-      legend: {
-        show: false,
-      },
-      bindto: "#gaugeChart2"
-    });
-
-    // setTimeout(function() {
-    //   gChart2.load({
-    //     columns: [["data", 20]]
-    //   });
-    // }, 250);
-    setTimeout(function() {
-      gChart2.load({
-        columns: [["data", 30]]
-      });
-    }, 500);
-
-    var today1 = new Date();
-    var picker1 = tui.DatePicker.createRangePicker({
-      language: 'customKey',
-      startpicker: {
-        date: today1,
-        input: '#startpicker-input1',
-        container: '#startpicker-container1'
-      },
-      endpicker: {
-        date: today1,
-        input: '#endpicker-input1',
-        container: '#endpicker-container1'
-      },
-      selectableRanges: [
-        [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
-      ],
-      format: 'YYYY-MM-dd',
-      // showAlways: true,
-    });
-
-    picker1.on('change:end', () => {
-        console.log(123);
     });
 
     $(window).on('load resize', function(){
@@ -2095,14 +1097,26 @@
           if (Qsample == 'detailA') {
             $('#left-event').hide();
             $('#left-event2').show();
+            $('#right-event').show();
           }
         }
       }, 250);
     }
 
+    $('#left-event .tb-status td').on('click', function(){
+      $('#left-event').hide();
+      $('#left-event2').show();
+    });
+
+    $('#left-event2 .back').on('click', function(){
+      $('#left-event2').hide();
+      $('#left-event').show();
+    });
+
     $(window).on('load resize', function(){
-      $('.left-wrap#left-event .c-scrollbar').css('height', $(window).height() - 385);
-      $('.left-wrap.type-sub .inner').css('height', $(window).height() - 215);
+      $('.left-wrap#left-event .c-scrollbar').css('height', $(window).height() - 375);
+      $('.left-wrap#left-event2 .inner').css('height', $(window).height() - 230);
+      $('.right-wrap#right-event .c-scrollbar').css('height', $(window).height() - 260);
     });
 
     $('.lt-item-wrap li.top').on('click', function(e){
@@ -2141,7 +1155,15 @@
       } else {
         $(this).removeClass('on');
       }
-    })
+    });
+    $('.st-area .btn-switch').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
   </script>
 </body>
 </html>

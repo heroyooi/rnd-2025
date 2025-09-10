@@ -143,6 +143,10 @@ body.ver_light .select-base.disabled select{display:none;}
 .st-area .status.error{color:#fe3633;}
 .st-area .status.normal::before{background:url(../img/rnd2/ico-state-normal.png) 0 0 no-repeat;}
 .st-area .status.error::before{background:url(../img/rnd2/ico-state-error.png) 0 0 no-repeat;}
+.st-area .btn-switch{display:block;width:32px;height:16px;background:url(../img/ico-toggle-off.png) 50% 50% no-repeat;}
+.st-area .btn-switch.on{background:url(../img/ico-toggle-on.png) 50% 50% no-repeat;}
+.st-area .switch-area{display:flex;gap:0 8px;align-items: center;}
+.st-area .switch-area .label{font-size:14px;}
 
 /* total */
 .total-wrap{display:flex;justify-content:space-between;align-items: center;}
