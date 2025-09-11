@@ -288,7 +288,7 @@ body.ver_ga{background-color: #1d1e22;}
 body.ver_ga #header{-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);background-color: #1d1e22;background-image: none;}
 #ga-wrap{padding-top:60px;}
 
-.n-top-area{padding:11px 20px;display:flex;justify-content: space-between;align-items: center;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);}
+.n-top-area{padding:11px 20px;display:flex;justify-content: space-between;align-items: center;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);position: relative;z-index: 5;}
 .n-top-area .tit{font-size:18px;font-weight:600;color:#5c87ff;}
 .n-top-area .item-area{display:flex;align-items: center;gap:0 8px;}
 .n-top-area .item-area .label{font-size:13px;font-weight:700;line-height:1.5;color:#5c87ff;}

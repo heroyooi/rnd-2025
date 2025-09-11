@@ -300,7 +300,7 @@
           <p class="tit">트래킹 모드</p>
           <div class="tb-date">
             <span class="date">2025.04.23 ~ 2025.04.23</span>
-            <span class="select-base" style="width: 80px;">
+            <!-- <span class="select-base" style="width: 80px;">
               <span class="value"></span>
               <select>
                 <option value="0" selected>오늘</option>
@@ -308,7 +308,15 @@
                 <option value="2">값 2</option>
                 <option value="3">값 3</option>
               </select>
-            </span>
+            </span> -->
+            <div class="custom-select" style="width: 80px;">
+              <select>
+                <option value="0">값1</option>
+                <option value="1" selected>오늘</option>
+                <option value="2">값2</option>
+                <option value="3">값3</option>
+              </select>
+            </div>
           </div>
           <div class="tb-wrap w-scrollbar">
             <table summary="이벤트 정보 현황" class="tb-status">
@@ -1004,7 +1012,7 @@
     var toastQueue = [];
     var maxToasts = 3;
 
-    function toastUI($html, top = 80, zIndex = 10) {
+    function toastUI($html, top = 140, zIndex = 10) {
       var $toast = $('<div class="toast-area"></div>');
 
       if (zIndex) $toast.css('z-index', zIndex);
@@ -1057,14 +1065,14 @@
             `<p class="toast-con">
               <span class="txt">[이벤트 발생] 낙하물 검지 (RSU000000)</span>
               <a href="#">위치보기 +</a>
-            </p>`, 80);
+            </p>`, 141);
 
           setTimeout(() => {
             toastUI(
               `<p class="toast-con">
                 <span class="txt">[이벤트 발생] 낙하물 검지 (RSU000000)</span>
                 <a href="#">위치보기 +</a>
-              </p>`, 144);
+              </p>`, 201);
           }, 500);
 
           setTimeout(() => {
@@ -1072,7 +1080,7 @@
               `<p class="toast-con">
                 <span class="txt">[이벤트 발생] 낙하물 검지 (RSU000000)</span>
                 <a href="#">위치보기 +</a>
-              </p>`, 208);
+              </p>`, 261);
           }, 1000);
         } else if (Qsample == 'detailA' || Qsample == 'detailB') {
           $('.lt-item-wrap li > a[href="#left-event"]').click();
