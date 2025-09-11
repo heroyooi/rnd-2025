@@ -75,6 +75,10 @@ var GUI = window.GUI || (function(){
           $(this).addClass('on');
         });
       }
+
+      if ($('.custom-select').length) {
+        customSbox();
+      }
     },
     baseUI: function($this){
       var _ = $this;
@@ -588,4 +592,78 @@ var getOptions = function(id) {
     removalDelay: 300,
     mainClass: 'mfp-zin'
   };
+}
+
+function customSbox() {
+  var x, selElmnt, a, b, c, i, j;
+  x = $(".custom-select");
+
+  x.each(function() {
+    selElmnt = $(this).find("select")[0];
+    a = $("<div>").addClass("select-selected").html(selElmnt.options[selElmnt.selectedIndex].innerHTML);
+    $(this).append(a);
+
+    b = $("<div>").addClass("select-items select-hide");
+
+    for (j = 0; j < selElmnt.length; j++) {
+      c = $("<div>").html(selElmnt.options[j].innerHTML);
+      c.on("click", function(e) {
+        var s, h, y, k, i;
+        s = $(this).closest(".custom-select").find("select")[0];
+        h = $(this).closest(".select-items").prev(".select-selected")[0];
+        
+        for (i = 0; i < s.length; i++) {
+          if (s.options[i].innerHTML == $(this).html()) {
+            s.selectedIndex = i;
+            h.innerHTML = $(this).html();
+            y = $(this).siblings(".same-as-selected");
+            y.removeClass("same-as-selected");
+            $(this).addClass("same-as-selected");
+
+            // 선택된 옵션에 따라 .custom-select에 active 클래스 추가/제거
+            if (s.options[i].value == "0") {
+              $(this).closest(".custom-select").removeClass("active");
+            } else {
+              $(this).closest(".custom-select").addClass("active");
+            }
+            break;
+          }
+        }
+        h.click();
+      });
+      b.append(c);
+    }
+    $(this).append(b);
+
+    a.on("click", function(e) {
+      e.stopPropagation();
+      closeAllSelect(this);
+      $(this).next().toggleClass("select-hide");
+      $(this).toggleClass("select-arrow-active");
+    });
+  });
+
+  function closeAllSelect(elmnt) {
+    var x, y, i, arrNo = [];
+    x = $(".select-items");
+    y = $(".select-selected");
+    
+    y.each(function(index) {
+      if (elmnt == this) {
+        arrNo.push(index);
+      } else {
+        $(this).removeClass("select-arrow-active");
+      }
+    });
+
+    x.each(function(index) {
+      if ($.inArray(index, arrNo) === -1) {
+        $(this).addClass("select-hide");
+      }
+    });
+  }
+
+  $(document).on("click", function() {
+    closeAllSelect();
+  });
 }
